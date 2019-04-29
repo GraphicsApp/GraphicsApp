@@ -1,0 +1,6 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Production and Testing
+out/
