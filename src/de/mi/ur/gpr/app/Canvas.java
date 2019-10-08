@@ -19,6 +19,8 @@ public class Canvas extends JPanel {
         createRenderingHints();
     }
 
+    // TODO: Decide which RenderingHint regarding Quality we want to pass,
+    // since at the moment, we pass different values for the same Rendering Hint (KEY_RENDERING)
     private void createRenderingHints() {
          renderingHints = new RenderingHints(RenderingHints.KEY_ANTIALIASING,
                         RenderingHints.VALUE_ANTIALIAS_ON);
@@ -58,6 +60,9 @@ public class Canvas extends JPanel {
             case CIRCLE:
                 drawCircle(g2d, (Circle) object);
                 break;
+            case ELLIPSE:
+                drawEllipse(g2d, (Ellipse) object);
+                break;
             case LABEL:
                 drawLabel(g2d, (Label) object);
                 break;
@@ -69,23 +74,31 @@ public class Canvas extends JPanel {
         }
     }
 
+    private void drawEllipse(Graphics2D g2d, Ellipse ellipse) {
+        g2d.setColor(ellipse.getColor().asAWTColor());
+        g2d.fillOval(
+                (int) ellipse.getXPos() - ellipse.getRadiusX(),
+                (int) ellipse.getYPos() - ellipse.getRadiusY(),
+                ellipse.getRadiusX() * 2, ellipse.getRadiusY() * 2);
+    }
+
     private void drawRectangle(Graphics2D g2d, Rectangle rect) {
         g2d.setColor(rect.getColor().asAWTColor());
-        g2d.fillRect((int) rect.getxPos(), (int) rect.getyPos(), rect.getWidth(), rect.getHeight());
+        g2d.fillRect((int) rect.getXPos(), (int) rect.getYPos(), rect.getWidth(), rect.getHeight());
     }
 
     private void drawCircle(Graphics2D g2d, Circle circle) {
         g2d.setColor(circle.getColor().asAWTColor());
-        g2d.fillOval((int) circle.getxPos() - circle.getRadius(), (int) circle.getyPos() -circle.getRadius(), circle.getRadius() * 2, circle.getRadius() * 2);
+        g2d.fillOval((int) circle.getXPos() - circle.getRadius(), (int) circle.getYPos() -circle.getRadius(), circle.getRadius() * 2, circle.getRadius() * 2);
     }
 
     private void drawImage(Graphics2D g2d, Image image) {
-        g2d.drawImage(image.getImage(), (int)  image.getxPos(), (int) image.getyPos(), null);
+        g2d.drawImage(image.getImage(), (int)  image.getXPos(), (int) image.getYPos(), null);
     }
 
     private void drawLabel(Graphics2D g2d, Label label) {
         g2d.setColor(label.getColor().asAWTColor());
-        g2d.drawString(label.getText(), label.getxPos(), label.getyPos());
+        g2d.drawString(label.getText(), label.getXPos(), label.getYPos());
     }
 
 

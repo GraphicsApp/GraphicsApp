@@ -22,7 +22,7 @@ public class GraphicsAppLauncher {
             AppManager appManager = new AppManager(app, config);
             config.setListener(appManager);
             app.setConfig(config);
-            app.init(); // calls GraphicsApp.init once
+            app.initialize(); // calls GraphicsApp.init once
             appManager.start(); // starts loop to call GraphicsApp.draw repeatedly
         } catch (Exception e) {
             e.printStackTrace();

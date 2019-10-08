@@ -21,8 +21,8 @@ public class GraphicsAppCore {
         try {
             if (app == null) {
                 app = this;
-                objects = new ArrayList<GraphicsObject>();
-                drawBuffer = new ArrayList<GraphicsObject>();
+                objects = new ArrayList<>();
+                drawBuffer = new ArrayList<>();
             } else {
                 throw new OnlyOneGraphicsAppAllowedException();
             }
@@ -45,7 +45,7 @@ public class GraphicsAppCore {
 
     public GraphicsObject[] getObjects() {
         // TODO: Think about passing copies of the objects!
-        return objects.toArray(new GraphicsObject[objects.size()]);
+        return objects.toArray(new GraphicsObject[0]);
     }
 
     public void addObject(GraphicsObject object) {
@@ -62,7 +62,7 @@ public class GraphicsAppCore {
 
     public GraphicsObject[] getDrawBuffer() {
         // TODO: Think about passing copies of the objects!
-        return drawBuffer.toArray(new GraphicsObject[drawBuffer.size()]);
+        return drawBuffer.toArray(new GraphicsObject[0]);
     }
 
     public void clearDrawBuffer() {

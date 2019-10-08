@@ -15,7 +15,7 @@ public abstract class GraphicsObject {
     protected GraphicsObjectType type;
 
     public GraphicsObject(int x, int y) {
-        this(x,y,DEFAULT_COLOR);
+        this(x , y, DEFAULT_COLOR);
     }
 
     public GraphicsObject(int x, int y, Color color) {
@@ -30,19 +30,19 @@ public abstract class GraphicsObject {
         GraphicsApp.getApp().addToDrawBuffer(this);
     }
 
-    public float getxPos() {
+    public float getXPos() {
         return xPos;
     }
 
-    public void setxPos(float xPos) {
+    public void setXPos(float xPos) {
         this.xPos = xPos;
     }
 
-    public float getyPos() {
+    public float getYPos() {
         return yPos;
     }
 
-    public void setyPos(float yPos) {
+    public void setYPos(float yPos) {
         this.yPos = yPos;
     }
 

@@ -15,7 +15,7 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
         super();
     }
 
-    public abstract void init();
+    public abstract void initialize();
 
     public abstract void draw();
 
