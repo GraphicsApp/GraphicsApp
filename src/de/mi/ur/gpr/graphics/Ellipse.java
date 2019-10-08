@@ -4,36 +4,36 @@ import de.mi.ur.gpr.colors.Color;
 
 public class Ellipse extends GraphicsObject {
 
-    private int radiusX;
-    private int radiusY;
+    private float radiusX;
+    private float radiusY;
 
-    public Ellipse(int x, int y, int radiusX, int radiusY, Color color) {
+    public Ellipse(float x, float y, float radiusX, float radiusY, Color color) {
         super(x,y, color);
         this.radiusX = radiusX;
         this.radiusY = radiusY;
         this.type = GraphicsObjectType.ELLIPSE;
     }
 
-    public Ellipse(int x, int y, int radiusX, int radiusY) {
+    public Ellipse(float x, float y, float radiusX, float radiusY) {
         super(x,y);
         this.radiusX = radiusX;
         this.radiusY = radiusY;
         this.type = GraphicsObjectType.ELLIPSE;
     }
 
-    public void setRadiusX(int radiusX) {
+    public void setRadiusX(float radiusX) {
         this.radiusX = radiusX;
     }
 
-    public void setRadiusY(int radiusY) {
+    public void setRadiusY(float radiusY) {
         this.radiusY = radiusY;
     }
 
-    public int getRadiusX() {
+    public float getRadiusX() {
         return radiusX;
     }
 
-    public int getRadiusY() {
+    public float getRadiusY() {
         return radiusY;
     }
 

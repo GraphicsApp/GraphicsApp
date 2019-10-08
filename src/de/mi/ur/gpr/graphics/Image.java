@@ -1,6 +1,5 @@
 package de.mi.ur.gpr.graphics;
 
-import de.mi.ur.gpr.app.GraphicsApp;
 import de.mi.ur.gpr.utils.FileHelper;
 import de.mi.ur.gpr.utils.GraphicsHelper;
 

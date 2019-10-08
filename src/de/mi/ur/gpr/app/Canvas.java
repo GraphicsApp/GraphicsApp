@@ -54,6 +54,9 @@ public class Canvas extends JPanel {
     private void drawComponent(Graphics2D g2d, GraphicsObject object) {
         switch(object.getType()) {
             case BACKGROUND:
+            case LINE:
+                drawLine(g2d, (Line) object);
+                break;
             case RECTANGLE:
                 drawRectangle(g2d, (Rectangle) object);
                 break;
@@ -74,12 +77,23 @@ public class Canvas extends JPanel {
         }
     }
 
+    private void drawLine(Graphics2D g2d, Line line) {
+        g2d.setColor(line.getColor().asAWTColor());
+        Stroke stroke = new BasicStroke(line.getLineWidth());
+        g2d.setStroke(stroke);
+        g2d.drawLine(
+                (int) line.getXPos(),
+                (int) line.getYPos(),
+                (int) line.getEndpointX(),
+                (int) line.getEndpointY());
+    }
+
     private void drawEllipse(Graphics2D g2d, Ellipse ellipse) {
         g2d.setColor(ellipse.getColor().asAWTColor());
         g2d.fillOval(
-                (int) ellipse.getXPos() - ellipse.getRadiusX(),
-                (int) ellipse.getYPos() - ellipse.getRadiusY(),
-                ellipse.getRadiusX() * 2, ellipse.getRadiusY() * 2);
+                (int) ellipse.getXPos() - (int) ellipse.getRadiusX(),
+                (int) ellipse.getYPos() - (int) ellipse.getRadiusY(),
+                (int) ellipse.getRadiusX() * 2, (int) ellipse.getRadiusY() * 2);
     }
 
     private void drawRectangle(Graphics2D g2d, Rectangle rect) {
@@ -89,7 +103,11 @@ public class Canvas extends JPanel {
 
     private void drawCircle(Graphics2D g2d, Circle circle) {
         g2d.setColor(circle.getColor().asAWTColor());
-        g2d.fillOval((int) circle.getXPos() - circle.getRadius(), (int) circle.getYPos() -circle.getRadius(), circle.getRadius() * 2, circle.getRadius() * 2);
+        g2d.fillOval(
+                (int) circle.getXPos() - (int) circle.getRadius(),
+                (int) circle.getYPos() - (int) circle.getRadius(),
+                (int) circle.getRadius() * 2,
+                (int) circle.getRadius() * 2);
     }
 
     private void drawImage(Graphics2D g2d, Image image) {

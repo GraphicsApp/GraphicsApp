@@ -12,10 +12,13 @@ public class Config {
     private static final Color DEFAULT_BACKRGOUND_COLOR = Colors.WHITE;
     private static final String DEFAULT_TITLE = "GraphicsApp";
 
+    private static final float DEFAULT_STROKE_WIDTH = 2f;
+
     private int width = DEFAULT_WIDTH;
     private int height = DEFAULT_HEIGHT;
     private int frameRate = DEFAULT_FRAME_RATE;
     private Color backgroundColor = DEFAULT_BACKRGOUND_COLOR;
+    private float strokeWidth = DEFAULT_STROKE_WIDTH;
     private String title = DEFAULT_TITLE;
 
     private ConfigChangeListener listener;
@@ -32,6 +35,10 @@ public class Config {
     public void setWidth(int width) {
         this.width = width;
         listener.onSizeChanged(this.width, this.height);
+    }
+
+    public float getStrokeWidth() {
+        return strokeWidth;
     }
 
     public int getHeight() {

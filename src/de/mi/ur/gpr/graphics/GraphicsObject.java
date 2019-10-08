@@ -12,13 +12,14 @@ public abstract class GraphicsObject {
     private float xPos;
     private float yPos;
     private Color color;
+    private Color borderColor;
     protected GraphicsObjectType type;
 
-    public GraphicsObject(int x, int y) {
+    public GraphicsObject(float x, float y) {
         this(x , y, DEFAULT_COLOR);
     }
 
-    public GraphicsObject(int x, int y, Color color) {
+    public GraphicsObject(float x, float y, Color color) {
         this.xPos = x;
         this.yPos = y;
         this.color = color;
@@ -46,12 +47,21 @@ public abstract class GraphicsObject {
         this.yPos = yPos;
     }
 
+    public void setPosition(float xPos, float yPos) {
+        setXPos(xPos);
+        setYPos(yPos);
+    }
+
     public Color getColor() {
         return color;
     }
 
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    public void setBorderColor(Color color) {
+        this.borderColor = color;
     }
 
     public GraphicsObjectType getType() {

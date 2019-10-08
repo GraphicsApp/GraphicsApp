@@ -4,25 +4,25 @@ import de.mi.ur.gpr.colors.Color;
 
 public class Circle extends GraphicsObject {
 
-    private int radius;
+    private float radius;
 
-    public Circle(int x, int y, int radius, Color color) {
+    public Circle(float x, float y, float radius, Color color) {
         super(x,y, color);
         this.radius = radius;
         this.type = GraphicsObjectType.CIRCLE;
     }
 
-    public Circle(int x, int y, int radius) {
+    public Circle(float x, float y, float radius) {
         super(x,y);
         this.radius = radius;
         this.type = GraphicsObjectType.CIRCLE;
     }
 
-    public void setRadius(int radius) {
+    public void setRadius(float radius) {
         this.radius = radius;
     }
 
-    public int getRadius() {
+    public float getRadius() {
         return radius;
     }
 

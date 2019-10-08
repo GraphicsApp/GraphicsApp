@@ -5,7 +5,7 @@ public class Label extends GraphicsObject {
 
     private String text;
 
-    public Label(int x, int y, String text) {
+    public Label(float x, float y, String text) {
         super(x, y);
         this.text = text;
         this.type = GraphicsObjectType.LABEL;
