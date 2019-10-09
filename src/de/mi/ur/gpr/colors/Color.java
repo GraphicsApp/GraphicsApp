@@ -5,6 +5,7 @@ public class Color {
     private final int red;
     private final int green;
     private final int blue;
+    private final int alpha;
 
     private java.awt.Color awtColor;
 
@@ -12,6 +13,14 @@ public class Color {
         this.red = red;
         this.green = green;
         this.blue = blue;
+        this.alpha = 255;
+    }
+
+    public Color(int red, int green, int blue, int alpha) {
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
+        this.alpha = alpha;
     }
 
     public int red() {
@@ -26,9 +35,11 @@ public class Color {
         return blue;
     }
 
+    public int alpha() { return alpha; }
+
     public java.awt.Color asAWTColor() {
         if(awtColor == null) {
-            awtColor = new java.awt.Color(red, green, blue);
+            awtColor = new java.awt.Color(red, green, blue, alpha);
         }
         return awtColor;
     }

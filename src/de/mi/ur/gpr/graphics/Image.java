@@ -11,41 +11,31 @@ import java.io.IOException;
 public class Image extends GraphicsObject {
 
     private BufferedImage image;
-    private int width;
-    private int height;
 
     public Image(int x, int y, String filePath) {
         super(x, y);
         this.type = GraphicsObjectType.IMAGE;
         loadImage(filePath);
-        this.width = image.getWidth();
-        this.height = image.getHeight();
+        setWidth(image.getWidth());
+        setHeight(image.getHeight());
     }
 
     public BufferedImage getImage() {
         return image;
     }
 
-    public int getWidth() {
-        return width;
+    public void setWidth(float width) {
+        super.setWidth(width);
+        rescale();
     }
 
-    public void setWidth(int width) {
-        this.width = width;
-        resacale();
+    public void setHeight(float height) {
+        super.setHeight(height);
+        rescale();
     }
 
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height; resacale();
-    }
-
-
-    private void resacale() {
-        image = GraphicsHelper.resizeImage(image, width, height);
+    private void rescale() {
+        image = GraphicsHelper.resizeImage(image, (int) getWidth(), (int) getHeight());
     }
 
     private void loadImage(String filePath) {

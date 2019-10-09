@@ -14,11 +14,11 @@ public class Point {
         this.y = y;
     }
 
-    public float getX() {
+    public float getXPos() {
         return this.x;
     }
 
-    public float getY() {
+    public float getYPos() {
         return this.y;
     }
 

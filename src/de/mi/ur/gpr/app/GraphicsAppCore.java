@@ -68,4 +68,8 @@ public class GraphicsAppCore {
     public void clearDrawBuffer() {
         drawBuffer.clear();
     }
+
+    public void destroy() {
+        app = null;
+    }
 }

@@ -8,36 +8,34 @@ public class Line extends GraphicsObject {
     private float yEndPoint;
     private Color borderColor;
 
-    private float lineWidth;
-
     public Line(float startX, float startY, float endX, float endY, Color color) {
         super(startX, startY, color);
         this.borderColor = color;
         this.xEndPoint = endX;
         this.yEndPoint = endY;
-        this.lineWidth = GraphicsApp.getApp().getConfig().getStrokeWidth();
+        this.strokeWeight = GraphicsApp.getApp().getConfig().getStrokeWidth();
         this.type = GraphicsObjectType.LINE;
     }
 
     public Line(float startX, float startY, float endX, float endY, Color color, float lineWidth) {
         this(startX, startY, endX, endY, color);
-        this.lineWidth = lineWidth;
+        this.strokeWeight = lineWidth;
     }
 
     public Line(Point start, Point end, Color color) {
-        this(start.getX(), start.getY(), end.getX(), end.getY(), color);
+        this(start.getXPos(), start.getYPos(), end.getXPos(), end.getYPos(), color);
     }
 
     public Line(Point start, Point end, Color color, float lineWidth) {
-        this(start.getX(), start.getY(), end.getX(), end.getY(), color, lineWidth);
+        this(start.getXPos(), start.getYPos(), end.getXPos(), end.getYPos(), color, lineWidth);
     }
 
     public float getLineWidth() {
-        return lineWidth;
+        return strokeWeight;
     }
 
     public void setLineWidth(float lineWidth) {
-        this.lineWidth = lineWidth;
+        this.strokeWeight = lineWidth;
     }
 
     public float getStartpointX() {
@@ -61,7 +59,7 @@ public class Line extends GraphicsObject {
     }
 
     public void setStartPoint(Point start) {
-        this.setStartPoint(start.getX(), start.getY());
+        this.setStartPoint(start.getXPos(), start.getYPos());
     }
 
     public void setEndPoint(float xEndPoint, float yEndPoint) {
@@ -70,7 +68,7 @@ public class Line extends GraphicsObject {
     }
 
     public void setEndPoint(Point end) {
-        this.setEndPoint(end.getX(), end.getY());
+        this.setEndPoint(end.getXPos(), end.getYPos());
     }
 
     public void setColor(Color newColor) {
@@ -119,7 +117,7 @@ public class Line extends GraphicsObject {
     }
 
     public void setPosition(Point p) {
-        this.setPosition(p.getX(), p.getY());
+        this.setPosition(p.getXPos(), p.getYPos());
     }
 
     public void setStartAndEndPoint(float toStartPointX, float toStartPointY, float toEndPointX, float toEndPointY) {
@@ -127,19 +125,19 @@ public class Line extends GraphicsObject {
         this.setEndPoint(toEndPointX, toEndPointY);
     }
 
-    public double getRightBorder() {
+    public float getRightBorder() {
         return Math.max(super.getXPos(), this.xEndPoint);
     }
 
-    public double getLeftBorder() {
+    public float getLeftBorder() {
         return Math.min(super.getXPos(), this.xEndPoint);
     }
 
-    public double getTopBorder() {
+    public float getTopBorder() {
         return Math.min(super.getYPos(), this.yEndPoint);
     }
 
-    public double getBottomBorder() {
+    public float getBottomBorder() {
         return Math.max(super.getYPos(), this.yEndPoint);
     }
 

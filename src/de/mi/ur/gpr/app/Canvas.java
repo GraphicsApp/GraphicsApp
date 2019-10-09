@@ -98,7 +98,7 @@ public class Canvas extends JPanel {
 
     private void drawRectangle(Graphics2D g2d, Rectangle rect) {
         g2d.setColor(rect.getColor().asAWTColor());
-        g2d.fillRect((int) rect.getXPos(), (int) rect.getYPos(), rect.getWidth(), rect.getHeight());
+        g2d.fillRect((int) rect.getXPos(), (int) rect.getYPos(), (int) rect.getWidth(), (int) rect.getHeight());
     }
 
     private void drawCircle(Graphics2D g2d, Circle circle) {

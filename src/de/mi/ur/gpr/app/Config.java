@@ -10,6 +10,7 @@ public class Config {
     private static final int DEFAULT_HEIGHT = 720;
     private static final int DEFAULT_FRAME_RATE = 60;
     private static final Color DEFAULT_BACKRGOUND_COLOR = Colors.WHITE;
+    private static final Color DEFAULT_COLOR = Colors.RED;
     private static final String DEFAULT_TITLE = "GraphicsApp";
 
     private static final float DEFAULT_STROKE_WIDTH = 2f;
@@ -57,6 +58,10 @@ public class Config {
     public void setFrameRate(int frameRate) {
         this.frameRate = frameRate;
         listener.onFrameRateChanged(this.frameRate);
+    }
+
+    public Color getDefaultColor() {
+        return DEFAULT_COLOR;
     }
 
     public Color getBackgroundColor() {

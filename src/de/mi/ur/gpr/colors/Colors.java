@@ -8,6 +8,8 @@ public class Colors {
 
     public static final Color RED = new Color(255,0,0);
     public static final Color WHITE = new Color(255,255,255);
+    public static final Color BLACK = new Color(0,0,0);
+    public static final Color TRANSPARENT = new Color(255,255,255, 0);
 
     public static final Color getRandomColor() {
         int red = (rand.nextInt(256) + 255)/2;
