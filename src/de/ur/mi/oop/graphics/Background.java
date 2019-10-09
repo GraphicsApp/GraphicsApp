@@ -10,6 +10,4 @@ public class Background extends Rectangle {
         this.type = GraphicsObjectType.BACKGROUND;
     }
 
-
-
 }

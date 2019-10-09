@@ -12,12 +12,13 @@ public class Image extends GraphicsObject {
 
     private BufferedImage image;
 
-    public Image(int x, int y, String filePath) {
+    public Image(float x, float y, String filePath) {
         super(x, y);
         this.type = GraphicsObjectType.IMAGE;
         loadImage(filePath);
-        setWidth(image.getWidth());
-        setHeight(image.getHeight());
+        super.setWidth(image.getWidth());
+        super.setHeight(image.getHeight());
+        rescale();
     }
 
     public BufferedImage getImage() {

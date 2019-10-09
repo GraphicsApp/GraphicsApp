@@ -1,6 +1,5 @@
 package de.ur.mi.oop.app;
 
-import de.mi.ur.gpr.graphics.*;
 import de.ur.mi.oop.graphics.*;
 import de.ur.mi.oop.graphics.Label;
 
@@ -53,6 +52,8 @@ public class Canvas extends JPanel {
     private void drawComponent(Graphics2D g2d, GraphicsObject object) {
         switch(object.getType()) {
             case BACKGROUND:
+                drawRectangle(g2d, (de.ur.mi.oop.graphics.Rectangle) object);
+                break;
             case LINE:
                 drawLine(g2d, (Line) object);
                 break;
