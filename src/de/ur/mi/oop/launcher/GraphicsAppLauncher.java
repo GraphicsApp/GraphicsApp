@@ -32,8 +32,18 @@ public class GraphicsAppLauncher {
     private static GraphicsApp getGraphicsAppInstance (String appName) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         StackTraceElement[] stackTraceElements = new Exception().getStackTrace();
         String launcherName = stackTraceElements[stackTraceElements.length-1].getClassName();
-        String packageName = launcherName.substring(0, launcherName.lastIndexOf(PACKAGE_DELIMITER));
-        Class<?> appClass = Class.forName(packageName + PACKAGE_DELIMITER + appName);
+
+        String className = "";
+
+        int packageNameCutOffIndex = launcherName.lastIndexOf(PACKAGE_DELIMITER);
+        if (packageNameCutOffIndex != -1) {
+            String packageName = launcherName.substring(0, launcherName.lastIndexOf(PACKAGE_DELIMITER));
+            className = packageName + PACKAGE_DELIMITER + appName;
+        } else {
+            className = appName;
+        }
+
+        Class<?> appClass = Class.forName(className);
         return (GraphicsApp) appClass.getConstructor().newInstance();
     }
 }
