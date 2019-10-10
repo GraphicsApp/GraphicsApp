@@ -26,10 +26,10 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
     public AppManager(GraphicsApp app, Config config) {
         this.app = app;
         this.config = config;
+        initFrame();
     }
 
     public void start() {
-        initFrame();
         startLoop();
     }
 
