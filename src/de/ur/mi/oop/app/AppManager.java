@@ -8,6 +8,7 @@ import de.ur.mi.oop.events.KeyPressedEvent;
 import de.ur.mi.oop.events.MouseClickedEvent;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class AppManager implements ConfigChangeListener, ActionListener, KeyListener, MouseListener {
@@ -80,7 +81,9 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void onSizeChanged(int newWidth, int newHeight) {
-        appFrame.setSize(newWidth, newHeight);
+        //appFrame.setSize(newWidth, newHeight);
+        appFrame.getContentPane().setPreferredSize(new Dimension(newWidth, newHeight));
+        appFrame.pack();
     }
 
     @Override

@@ -6,8 +6,9 @@ public enum GraphicsObjectType {
     BACKGROUND,
     LINE,
     RECTANGLE,
+    ARC,
     CIRCLE,
     ELLIPSE,
     LABEL,
-    IMAGE
+    IMAGE;
 }

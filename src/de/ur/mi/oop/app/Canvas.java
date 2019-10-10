@@ -63,6 +63,9 @@ public class Canvas extends JPanel {
             case CIRCLE:
                 drawCircle(g2d, (Circle) object);
                 break;
+            case ARC:
+                drawArc(g2d, (Arc) object);
+                break;
             case ELLIPSE:
                 drawEllipse(g2d, (Ellipse) object);
                 break;
@@ -108,6 +111,11 @@ public class Canvas extends JPanel {
                 (int) circle.getYPos() - (int) circle.getRadius(),
                 (int) circle.getRadius() * 2,
                 (int) circle.getRadius() * 2);
+    }
+
+    private void drawArc(Graphics2D g2d, Arc arc) {
+        g2d.setColor(arc.getColor().asAWTColor());
+        g2d.fillArc((int) arc.getXPos() - (int) arc.getRadius(), (int) arc.getYPos() - (int) arc.getRadius(), (int) arc.getRadius()*2, (int) arc.getRadius() * 2, (int) arc.getStart(), (int) arc.getEnd() );
     }
 
     private void drawImage(Graphics2D g2d, de.ur.mi.oop.graphics.Image image) {
