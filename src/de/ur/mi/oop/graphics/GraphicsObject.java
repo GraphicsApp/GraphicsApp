@@ -11,6 +11,7 @@ public abstract class GraphicsObject {
     ///////////////////////////////////////////////////////////////////////////
 
     protected static final Color DEFAULT_COLOR = Colors.RED;
+    protected static final Color DEFAULT_BORDER_COLOR = Colors.BLACK;
 
     private float xPos;
     private float yPos;
@@ -35,6 +36,7 @@ public abstract class GraphicsObject {
         this.height = 0;
         this.color = color;
         this.strokeWeight = 0;
+        this.strokeColor = DEFAULT_BORDER_COLOR;
         this.type = GraphicsObjectType.NONE;
         GraphicsApp.getApp().addObject(this);
     }
@@ -47,6 +49,11 @@ public abstract class GraphicsObject {
         this(x, y, color);
         this.width = width;
         this.height = height;
+    }
+
+    public GraphicsObject(float x, float y, float width, float height, Color color, Color borderColor) {
+        this(x, y, width, height, color);
+        this.strokeColor = borderColor;
     }
 
     public GraphicsObject(Point point) {
@@ -137,6 +144,14 @@ public abstract class GraphicsObject {
     public void setBorder(Color color, float weight) {
         this.setBorderColor(color);
         this.setBorderWeight(weight);
+    }
+
+    public float getBorderWeight() {
+        return this.strokeWeight;
+    }
+
+    public Color getBorderColor() {
+        return this.strokeColor;
     }
 
     public GraphicsObjectType getType() {

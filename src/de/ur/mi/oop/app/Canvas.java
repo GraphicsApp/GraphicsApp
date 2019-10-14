@@ -5,6 +5,9 @@ import de.ur.mi.oop.graphics.Label;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.Rectangle;
+import java.awt.geom.Arc2D;
+import java.awt.geom.Ellipse2D;
 
 
 public class Canvas extends JPanel {
@@ -92,30 +95,45 @@ public class Canvas extends JPanel {
     }
 
     private void drawEllipse(Graphics2D g2d, Ellipse ellipse) {
-        g2d.setColor(ellipse.getColor().asAWTColor());
-        g2d.fillOval(
-                (int) ellipse.getXPos() - (int) ellipse.getRadiusX(),
-                (int) ellipse.getYPos() - (int) ellipse.getRadiusY(),
-                (int) ellipse.getRadiusX() * 2, (int) ellipse.getRadiusY() * 2);
+        Ellipse2D ellipseShape = new Ellipse2D.Float(
+                ellipse.getXPos() - ellipse.getRadiusX(),
+                ellipse.getYPos() - ellipse.getRadiusY(),
+                ellipse.getRadiusX() * 2,
+                ellipse.getRadiusY() * 2);
+
+        drawAndStrokeShape(g2d, ellipse, ellipseShape);
     }
 
     private void drawRectangle(Graphics2D g2d, de.ur.mi.oop.graphics.Rectangle rect) {
-        g2d.setColor(rect.getColor().asAWTColor());
-        g2d.fillRect((int) rect.getXPos(), (int) rect.getYPos(), (int) rect.getWidth(), (int) rect.getHeight());
+        Rectangle rectShape = new Rectangle(
+                (int) rect.getXPos(),
+                (int) rect.getYPos(),
+                (int) rect.getWidth(),
+                (int) rect.getHeight());
+
+        drawAndStrokeShape(g2d, rect, rectShape);
     }
 
     private void drawCircle(Graphics2D g2d, Circle circle) {
-        g2d.setColor(circle.getColor().asAWTColor());
-        g2d.fillOval(
-                (int) circle.getXPos() - (int) circle.getRadius(),
-                (int) circle.getYPos() - (int) circle.getRadius(),
-                (int) circle.getRadius() * 2,
-                (int) circle.getRadius() * 2);
+        Ellipse2D circleShape = new Ellipse2D.Float(
+                circle.getXPos() - circle.getRadius(),
+                circle.getYPos() - circle.getRadius(),
+                circle.getRadius() * 2,
+                circle.getRadius() * 2);
+
+        drawAndStrokeShape(g2d, circle, circleShape);
     }
 
     private void drawArc(Graphics2D g2d, Arc arc) {
-        g2d.setColor(arc.getColor().asAWTColor());
-        g2d.fillArc((int) arc.getXPos() - (int) arc.getRadius(), (int) arc.getYPos() - (int) arc.getRadius(), (int) arc.getRadius()*2, (int) arc.getRadius() * 2, (int) arc.getStart(), (int) arc.getEnd() );
+        Arc2D arcShape = new Arc2D.Float(
+                arc.getXPos() - arc.getRadius(),
+                arc.getYPos() - arc.getRadius(),
+                arc.getRadius() * 2, arc.getRadius() * 2,
+                arc.getStart(),
+                arc.getEnd(),
+                Arc2D.OPEN);
+
+        drawAndStrokeShape(g2d, arc, arcShape);
     }
 
     private void drawImage(Graphics2D g2d, de.ur.mi.oop.graphics.Image image) {
@@ -127,5 +145,17 @@ public class Canvas extends JPanel {
         g2d.drawString(label.getText(), label.getXPos(), label.getYPos());
     }
 
+    private void drawAndStrokeShape(Graphics2D g2d, GraphicsObject graphicsObject, Shape shape) {
+        Stroke stroke = new BasicStroke(graphicsObject.getBorderWeight());
+        Color fillColor = graphicsObject.getColor().asAWTColor();
+        Color strokeColor = graphicsObject.getBorderColor().asAWTColor();
+
+        g2d.setPaint(fillColor);
+        g2d.fill(shape);
+
+        g2d.setStroke(stroke);
+        g2d.setPaint(strokeColor);
+        g2d.draw(shape);
+    }
 
 }
