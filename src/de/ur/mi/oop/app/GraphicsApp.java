@@ -48,4 +48,9 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
     public int getHeight() {
         return getConfig().getHeight();
     }
+
+    public void setCanvasSize(int width, int height) {
+        getConfig().setWidth(width);
+        getConfig().setHeight(height);
+    }
 }
