@@ -18,6 +18,14 @@ public class Circle extends GraphicsObject {
         this.type = GraphicsObjectType.CIRCLE;
     }
 
+    public Circle(Point position, float radius) {
+        this(position.getXPos(), position.getYPos(), radius);
+    }
+
+    public Circle(Point position, float radius, Color color) {
+        this(position.getXPos(), position.getYPos(), radius, color);
+    }
+
     public void setRadius(float radius) {
         this.radius = radius;
     }
