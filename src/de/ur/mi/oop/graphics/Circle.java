@@ -49,4 +49,20 @@ public class Circle extends GraphicsObject {
     public void setHeight(float height) {
         setRadius(0.5f * height);
     }
+
+    public float getRightBorder() {
+        return this.radius + getXPos();
+    }
+
+    public float getLeftBorder() {
+        return getXPos() - this.radius;
+    }
+
+    public float getTopBorder() {
+        return getYPos() - this.radius;
+    }
+
+    public float getBottomBorder() {
+        return getYPos() + this.radius;
+    }
 }

@@ -53,4 +53,19 @@ public class Ellipse extends GraphicsObject {
         setRadiusY(0.5f * height);
     }
 
+    public float getRightBorder() {
+        return this.radiusX + getXPos();
+    }
+
+    public float getLeftBorder() {
+        return getXPos() - this.radiusX;
+    }
+
+    public float getTopBorder() {
+        return getYPos() - this.radiusY;
+    }
+
+    public float getBottomBorder() {
+        return getYPos() + this.radiusY;
+    }
 }
