@@ -8,8 +8,16 @@ import de.ur.mi.oop.events.KeyPressedEvent;
 import de.ur.mi.oop.events.MouseClickedEvent;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Der AppManager ist dafür zuständig, den Zeichen-Canvas zu initialisieren und
+ * die Anwendungs-Eigenschaften wie Fenstergröße, Fenstertitel usw. zu setzen.
+ *
+ * Im AppManager läuft die Zeichenschleife, welche die Grafikobjekte ständig erneut zeichnet. Er
+ * gibt die Tasten- und Maus-Events an die GraphicsApp weiter.
+ */
 public class AppManager implements ConfigChangeListener, ActionListener, KeyListener, MouseListener {
 
     private static final Color DEFAULT_BACKGROUND_COLOR = Colors.WHITE;
@@ -80,7 +88,9 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void onSizeChanged(int newWidth, int newHeight) {
-        appFrame.setSize(newWidth, newHeight);
+        //appFrame.setSize(newWidth, newHeight);
+        appFrame.getContentPane().setPreferredSize(new Dimension(newWidth, newHeight));
+        appFrame.pack();
     }
 
     @Override

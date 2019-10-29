@@ -8,10 +8,23 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Die Image-Klasse ist ein grafisches Objekt, das ein Bild anzeigt.
+ */
 public class Image extends GraphicsObject {
 
     private BufferedImage image;
 
+    /**
+     * Lädt und erstellt ein Bild, das an den Koordinaten x und y positioniert ist, und zwar mit
+     * die angegebene Breite und Höhe.
+     *
+     * @param x
+     * Die x-Position der linken oberen Ecke des Bildes.
+     * @param y y
+     * Die y-Position der linken oberen Ecke des Bildes.
+     * @param filePath Der Dateipfad zum anzuzeigenden Bild
+     */
     public Image(float x, float y, String filePath) {
         super(x, y);
         this.type = GraphicsObjectType.IMAGE;
@@ -21,6 +34,10 @@ public class Image extends GraphicsObject {
         rescale();
     }
 
+    /**
+     * Liefert das AWT-Image-Objekt zurück
+     * @return das AWT-Image-Objekt
+     */
     public BufferedImage getImage() {
         return image;
     }

@@ -4,6 +4,9 @@ import de.ur.mi.oop.graphics.GraphicsObject;
 
 import java.util.ArrayList;
 
+/**
+ * Die GraphicsAppCore-Klasse verwaltet den Zeichenpuffer und die Konfiguration.
+ */
 public class GraphicsAppCore {
 
     private static GraphicsAppCore app = null;
