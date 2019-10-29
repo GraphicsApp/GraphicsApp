@@ -3,7 +3,7 @@ package de.ur.mi.oop.graphics;
 import de.ur.mi.oop.colors.Color;
 
 /**
- * Die Ellipse-Klasse ist ein grafisches Objekt, dessen Aussehen aus einer Ellipse besteht.
+ * Die Ellipse-Klasse ist ein grafisches Objekt, das eine Ellipse darstellt.
  */
 public class Ellipse extends GraphicsObject {
 
@@ -11,7 +11,7 @@ public class Ellipse extends GraphicsObject {
     private float radiusY;
 
     /**
-     * Konstruiert eine neue Ellipse mit der angegebenen Breite und Höhe, deren
+     * Konstruiert eine neue Ellipse mit dem angegebenen vertikalen und horizontalen Radius, deren
      * Mittelpunkt an den Koordinaten x und y positioniert ist.
      *
      * @param x
@@ -23,7 +23,7 @@ public class Ellipse extends GraphicsObject {
      * @param radiusY
      * Der vertikale Radius der Ellipse in Pixel
      * @param color
-     * Die Hintergrundfarbe für die Ellipse
+     * Die Füllfarbe für die Ellipse
      */
     public Ellipse(float x, float y, float radiusX, float radiusY, Color color) {
         super(x,y, color);
@@ -33,7 +33,7 @@ public class Ellipse extends GraphicsObject {
     }
 
     /**
-     * Konstruiert eine neue Ellipse mit der angegebenen Breite und Höhe, deren
+     * Konstruiert eine neue Ellipse mit dem angegebenen vertikalen und horizontalen Radius, deren
      * Mittelpunkt an den Koordinaten x und y positioniert ist und mit einer
      * Default-Farbe gefärbt ist.
      *
