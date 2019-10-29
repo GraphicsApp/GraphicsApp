@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"de.ur.mi.oop.app"},{"l":"de.ur.mi.oop.colors"},{"l":"de.ur.mi.oop.events"},{"l":"de.ur.mi.oop.graphics"},{"l":"de.ur.mi.oop.launcher"},{"l":"de.ur.mi.oop.utils"}]
