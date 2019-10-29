@@ -3,6 +3,9 @@ package de.ur.mi.oop.app;
 import de.ur.mi.oop.colors.Color;
 import de.ur.mi.oop.colors.Colors;
 
+/**
+ * Basiskonfiguration der GraphicsApp-Anwendung
+ */
 // TODO: Config is shared by App and AppManager. Check if any safety issues occur by allowing both sides to change the object.
 public class Config {
 

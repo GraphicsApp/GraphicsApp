@@ -6,6 +6,9 @@ import de.ur.mi.oop.app.Config;
 
 import java.lang.reflect.InvocationTargetException;
 
+/**
+ * Der GraphicsAppLauncher startet eine GraphicsApp-Anwendung
+ */
 public class GraphicsAppLauncher {
 
     public static final String PACKAGE_DELIMITER = ".";

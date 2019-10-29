@@ -1,5 +1,10 @@
 package de.ur.mi.oop.colors;
 
+
+/**
+ * Repräsentiert eine RGB-Farbe. Instanzen dieser Klasse können an GraphicsObjects übergeben werden,
+ * um diese einzufärben.
+ */
 public class Color {
 
     private final int red;
@@ -9,6 +14,15 @@ public class Color {
 
     private java.awt.Color awtColor;
 
+    /**
+     * Erstellt eine neue Color-Instanz aus den angegebenen RGB-Werten.
+     * @param red
+     * der Rotwert der neuen Farbe (0-255)
+     * @param green
+     * der Grünwert der neuen Farbe (0-255)
+     * @param blue
+     * der Blauwert der neuen Farbe (0-255)
+     */
     public Color(int red, int green, int blue) {
         this.red = red;
         this.green = green;
@@ -16,6 +30,17 @@ public class Color {
         this.alpha = 255;
     }
 
+    /**
+     * Erstellt eine neue Color-Instanz aus den angegebenen RGB-Werten.
+     * @param red
+     * der Rotwert der neuen Farbe (0-255)
+     * @param green
+     * der Grünwert der neuen Farbe (0-255)
+     * @param blue
+     * der Blauwert der neuen Farbe (0-255)
+     * @param alpha
+     * der Transparenzwert der neuen Farbe (0-255)
+     */
     public Color(int red, int green, int blue, int alpha) {
         this.red = red;
         this.green = green;
@@ -23,20 +48,41 @@ public class Color {
         this.alpha = alpha;
     }
 
+    /**
+     * Gibt den Rotwert zurück
+     * @return Rotwert (0-255)
+     */
     public int red() {
         return red;
     }
 
+    /**
+     * Gibt den Grünwert zurück
+     * @return Grünwert (0-255)
+     */
     public int green() {
         return green;
     }
 
+    /**
+     * Gibt den Blauwert zurück
+     * @return Blauwert (0-255)
+     */
     public int blue() {
         return blue;
     }
 
+    /**
+     * Gibt den Transparenzwert zurück
+     * @return Transparenzwert (0-255)
+     */
     public int alpha() { return alpha; }
 
+    /**
+     * Transformiert die GraphicsApp-Farbinstanz in eine AWT-Farbe um mit Java2D benutzt werden zu können.
+     *
+     * @return die RGB-Farbe als AWT-Objekt
+     */
     public java.awt.Color asAWTColor() {
         if(awtColor == null) {
             awtColor = new java.awt.Color(red, green, blue, alpha);

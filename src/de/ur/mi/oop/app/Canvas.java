@@ -9,7 +9,9 @@ import java.awt.Rectangle;
 import java.awt.geom.Arc2D;
 import java.awt.geom.Ellipse2D;
 
-
+/**
+ *
+ */
 public class Canvas extends JPanel {
 
     private GraphicsObject[] components;

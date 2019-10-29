@@ -2,6 +2,9 @@ package de.ur.mi.oop.colors;
 
 import java.util.Random;
 
+/**
+ * Eine Sammlung von vordefinierten GraphicsApp-Colors.
+ */
 public class Colors {
 
     private static final Random rand = new Random();
@@ -19,7 +22,11 @@ public class Colors {
     public static final Color GREY = new Color(100,100,100);
     public static final Color TRANSPARENT = new Color(255,255,255, 0);
 
-
+    /**
+     * Erzeugt eine zufällige, opake Farbe.
+     *
+     * @return Ein Color-Objekt, das mit zufälligen Rot-, Grün- und Blauwerten instantiiert wurde.
+     */
     public static final Color getRandomColor() {
         int red = (rand.nextInt(256) + 255)/2;
         int green = (rand.nextInt(256) + 255)/2;
