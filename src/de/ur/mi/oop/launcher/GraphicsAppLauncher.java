@@ -19,6 +19,8 @@ public class GraphicsAppLauncher {
     }
 
     public static void launch(String appName, Config config) {
+        // Try to enable GPU rendering
+        System.setProperty("sun.java2d.opengl", "true");
         try {
             config.setTitle(appName);
             GraphicsApp app = getGraphicsAppInstance(appName);
