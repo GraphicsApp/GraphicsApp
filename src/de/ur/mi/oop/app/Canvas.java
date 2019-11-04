@@ -148,16 +148,17 @@ public class Canvas extends JPanel {
     }
 
     private void drawAndStrokeShape(Graphics2D g2d, GraphicsObject graphicsObject, Shape shape) {
-        Stroke stroke = new BasicStroke(graphicsObject.getBorderWeight());
         Color fillColor = graphicsObject.getColor().asAWTColor();
-        Color strokeColor = graphicsObject.getBorderColor().asAWTColor();
-
         g2d.setPaint(fillColor);
         g2d.fill(shape);
 
-        g2d.setStroke(stroke);
-        g2d.setPaint(strokeColor);
-        g2d.draw(shape);
+        if (graphicsObject.getBorderWeight() != 0.f) {
+            Stroke stroke = new BasicStroke(graphicsObject.getBorderWeight());
+            Color strokeColor = graphicsObject.getBorderColor().asAWTColor();
+            g2d.setStroke(stroke);
+            g2d.setPaint(strokeColor);
+            g2d.draw(shape);
+        }
     }
 
 }
