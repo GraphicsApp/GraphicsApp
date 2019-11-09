@@ -10,11 +10,12 @@ import de.ur.mi.oop.events.MouseClickedEvent;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferStrategy;
 
 /**
  * Der AppManager ist dafür zuständig, den Zeichen-Canvas zu initialisieren und
  * die Anwendungs-Eigenschaften wie Fenstergröße, Fenstertitel usw. zu setzen.
- *
+ * <p>
  * Im AppManager läuft die Zeichenschleife, welche die Grafikobjekte ständig erneut zeichnet. Er
  * gibt die Tasten- und Maus-Events an die GraphicsApp weiter.
  */
@@ -62,40 +63,41 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
     }
 
     private void startLoop() {
-        loopTimer = new Timer(1000/config.getFrameRate(), this);
+
+        loopTimer = new Timer(1000 / config.getFrameRate(), this);
         loopTimer.start();
     }
 
     private void showFPS(int fps) {
-        appFrame.setTitle("Current FPS: ~ " + fps);
+        if (config.shouldShowFrameRate()) {
+            appFrame.setTitle("Current FPS: ~ " + fps);
+        }
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         long currentTime = System.currentTimeMillis();
-
-        if(lastFrameTime != 0) {
-            int delta = (int) (currentTime - lastFrameTime);
-            int currentFPS = 1000/delta;
-            if(Math.abs(currentFPS - lastFPS) > 5) {
+        long delta = currentTime - lastFrameTime;
+        if (delta != currentTime) {
+            int currentFPS = 1000 / (int) delta;
+            if (Math.abs(currentFPS - lastFPS) > 5) {
                 showFPS(currentFPS);
             }
             lastFPS = currentFPS;
         }
-       lastFrameTime = currentTime;
         draw();
+        lastFrameTime = System.currentTimeMillis();
     }
 
     @Override
     public void onSizeChanged(int newWidth, int newHeight) {
-        //appFrame.setSize(newWidth, newHeight);
         appFrame.getContentPane().setPreferredSize(new Dimension(newWidth, newHeight));
         appFrame.pack();
     }
 
     @Override
     public void onFrameRateChanged(int newFramerate) {
-        if(loopTimer != null) {
+        if (loopTimer != null) {
             loopTimer.setDelay(1000 / newFramerate);
         }
     }
@@ -124,7 +126,7 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
         long timestamp = System.currentTimeMillis();
         int xPos = e.getX();
         int yPos = e.getY();
-        MouseClickedEvent mouseClickedEvent = new MouseClickedEvent(timestamp,xPos,yPos);
+        MouseClickedEvent mouseClickedEvent = new MouseClickedEvent(timestamp, xPos, yPos);
         ((GraphicsAppMouseListener) app).onMouseClicked(mouseClickedEvent);
     }
 

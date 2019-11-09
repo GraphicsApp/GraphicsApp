@@ -13,17 +13,13 @@ public class Circle extends GraphicsObject {
      * Konstruiert einen neuen Kreis mit dem angegebenen Radius, deren
      * Mittelpunkt an den Koordinaten x und y positioniert ist.
      *
-     * @param x
-     * Die x-Position der Ellipse in Pixel
-     * @param y y
-     * Die y-Position der Ellipse in Pixel
-     * @param radius
-     * Der Radius des Kreises in Pixel
-     * @param color
-     * Die Füllfarbe für den Kreis
+     * @param x      Die x-Position der Ellipse in Pixel
+     * @param y      Die y-Position der Ellipse in Pixel
+     * @param radius Der Radius des Kreises in Pixel
+     * @param color  Die Füllfarbe für den Kreis
      */
     public Circle(float x, float y, float radius, Color color) {
-        super(x,y, color);
+        super(x, y, color);
         this.radius = radius;
         this.type = GraphicsObjectType.CIRCLE;
     }
@@ -32,15 +28,13 @@ public class Circle extends GraphicsObject {
      * Konstruiert einen neuen Kreis mit dem angegebenen Radius, deren
      * Mittelpunkt an den Koordinaten x und y positioniert ist.
      *
-     * @param x
-     * Die x-Position der Ellipse in Pixel
-     * @param y y
-     * Die y-Position der Ellipse in Pixel
-     * @param radius
-     * Der Radius des Kreises in Pixel
+     * @param x      Die x-Position der Ellipse in Pixel
+     * @param y      y
+     *               Die y-Position der Ellipse in Pixel
+     * @param radius Der Radius des Kreises in Pixel
      */
     public Circle(float x, float y, float radius) {
-        super(x,y);
+        super(x, y);
         this.radius = radius;
         this.type = GraphicsObjectType.CIRCLE;
     }
@@ -48,9 +42,9 @@ public class Circle extends GraphicsObject {
     /**
      * Konstruiert einen neuen Kreis mit dem angegebenen Radius, deren
      * Mittelpunkt an den Koordinaten positioniert ist, die durch einen Point gegeben sind.
+     *
      * @param position Koordinaten des Mittelpunkts
-     * @param radius
-     * Der Radius des Kreises in Pixel
+     * @param radius   Der Radius des Kreises in Pixel
      */
     public Circle(Point position, float radius) {
         this(position.getXPos(), position.getYPos(), radius);
@@ -59,11 +53,10 @@ public class Circle extends GraphicsObject {
     /**
      * Konstruiert einen neuen Kreis mit dem angegebenen Radius, deren
      * Mittelpunkt an den Koordinaten positioniert ist, die durch einen Point gegeben sind.
+     *
      * @param position Koordinaten des Mittelpunkts
-     * @param radius
-     * Der Radius des Kreises in Pixel
-     * @param color
-     * Die Füllfarbe für den Kreis
+     * @param radius   Der Radius des Kreises in Pixel
+     * @param color    Die Füllfarbe für den Kreis
      */
     public Circle(Point position, float radius, Color color) {
         this(position.getXPos(), position.getYPos(), radius, color);

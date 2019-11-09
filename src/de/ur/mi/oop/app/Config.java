@@ -12,8 +12,9 @@ public class Config {
     private static final int DEFAULT_WIDTH = 1280;
     private static final int DEFAULT_HEIGHT = 720;
     private static final int DEFAULT_FRAME_RATE = 60;
-    private static final Color DEFAULT_BACKRGOUND_COLOR = Colors.WHITE;
+    private static final Color DEFAULT_BACKGROUND_COLOR = Colors.WHITE;
     private static final Color DEFAULT_COLOR = Colors.RED;
+    private static final boolean DEFAULT_FRAME_RATE_VISIBILITY = false;
     private static final String DEFAULT_TITLE = "GraphicsApp";
 
     private static final float DEFAULT_STROKE_WIDTH = 2f;
@@ -21,7 +22,8 @@ public class Config {
     private int width = DEFAULT_WIDTH;
     private int height = DEFAULT_HEIGHT;
     private int frameRate = DEFAULT_FRAME_RATE;
-    private Color backgroundColor = DEFAULT_BACKRGOUND_COLOR;
+    private boolean showFrameRate = DEFAULT_FRAME_RATE_VISIBILITY;
+    private Color backgroundColor = DEFAULT_BACKGROUND_COLOR;
     private float strokeWidth = DEFAULT_STROKE_WIDTH;
     private String title = DEFAULT_TITLE;
 
@@ -43,6 +45,10 @@ public class Config {
 
     public float getStrokeWidth() {
         return strokeWidth;
+    }
+
+    public void setStrokeWidth(float strokeWidth) {
+        this.strokeWidth = strokeWidth;
     }
 
     public int getHeight() {
@@ -81,6 +87,14 @@ public class Config {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public boolean shouldShowFrameRate() {
+        return this.showFrameRate;
+    }
+
+    public void setFrameRateVisibility(boolean frameRateIsVisible) {
+        this.showFrameRate = frameRateIsVisible;
     }
 
 }

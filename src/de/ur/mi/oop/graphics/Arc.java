@@ -14,15 +14,15 @@ public class Arc extends GraphicsObject {
     /**
      * Konstruiert einen Kreisbogen an der Stelle (x, y)
      *
-     * @param x x-Koordinate des Mittelpunkts
-     * @param y y-Koordinate des Mittelpunkts
-     * @param radius der Radius des Bogens
-     * @param start Der Startwinkel des Bogens in Grad.
-     * @param end Die Winkelausdehnung des Bogens in Grad.
-     * @param color Die Füllfarbe des Bogens
+     * @param x      Die x-Koordinate des Mittelpunkts
+     * @param y      Die y-Koordinate des Mittelpunkts
+     * @param radius Der Radius des Bogens
+     * @param start  Der Startwinkel des Bogens in Grad.
+     * @param end    Die Winkelausdehnung des Bogens in Grad.
+     * @param color  Die Füllfarbe des Bogens
      */
     public Arc(float x, float y, float radius, float start, float end, Color color) {
-        super(x,y, color);
+        super(x, y, color);
         this.radius = radius;
         this.start = start;
         this.end = end;
@@ -32,12 +32,12 @@ public class Arc extends GraphicsObject {
     /**
      * Konstruiert einen vollständigen Kreisbogen an der Stelle (x, y)
      *
-     * @param x x-Koordinate des Mittelpunkts
-     * @param y y-Koordinate des Mittelpunkts
+     * @param x      x-Koordinate des Mittelpunkts
+     * @param y      y-Koordinate des Mittelpunkts
      * @param radius der Radius des Bogens
      */
     public Arc(float x, float y, float radius) {
-        super(x,y);
+        super(x, y);
         this.radius = radius;
         this.start = 0;
         this.end = 360;
@@ -72,6 +72,7 @@ public class Arc extends GraphicsObject {
 
     /**
      * Liefer die Winkelausdehnung des Bogens in Grad.
+     *
      * @return die Winkelausdehnung des Bogens in Grad
      */
     public float getEnd() {

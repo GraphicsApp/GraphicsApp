@@ -56,6 +56,7 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
 
     /**
      * Zeichnet den Hintergrund der GraphicsApp-Anwendung
+     *
      * @param color die Hintergrundfarbe
      */
     protected void drawBackground(Color color) {
@@ -67,12 +68,19 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
     }
 
     /**
-     * Setzt die Bildwiederholrate der GraphgicsApp-Anwendung
+     * Setzt die Bildwiederholrate der GraphicsApp-Anwendung
      *
      * @param frameRate Bilder pro Sekunde
      */
     protected void setFrameRate(int frameRate) {
         getConfig().setFrameRate(frameRate);
+    }
+
+    /**
+     * Zeigt die aktuelle Bildwiederholrate in der Titelleiste der Anwendung an
+     */
+    protected void showFrameRate() {
+        getConfig().setFrameRateVisibility(true);
     }
 
     public int getWidth() {

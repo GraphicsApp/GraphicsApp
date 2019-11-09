@@ -10,7 +10,7 @@ import java.awt.geom.Arc2D;
 import java.awt.geom.Ellipse2D;
 
 /**
- *
+ * Zeichenfläche zur Darstellung der einzelnen GraphicsObjects
  */
 public class Canvas extends JPanel {
 
@@ -22,15 +22,10 @@ public class Canvas extends JPanel {
         createRenderingHints();
     }
 
-    // TODO: Decide which RenderingHint regarding Quality we want to pass,
-    // since at the moment, we pass different values for the same Rendering Hint (KEY_RENDERING)
     private void createRenderingHints() {
-         renderingHints = new RenderingHints(RenderingHints.KEY_ANTIALIASING,
-                        RenderingHints.VALUE_ANTIALIAS_ON);
-        renderingHints.put(RenderingHints.KEY_RENDERING,
-                RenderingHints.VALUE_RENDER_QUALITY);
-        renderingHints.put(RenderingHints.KEY_RENDERING,
-                RenderingHints.VALUE_RENDER_SPEED);
+        renderingHints = new RenderingHints(RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+        renderingHints.put(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_SPEED);
 
     }
 
@@ -47,23 +42,21 @@ public class Canvas extends JPanel {
     }
 
     private void draw(Graphics2D g2d) {
-        if(components != null) {
-            for (int i = 0; i < components.length; i++) {
-                drawComponent(g2d, components[i]);
+        if (components != null) {
+            for (GraphicsObject component : components) {
+                drawComponent(g2d, component);
             }
         }
     }
 
     private void drawComponent(Graphics2D g2d, GraphicsObject object) {
-        switch(object.getType()) {
+        switch (object.getType()) {
             case BACKGROUND:
+            case RECTANGLE:
                 drawRectangle(g2d, (de.ur.mi.oop.graphics.Rectangle) object);
                 break;
             case LINE:
                 drawLine(g2d, (Line) object);
-                break;
-            case RECTANGLE:
-                drawRectangle(g2d, (de.ur.mi.oop.graphics.Rectangle) object);
                 break;
             case CIRCLE:
                 drawCircle(g2d, (Circle) object);
@@ -139,7 +132,7 @@ public class Canvas extends JPanel {
     }
 
     private void drawImage(Graphics2D g2d, de.ur.mi.oop.graphics.Image image) {
-        g2d.drawImage(image.getImage(), (int)  image.getXPos(), (int) image.getYPos(), null);
+        g2d.drawImage(image.getImage(), (int) image.getXPos(), (int) image.getYPos(), null);
     }
 
     private void drawLabel(Graphics2D g2d, Label label) {

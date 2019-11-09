@@ -1,4 +1,4 @@
-    package de.ur.mi.oop.graphics;
+package de.ur.mi.oop.graphics;
 
 import de.ur.mi.oop.app.GraphicsApp;
 import de.ur.mi.oop.colors.Color;
@@ -49,7 +49,7 @@ public abstract class GraphicsObject {
     }
 
     public GraphicsObject(float x, float y) {
-        this(x , y, GraphicsApp.getApp().getConfig().getDefaultColor());
+        this(x, y, GraphicsApp.getApp().getConfig().getDefaultColor());
     }
 
     public GraphicsObject(float x, float y, float width, float height, Color color) {
@@ -81,6 +81,7 @@ public abstract class GraphicsObject {
     ///////////////////////////////////////////////////////////////////////////
     // Getters and Setters
     ///////////////////////////////////////////////////////////////////////////
+
     /**
      * Liefert die x-Koordinate des Objekts.
      *
@@ -149,6 +150,7 @@ public abstract class GraphicsObject {
 
     /**
      * Setzt die Breite des Objekts.
+     *
      * @param width die neue Breite
      */
     public void setWidth(float width) {
@@ -157,6 +159,7 @@ public abstract class GraphicsObject {
 
     /**
      * Setzt die Höhe des Objekts.
+     *
      * @param height die neue Breite
      */
     public void setHeight(float height) {
@@ -201,6 +204,7 @@ public abstract class GraphicsObject {
 
     /**
      * Liefert die Hintergrundfarbe des Objekts
+     *
      * @return die Hintergrundfarbe
      */
     public Color getColor() {
@@ -209,6 +213,7 @@ public abstract class GraphicsObject {
 
     /**
      * Setzt die Hintergrundfarbe des Objekts
+     *
      * @param color die neue Hintergrundfarbe
      */
     public void setColor(Color color) {
@@ -217,6 +222,7 @@ public abstract class GraphicsObject {
 
     /**
      * Setzt die Randfarbe des Objekts
+     *
      * @param color die neue Randfarbe
      */
     public void setBorderColor(Color color) {
@@ -225,6 +231,7 @@ public abstract class GraphicsObject {
 
     /**
      * Setzt die Randstärke des Objekts
+     *
      * @param weight die neue Randstärke
      */
     public void setBorderWeight(float weight) {
@@ -233,7 +240,8 @@ public abstract class GraphicsObject {
 
     /**
      * Setzt die Randeigenschaften des Objekts
-     * @param color die neue Randfarbe
+     *
+     * @param color  die neue Randfarbe
      * @param weight die neue Randstärke
      */
     public void setBorder(Color color, float weight) {
@@ -243,6 +251,7 @@ public abstract class GraphicsObject {
 
     /**
      * Liefert die Randstärke des Objekts
+     *
      * @return die Randstärke des Objekts
      */
     public float getBorderWeight() {
@@ -251,6 +260,7 @@ public abstract class GraphicsObject {
 
     /**
      * Liefert die Randfarbe des Objekts
+     *
      * @return die Randfarbe des Objekts
      */
     public Color getBorderColor() {
@@ -259,6 +269,7 @@ public abstract class GraphicsObject {
 
     /**
      * Liefert den Grafik-Typ des Objekts
+     *
      * @return der Grafik-Typ des Objekts
      */
     public GraphicsObjectType getType() {
@@ -272,11 +283,8 @@ public abstract class GraphicsObject {
     /**
      * Bewegt das Objekt auf dem Bildschirm mit den Verschiebungen dx und dy.
      *
-     * @param dx
-     * Die horizontale Änderung der Position
-     * @param dy
-     * Die vertikale Änderung der Position
-     *
+     * @param dx Die horizontale Änderung der Position
+     * @param dy Die vertikale Änderung der Position
      */
     public void move(float dx, float dy) {
         this.xPos += dx;
@@ -286,10 +294,9 @@ public abstract class GraphicsObject {
     /**
      * Prüft, ob dieses Objekt die angegebenen Koordinaten enthält.
      *
-     * @param x
-     * Die zu testende x-Position
+     * @param x Die zu testende x-Position
      * @param y y
-     * Die zu testende y-Position
+     *          Die zu testende y-Position
      * @return true, wenn sich der Punkt (x, y) innerhalb des Objekts befindet,
      * und false andernfalls
      */
@@ -300,8 +307,7 @@ public abstract class GraphicsObject {
     /**
      * Liefert den Abstand zu einem anderen Grafikobjekt.
      *
-     * @param object
-     * das andere Grafikobjekt
+     * @param object das andere Grafikobjekt
      * @return Abstand zwischen diesem Objekt und dem angegebenen Objekt
      */
     public double distanceTo(GraphicsObject object) {

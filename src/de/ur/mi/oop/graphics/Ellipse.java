@@ -14,19 +14,14 @@ public class Ellipse extends GraphicsObject {
      * Konstruiert eine neue Ellipse mit dem angegebenen vertikalen und horizontalen Radius, deren
      * Mittelpunkt an den Koordinaten x und y positioniert ist.
      *
-     * @param x
-     * Die x-Position der Ellipse in Pixel
-     * @param y y
-     * Die y-Position der Ellipse in Pixel
-     * @param radiusX
-     * Der horizontale Radius der Ellipse in Pixel
-     * @param radiusY
-     * Der vertikale Radius der Ellipse in Pixel
-     * @param color
-     * Die Füllfarbe für die Ellipse
+     * @param x       Die x-Position der Ellipse in Pixel
+     * @param y       Die y-Position der Ellipse in Pixel
+     * @param radiusX Der horizontale Radius der Ellipse in Pixel
+     * @param radiusY Der vertikale Radius der Ellipse in Pixel
+     * @param color   Die Füllfarbe für die Ellipse
      */
     public Ellipse(float x, float y, float radiusX, float radiusY, Color color) {
-        super(x,y, color);
+        super(x, y, color);
         this.radiusX = radiusX;
         this.radiusY = radiusY;
         this.type = GraphicsObjectType.ELLIPSE;
@@ -37,17 +32,14 @@ public class Ellipse extends GraphicsObject {
      * Mittelpunkt an den Koordinaten x und y positioniert ist und mit einer
      * Default-Farbe gefärbt ist.
      *
-     * @param x
-     * Die x-Position der Ellipse in Pixel
-     * @param y y
-     * Die y-Position der Ellipse in Pixel
-     * @param radiusX
-     * Der horizontale Radius der Ellipse in Pixel
-     * @param radiusY
-     * Der vertikale Radius der Ellipse in Pixel
+     * @param x       Die x-Position der Ellipse in Pixel
+     * @param y       y
+     *                Die y-Position der Ellipse in Pixel
+     * @param radiusX Der horizontale Radius der Ellipse in Pixel
+     * @param radiusY Der vertikale Radius der Ellipse in Pixel
      */
     public Ellipse(float x, float y, float radiusX, float radiusY) {
-        super(x,y);
+        super(x, y);
         this.radiusX = radiusX;
         this.radiusY = radiusY;
         this.type = GraphicsObjectType.ELLIPSE;

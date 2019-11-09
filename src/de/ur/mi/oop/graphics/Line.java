@@ -15,10 +15,9 @@ public class Line extends GraphicsObject {
      *
      * @param startX Die x-Position des ersten Punktes
      * @param startY Die y-Position des ersten Punktes
-     * @param endX Die x-Position des Endpunktes
-     * @param endY Die y-Position des Endpunktes
-     * @param color
-     *            Die Strichfarbe für die Linie
+     * @param endX   Die x-Position des Endpunktes
+     * @param endY   Die y-Position des Endpunktes
+     * @param color  Die Strichfarbe für die Linie
      */
     public Line(float startX, float startY, float endX, float endY, Color color) {
         super(startX, startY, color);
@@ -32,12 +31,11 @@ public class Line extends GraphicsObject {
     /**
      * Konstruiert eine neue Linie von startX und startY nach endX und endY.
      *
-     * @param startX Die x-Position des ersten Punktes
-     * @param startY Die y-Position des ersten Punktes
-     * @param endX Die x-Position des Endpunktes
-     * @param endY Die y-Position des Endpunktes
-     * @param color
-     *            Die Strichfarbe für die Linie
+     * @param startX    Die x-Position des ersten Punktes
+     * @param startY    Die y-Position des ersten Punktes
+     * @param endX      Die x-Position des Endpunktes
+     * @param endY      Die y-Position des Endpunktes
+     * @param color     Die Strichfarbe für die Linie
      * @param lineWidth Die Strichstärke
      */
     public Line(float startX, float startY, float endX, float endY, Color color, float lineWidth) {
@@ -49,9 +47,8 @@ public class Line extends GraphicsObject {
      * Konstruiert eine neue Linie von einem Startpunkt zu einem Endpunkt.
      *
      * @param start Start-Koordinatenpunkt
-     * @param end End-Koordinatenpunkt
-     * @param color
-     *            Die Strichfarbe für die Linie
+     * @param end   End-Koordinatenpunkt
+     * @param color Die Strichfarbe für die Linie
      */
     public Line(Point start, Point end, Color color) {
         this(start.getXPos(), start.getYPos(), end.getXPos(), end.getYPos(), color);
@@ -60,10 +57,9 @@ public class Line extends GraphicsObject {
     /**
      * Konstruiert eine neue Linie von einem Startpunkt zu einem Endpunkt.
      *
-     * @param start Start-Koordinatenpunkt
-     * @param end End-Koordinatenpunkt
-     * @param color
-     *            Die Strichfarbe für die Linie
+     * @param start     Start-Koordinatenpunkt
+     * @param end       End-Koordinatenpunkt
+     * @param color     Die Strichfarbe für die Linie
      * @param lineWidth Die Strichstärke
      */
     public Line(Point start, Point end, Color color, float lineWidth) {
@@ -163,14 +159,10 @@ public class Line extends GraphicsObject {
     /**
      * Setzt sowohl Start- als auch Endpunkt der Linie neu
      *
-     * @param toStartPointX
-     * Die neue x-Position des Startpunkts
-     * @param toStartPointY
-     * Die neue y-Position des Startpunktes
-     * @param toEndPointX
-     * Die neue x-Position des Endpunkts
-     * @param toEndPointY
-     * Die neue y-Position des Endpunktes
+     * @param toStartPointX Die neue x-Position des Startpunkts
+     * @param toStartPointY Die neue y-Position des Startpunktes
+     * @param toEndPointX   Die neue x-Position des Endpunkts
+     * @param toEndPointY   Die neue y-Position des Endpunktes
      */
     public void setStartAndEndPoint(float toStartPointX, float toStartPointY, float toEndPointX, float toEndPointY) {
         this.setStartPoint(toStartPointX, toStartPointY);

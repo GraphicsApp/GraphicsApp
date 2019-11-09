@@ -9,7 +9,7 @@ public class Background extends Rectangle {
 
     // TODO: Remove dependency to GraphicsApp by injecting correct width and height
     public Background() {
-        super(0,0, GraphicsApp.getApp().getWidth(), GraphicsApp.getApp().getHeight());
+        super(0, 0, GraphicsApp.getApp().getWidth(), GraphicsApp.getApp().getHeight());
         this.type = GraphicsObjectType.BACKGROUND;
     }
 
