@@ -14,5 +14,5 @@ public enum GraphicsObjectType {
     CIRCLE,
     ELLIPSE,
     LABEL,
-    IMAGE;
+    IMAGE
 }

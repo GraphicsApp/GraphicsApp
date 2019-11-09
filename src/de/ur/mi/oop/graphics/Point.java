@@ -17,6 +17,7 @@ public class Point {
 
     /**
      * Erzeugt einen neuen Point bei (x, y).
+     *
      * @param x die x-Koordinate des Punktes
      * @param y die y-Koordinate des Punktes
      */
@@ -40,11 +41,9 @@ public class Point {
     /**
      * Setzt die Position des Punktes auf die angegebene Position.
      *
-     * @param x
-     * Die x-Position des Punktes
+     * @param x Die x-Position des Punktes
      * @param y y
-     * Die y-Position des Punktes
-     *
+     *          Die y-Position des Punktes
      */
     public void setLocation(float x, float y) {
         this.x = x;
@@ -54,11 +53,8 @@ public class Point {
     /**
      * Bewegt den Punkt auf dem Bildschirm mit den Verschiebungen dx und dy.
      *
-     * @param dx
-     * Die horizontale Änderung der Position
-     * @param dy
-     * Die vertikale Änderung der Position
-     *
+     * @param dx Die horizontale Änderung der Position
+     * @param dy Die vertikale Änderung der Position
      */
     public void move(float dx, float dy) {
         this.x += dx;
@@ -68,8 +64,7 @@ public class Point {
     /**
      * Setzt die Position des Punktes auf die Position eines neuen Punktobjekts.
      *
-     * @param point
-     * Der Punkt, der die neuen Positionsinformationen enthält.
+     * @param point Der Punkt, der die neuen Positionsinformationen enthält.
      */
     public void setLocation(Point point) {
         this.x = point.x;

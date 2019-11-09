@@ -28,10 +28,8 @@ public class Compound extends GraphicsObject {
     /**
      * Erzeugt ein neues Compound-Objekt ohne interne Komponenten an der angegebenen Position.
      *
-     * @param x
-     *            die x-Position in Pixeln
-     * @param y
-     *            die y-Position in Pixeln
+     * @param x Die x-Position in Pixeln
+     * @param y Die y-Position in Pixeln
      */
     public Compound(float x, float y) {
         super(x, y);
@@ -44,12 +42,9 @@ public class Compound extends GraphicsObject {
      * Erzeugt ein neues Compound-Objekt ohne interne Komponenten an der angegebenen Position
      * mit einer Hintergrundfarbe.
      *
-     * @param x
-     *            die x-Position in Pixeln
-     * @param y
-     *            die y-Position in Pixeln
-     * @param backgroundColor
-     * Hintergrundfarbe
+     * @param x               Die x-Position in Pixeln
+     * @param y               Die y-Position in Pixeln
+     * @param backgroundColor Hintergrundfarbe
      */
     public Compound(float x, float y, Color backgroundColor) {
         this(x, y);
@@ -60,8 +55,7 @@ public class Compound extends GraphicsObject {
     /**
      * Erzeugt ein neues Compound Objekt ohne interne Komponenten an der mittels Point-Objekt angegebenen Position.
      *
-     * @param position
-     * Point-Objekt, welches die Stelle markiert
+     * @param position Point-Objekt, welches die Stelle markiert
      */
     public Compound(Point position) {
         this(position.getXPos(), position.getYPos());
@@ -71,10 +65,8 @@ public class Compound extends GraphicsObject {
      * Erzeugt ein neues Compound-Objekt ohne interne Komponenten an der mittels Point-Objekt angegebenen Position
      * mit einer Hintergrundfarbe.
      *
-     * @param position
-     * Point-Objekt, welches die Stelle markiert
-     * @param backgroundColor
-     * Hintergrundfarbe
+     * @param position        Point-Objekt, welches die Stelle markiert
+     * @param backgroundColor Hintergrundfarbe
      */
     public Compound(Point position, Color backgroundColor) {
         this(position.getXPos(), position.getYPos(), backgroundColor);
@@ -147,28 +139,24 @@ public class Compound extends GraphicsObject {
      * Liefert das Objekt am angegebenen Index, die Nummerierung geht von hinten nach vorne
      * (oberstes Objekt hat den höchsten Index).
      *
-     * @param index
-     *            Der Index des zurückzugebenden Objekts
+     * @param index Der Index des zurückzugebenden Objekts
      * @return Das Objekt mit dem angegebenen Index
      */
     public GraphicsObject get(int index) {
-        return (GraphicsObject)this.objects.get(index);
+        return this.objects.get(index);
     }
 
     /**
      * Liefert das oberste Grafikobjekt, das den Punkt (x, y) enthält, oder
      * null, wenn kein solches Objekt existiert. Die Koordinaten müssen Absolutwerte sein.
      *
-     * @param x
-     *            Die x-Koordinate des Punktes
-     * @param y
-     *            Die y-Koordinate des Punktes
-     * @return
-     * Das Objekt an der angegebenen Stelle oder null, wenn kein solches Objekt vorhanden ist.
+     * @param x Die x-Koordinate des Punktes
+     * @param y Die y-Koordinate des Punktes
+     * @return Das Objekt an der angegebenen Stelle oder null, wenn kein solches Objekt vorhanden ist.
      */
     public GraphicsObject getObjectAt(float x, float y) {
-        for(int i = this.objects.size() - 1; i >= 0; --i) {
-            GraphicsObject object = (GraphicsObject)this.objects.get(i);
+        for (int i = this.objects.size() - 1; i >= 0; --i) {
+            GraphicsObject object = this.objects.get(i);
             if (object.hitTest(x, y)) {
                 return object;
             }
@@ -182,8 +170,7 @@ public class Compound extends GraphicsObject {
      * null, wenn kein solches Objekt existiert. Die Koordinaten müssen Absolutwerte sein.
      *
      * @param point Die Koordinaten des Punktes
-     * @return
-     * Das Objekt an der angegebenen Stelle oder null, wenn kein solches Objekt vorhanden ist.
+     * @return Das Objekt an der angegebenen Stelle oder null, wenn kein solches Objekt vorhanden ist.
      */
     public GraphicsObject getObjectAt(Point point) {
         return this.getObjectAt(point.getXPos(), point.getYPos());
@@ -201,8 +188,7 @@ public class Compound extends GraphicsObject {
     /**
      * Entfernt ein Objekt aus diesem Compound.
      *
-     * @param object
-     * Das zu entfernende Objekt
+     * @param object Das zu entfernende Objekt
      */
     public void remove(GraphicsObject object) {
         this.objects.remove(object);
@@ -212,7 +198,6 @@ public class Compound extends GraphicsObject {
      * Entfernt ein Objekt aus diesem Compound.
      *
      * @param index Der Index des zu entfernenden Objekts
-     *
      */
     public void remove(int index) {
         this.objects.remove(index);
@@ -233,10 +218,8 @@ public class Compound extends GraphicsObject {
      * Überprüft, ob sich ein Punkt "innerhalb" des Compounds befindet,
      * was bedeutet, dass er sich innerhalb einer der Komponenten befindet.
      *
-     * @param x
-     *            Die x-Koordinate des zu prüfenden Punktes.
-     * @param y
-     *            Die y-Koordinate des zu prüfenden Punktes.
+     * @param x Die x-Koordinate des zu prüfenden Punktes.
+     * @param y Die y-Koordinate des zu prüfenden Punktes.
      * @return true, wenn sich der Punkt (x, y) innerhalb des Compounds befindet,
      * und false andernfalls
      */
@@ -333,6 +316,7 @@ public class Compound extends GraphicsObject {
     /**
      * Bewegt das Compound und alle darin enthaltenen Objekte
      * um die angegebene Verschiebung in x- und y-Richtung
+     *
      * @param dx Delta-X - Verschiebung in x-Richtung
      * @param dy Delta-Y - Verschiebung in y-Richtung
      */
@@ -347,6 +331,7 @@ public class Compound extends GraphicsObject {
 
     /**
      * Prüft, ob am angegebenen Punkt ein GraphicsObject liegt
+     *
      * @param x Die x-Koordinate des zu prüfenden Punktes.
      * @param y Die y-Koordinate des zu prüfenden Punktes.
      * @return true, wenn sich der Punkt (x, y) innerhalb eines enthaltenen GraphicObjects befindet,

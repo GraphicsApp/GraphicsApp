@@ -16,12 +16,10 @@ public class Color {
 
     /**
      * Erstellt eine neue Color-Instanz aus den angegebenen RGB-Werten.
-     * @param red
-     * der Rotwert der neuen Farbe (0-255)
-     * @param green
-     * der Grünwert der neuen Farbe (0-255)
-     * @param blue
-     * der Blauwert der neuen Farbe (0-255)
+     *
+     * @param red   der Rotwert der neuen Farbe (0-255)
+     * @param green der Grünwert der neuen Farbe (0-255)
+     * @param blue  der Blauwert der neuen Farbe (0-255)
      */
     public Color(int red, int green, int blue) {
         this.red = red;
@@ -32,14 +30,11 @@ public class Color {
 
     /**
      * Erstellt eine neue Color-Instanz aus den angegebenen RGB-Werten.
-     * @param red
-     * der Rotwert der neuen Farbe (0-255)
-     * @param green
-     * der Grünwert der neuen Farbe (0-255)
-     * @param blue
-     * der Blauwert der neuen Farbe (0-255)
-     * @param alpha
-     * der Transparenzwert der neuen Farbe (0-255)
+     *
+     * @param red   der Rotwert der neuen Farbe (0-255)
+     * @param green der Grünwert der neuen Farbe (0-255)
+     * @param blue  der Blauwert der neuen Farbe (0-255)
+     * @param alpha der Transparenzwert der neuen Farbe (0-255)
      */
     public Color(int red, int green, int blue, int alpha) {
         this.red = red;
@@ -50,6 +45,7 @@ public class Color {
 
     /**
      * Gibt den Rotwert zurück
+     *
      * @return Rotwert (0-255)
      */
     public int red() {
@@ -58,6 +54,7 @@ public class Color {
 
     /**
      * Gibt den Grünwert zurück
+     *
      * @return Grünwert (0-255)
      */
     public int green() {
@@ -66,6 +63,7 @@ public class Color {
 
     /**
      * Gibt den Blauwert zurück
+     *
      * @return Blauwert (0-255)
      */
     public int blue() {
@@ -74,9 +72,12 @@ public class Color {
 
     /**
      * Gibt den Transparenzwert zurück
+     *
      * @return Transparenzwert (0-255)
      */
-    public int alpha() { return alpha; }
+    public int alpha() {
+        return alpha;
+    }
 
     /**
      * Transformiert die GraphicsApp-Farbinstanz in eine AWT-Farbe um mit Java2D benutzt werden zu können.
@@ -84,7 +85,7 @@ public class Color {
      * @return die RGB-Farbe als AWT-Objekt
      */
     public java.awt.Color asAWTColor() {
-        if(awtColor == null) {
+        if (awtColor == null) {
             awtColor = new java.awt.Color(red, green, blue, alpha);
         }
         return awtColor;

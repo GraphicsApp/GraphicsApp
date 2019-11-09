@@ -19,10 +19,8 @@ public class Image extends GraphicsObject {
      * Lädt und erstellt ein Bild, das an den Koordinaten x und y positioniert ist, und zwar mit
      * die angegebene Breite und Höhe.
      *
-     * @param x
-     * Die x-Position der linken oberen Ecke des Bildes.
-     * @param y y
-     * Die y-Position der linken oberen Ecke des Bildes.
+     * @param x        Die x-Position der linken oberen Ecke des Bildes.
+     * @param y        Die y-Position der linken oberen Ecke des Bildes.
      * @param filePath Der Dateipfad zum anzuzeigenden Bild
      */
     public Image(float x, float y, String filePath) {
@@ -36,6 +34,7 @@ public class Image extends GraphicsObject {
 
     /**
      * Liefert das AWT-Image-Objekt zurück
+     *
      * @return das AWT-Image-Objekt
      */
     public BufferedImage getImage() {
