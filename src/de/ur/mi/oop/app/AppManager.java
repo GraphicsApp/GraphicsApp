@@ -145,12 +145,22 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void mousePressed(MouseEvent e) {
-
+        long timestamp = System.currentTimeMillis();
+        int xPos = e.getX();
+        int yPos = e.getY();
+        MousePressedEvent mousePressedEvent = new MousePressedEvent(timestamp, xPos, yPos,
+                MouseButton.values()[e.getButton()]);
+        ((GraphicsAppMouseListener) app).onMousePressed(mousePressedEvent);
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-
+        long timestamp = System.currentTimeMillis();
+        int xPos = e.getX();
+        int yPos = e.getY();
+        MouseReleasedEvent mouseReleasedEvent = new MouseReleasedEvent(timestamp, xPos, yPos,
+                MouseButton.values()[e.getButton()]);
+        ((GraphicsAppMouseListener) app).onMouseReleased(mouseReleasedEvent);
     }
 
     @Override
@@ -173,7 +183,7 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
         long timestamp = System.currentTimeMillis();
         int xPos = e.getX();
         int yPos = e.getY();
-        MouseMovedEvent mouseClickedEvent = new MouseMovedEvent(timestamp, xPos, yPos);
-        ((GraphicsAppMouseListener) app).onMouseMoved(mouseClickedEvent);
+        MouseMovedEvent mouseMovedEvent = new MouseMovedEvent(timestamp, xPos, yPos);
+        ((GraphicsAppMouseListener) app).onMouseMoved(mouseMovedEvent);
     }
 }

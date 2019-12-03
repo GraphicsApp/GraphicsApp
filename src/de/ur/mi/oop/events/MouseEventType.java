@@ -4,5 +4,7 @@ public enum MouseEventType {
     UNDEFINED,
     MOVE,
     CLICK,
+    PRESS,
+    RELEASE,
     DRAG
 }

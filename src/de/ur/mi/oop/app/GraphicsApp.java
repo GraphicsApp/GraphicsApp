@@ -4,6 +4,8 @@ import de.ur.mi.oop.colors.Color;
 import de.ur.mi.oop.events.*;
 import de.ur.mi.oop.graphics.Background;
 
+import java.awt.event.MouseEvent;
+
 /**
  * Die abstrakte Basisklasse für GraphicsApp-Anwendungen. Nutzer müssen hiervon erben,
  * um eine konkrete GraphicsApp-Anwendung zu implementieren. Dabei müssen die Methoden
@@ -43,6 +45,16 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
 
     @Override
     public void onMouseMoved(MouseMovedEvent event) {
+
+    }
+
+    @Override
+    public void onMousePressed(MousePressedEvent event) {
+
+    }
+
+    @Override
+    public void onMouseReleased(MouseReleasedEvent event) {
 
     }
 
