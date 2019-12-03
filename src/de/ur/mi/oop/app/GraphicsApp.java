@@ -1,11 +1,10 @@
 package de.ur.mi.oop.app;
 
 import de.ur.mi.oop.colors.Color;
-import de.ur.mi.oop.events.GraphicsAppKeyListener;
-import de.ur.mi.oop.events.GraphicsAppMouseListener;
-import de.ur.mi.oop.events.KeyPressedEvent;
-import de.ur.mi.oop.events.MouseClickedEvent;
+import de.ur.mi.oop.events.*;
 import de.ur.mi.oop.graphics.Background;
+
+import java.awt.event.MouseEvent;
 
 /**
  * Die abstrakte Basisklasse für GraphicsApp-Anwendungen. Nutzer müssen hiervon erben,
@@ -33,14 +32,19 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
      */
     public abstract void draw();
 
-    /**
-     * Wenn Mausklicks abgefangen werden sollen, muss diese Methode von Kindklassen überschrieben werden
-     *
-     * @param event Der Maus-Event, der wichtige Informationen enthält wie die Klickposition und welche
-     *              Maustaste benutzt wurde
-     */
+
     @Override
-    public void onMouseClicked(MouseClickedEvent event) {
+    public void onMouseMoved(MouseMovedEvent event) {
+
+    }
+
+    @Override
+    public void onMousePressed(MousePressedEvent event) {
+
+    }
+
+    @Override
+    public void onMouseReleased(MouseReleasedEvent event) {
 
     }
 
@@ -51,6 +55,11 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
      */
     @Override
     public void onKeyPressed(KeyPressedEvent event) {
+
+    }
+
+    @Override
+    public void onKeyReleased(KeyReleasedEvent event) {
 
     }
 

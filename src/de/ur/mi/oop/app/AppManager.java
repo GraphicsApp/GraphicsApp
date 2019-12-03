@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
-import java.awt.image.BufferStrategy;
+
 
 /**
  * Der AppManager ist dafür zuständig, den Zeichen-Canvas zu initialisieren und
@@ -56,14 +56,13 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
         appFrame.setLocationRelativeTo(null);
         appFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         appFrame.add(canvas);
+        canvas.addMouseListener(this);  // MouseListener auf Canvas, damit Koordinaten Titelleiste nicht beinhalten
+        canvas.addMouseMotionListener(this);
         appFrame.addKeyListener(this);
-        appFrame.addMouseListener(this);
-        appFrame.addMouseMotionListener(this);
         appFrame.setVisible(true);
     }
 
     private void startLoop() {
-
         loopTimer = new Timer(1000 / config.getFrameRate(), this);
         loopTimer.start();
     }
@@ -104,53 +103,35 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void keyTyped(KeyEvent e) {
-        long timestamp = System.currentTimeMillis();
-        int keyCode = e.getKeyCode();
-        // TODO: Change to actual key name
-        char keyChar = e.getKeyChar();
-        KeyTypedEvent keyTypedEvent = new KeyTypedEvent(timestamp, keyCode, keyChar);
-        ((GraphicsAppKeyListener) app).onKeyTyped(keyTypedEvent);
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        long timestamp = System.currentTimeMillis();
-        int keyCode = e.getKeyCode();
-        // TODO: Change to actual key name
-        char keyChar = e.getKeyChar();
-        KeyPressedEvent keyPressedEvent = new KeyPressedEvent(timestamp, keyCode, keyChar);
+        KeyPressedEvent keyPressedEvent = (KeyPressedEvent) GraphicsAppKeyEvent.createKeyEventFromAWT(e, KeyEventType.PRESSED);
         ((GraphicsAppKeyListener) app).onKeyPressed(keyPressedEvent);
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        long timestamp = System.currentTimeMillis();
-        int keyCode = e.getKeyCode();
-        // TODO: Change to actual key name
-        char keyChar = e.getKeyChar();
-        KeyReleasedEvent keyReleasedEvent = new KeyReleasedEvent(timestamp, keyCode, keyChar);
+        KeyReleasedEvent keyReleasedEvent = (KeyReleasedEvent) GraphicsAppKeyEvent.createKeyEventFromAWT(e, KeyEventType.RELEASED);
         ((GraphicsAppKeyListener) app).onKeyReleased(keyReleasedEvent);
     }
 
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        long timestamp = System.currentTimeMillis();
-        int xPos = e.getX();
-        int yPos = e.getY();
-        MouseClickedEvent mouseClickedEvent = new MouseClickedEvent(timestamp, xPos, yPos,
-                MouseButton.values()[e.getButton()]);
-        ((GraphicsAppMouseListener) app).onMouseClicked(mouseClickedEvent);
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-
+        MousePressedEvent mousePressedEvent = (MousePressedEvent) GraphicsAppMouseEvent.createMouseEventFromAWT(e, MouseEventType.PRESSED);
+        ((GraphicsAppMouseListener) app).onMousePressed(mousePressedEvent);
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-
+        MouseReleasedEvent mouseReleasedEvent = (MouseReleasedEvent) GraphicsAppMouseEvent.createMouseEventFromAWT(e, MouseEventType.RELEASED);
+        ((GraphicsAppMouseListener) app).onMouseReleased(mouseReleasedEvent);
     }
 
     @Override
@@ -170,10 +151,7 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        long timestamp = System.currentTimeMillis();
-        int xPos = e.getX();
-        int yPos = e.getY();
-        MouseMovedEvent mouseClickedEvent = new MouseMovedEvent(timestamp, xPos, yPos);
-        ((GraphicsAppMouseListener) app).onMouseMoved(mouseClickedEvent);
+        MouseMovedEvent mouseMovedEvent = (MouseMovedEvent) GraphicsAppMouseEvent.createMouseEventFromAWT(e, MouseEventType.MOVED);
+        ((GraphicsAppMouseListener) app).onMouseMoved(mouseMovedEvent);
     }
 }
