@@ -2,14 +2,13 @@ package de.ur.mi.oop.app;
 
 import de.ur.mi.oop.colors.Color;
 import de.ur.mi.oop.colors.Colors;
-import de.ur.mi.oop.events.GraphicsAppKeyListener;
-import de.ur.mi.oop.events.GraphicsAppMouseListener;
-import de.ur.mi.oop.events.KeyPressedEvent;
-import de.ur.mi.oop.events.MouseClickedEvent;
+import de.ur.mi.oop.events.*;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferStrategy;
 
 /**
@@ -19,7 +18,7 @@ import java.awt.image.BufferStrategy;
  * Im AppManager läuft die Zeichenschleife, welche die Grafikobjekte ständig erneut zeichnet. Er
  * gibt die Tasten- und Maus-Events an die GraphicsApp weiter.
  */
-public class AppManager implements ConfigChangeListener, ActionListener, KeyListener, MouseListener {
+public class AppManager implements ConfigChangeListener, ActionListener, KeyListener, MouseListener, MouseMotionListener {
 
     private static final Color DEFAULT_BACKGROUND_COLOR = Colors.WHITE;
 
@@ -59,6 +58,7 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
         appFrame.add(canvas);
         appFrame.addKeyListener(this);
         appFrame.addMouseListener(this);
+        appFrame.addMouseMotionListener(this);
         appFrame.setVisible(true);
     }
 
@@ -104,6 +104,12 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void keyTyped(KeyEvent e) {
+        long timestamp = System.currentTimeMillis();
+        int keyCode = e.getKeyCode();
+        // TODO: Change to actual key name
+        char keyChar = e.getKeyChar();
+        KeyTypedEvent keyTypedEvent = new KeyTypedEvent(timestamp, keyCode, keyChar);
+        ((GraphicsAppKeyListener) app).onKeyTyped(keyTypedEvent);
     }
 
     @Override
@@ -118,6 +124,12 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void keyReleased(KeyEvent e) {
+        long timestamp = System.currentTimeMillis();
+        int keyCode = e.getKeyCode();
+        // TODO: Change to actual key name
+        char keyChar = e.getKeyChar();
+        KeyReleasedEvent keyReleasedEvent = new KeyReleasedEvent(timestamp, keyCode, keyChar);
+        ((GraphicsAppKeyListener) app).onKeyReleased(keyReleasedEvent);
     }
 
 
@@ -126,7 +138,8 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
         long timestamp = System.currentTimeMillis();
         int xPos = e.getX();
         int yPos = e.getY();
-        MouseClickedEvent mouseClickedEvent = new MouseClickedEvent(timestamp, xPos, yPos);
+        MouseClickedEvent mouseClickedEvent = new MouseClickedEvent(timestamp, xPos, yPos,
+                MouseButton.values()[e.getButton()]);
         ((GraphicsAppMouseListener) app).onMouseClicked(mouseClickedEvent);
     }
 
@@ -148,5 +161,19 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
     @Override
     public void mouseExited(MouseEvent e) {
 
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+        long timestamp = System.currentTimeMillis();
+        int xPos = e.getX();
+        int yPos = e.getY();
+        MouseMovedEvent mouseClickedEvent = new MouseMovedEvent(timestamp, xPos, yPos);
+        ((GraphicsAppMouseListener) app).onMouseMoved(mouseClickedEvent);
     }
 }

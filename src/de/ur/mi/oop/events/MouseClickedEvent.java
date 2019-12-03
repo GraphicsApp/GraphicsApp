@@ -1,21 +1,17 @@
 package de.ur.mi.oop.events;
 
-public class MouseClickedEvent extends Event {
+public class MouseClickedEvent extends GraphicsAppMouseEvent {
 
-    private final int xPos;
-    private final int yPos;
+    private final MouseButton button;
 
-    public MouseClickedEvent(long timestamp, int xPos, int yPos) {
-        super(timestamp);
-        this.xPos = xPos;
-        this.yPos = yPos;
+    public MouseClickedEvent(long timestamp, int xPos, int yPos, MouseButton button) {
+        super(timestamp,xPos,yPos, MouseEventType.CLICK);
+        this.button = button;
     }
 
-    public int getXPos() {
-        return this.xPos;
+    public MouseButton getButton() {
+        return button;
     }
 
-    public int getYPos() {
-        return this.yPos;
-    }
+
 }
