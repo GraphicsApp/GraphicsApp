@@ -1,10 +1,7 @@
 package de.ur.mi.oop.app;
 
 import de.ur.mi.oop.colors.Color;
-import de.ur.mi.oop.events.GraphicsAppKeyListener;
-import de.ur.mi.oop.events.GraphicsAppMouseListener;
-import de.ur.mi.oop.events.KeyPressedEvent;
-import de.ur.mi.oop.events.MouseClickedEvent;
+import de.ur.mi.oop.events.*;
 import de.ur.mi.oop.graphics.Background;
 
 /**
@@ -44,6 +41,11 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
 
     }
 
+    @Override
+    public void onMouseMoved(MouseMovedEvent event) {
+
+    }
+
     /**
      * Wenn Tastendrücke abgefangen werden sollen, muss diese Methode von Kindklassen überschrieben werden
      *
@@ -51,6 +53,16 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
      */
     @Override
     public void onKeyPressed(KeyPressedEvent event) {
+
+    }
+
+    @Override
+    public void onKeyTyped(KeyTypedEvent event) {
+
+    }
+
+    @Override
+    public void onKeyReleased(KeyReleasedEvent event) {
 
     }
 

@@ -191,7 +191,7 @@ public abstract class GraphicsAppKeyEvent extends Event {
     public static final int VK_BEGIN = 65368;
     public static final int VK_UNDEFINED = 0;
     public static final char CHAR_UNDEFINED = (char)(-1);
-    
+
     private final int keyCode;
     private final char keyChar;
     private final KeyEventType type;
