@@ -1,5 +1,7 @@
 package de.ur.mi.oop.events;
 
+import java.awt.event.KeyEvent;
+
 public abstract class GraphicsAppKeyEvent extends Event {
 
     public static final int VK_ENTER = 10;
@@ -213,5 +215,19 @@ public abstract class GraphicsAppKeyEvent extends Event {
 
     public KeyEventType getType() {
         return type;
+    }
+
+    public static GraphicsAppKeyEvent createKeyEventFromAWT(KeyEvent event, KeyEventType type) {
+        long timestamp = System.currentTimeMillis();
+        int keyCode = event.getKeyCode();
+        char keyChar = event.getKeyChar();
+        switch(type) {
+            case PRESSED:
+                return new KeyPressedEvent(timestamp, keyCode, keyChar);
+            case RELEASED:
+                return new KeyReleasedEvent(timestamp, keyCode, keyChar);
+            default:
+                return  null;
+        }
     }
 }

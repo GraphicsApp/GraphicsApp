@@ -108,21 +108,13 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void keyPressed(KeyEvent e) {
-        long timestamp = System.currentTimeMillis();
-        int keyCode = e.getKeyCode();
-        // TODO: Change to actual key name
-        char keyChar = e.getKeyChar();
-        KeyPressedEvent keyPressedEvent = new KeyPressedEvent(timestamp, keyCode, keyChar);
+        KeyPressedEvent keyPressedEvent = (KeyPressedEvent) GraphicsAppKeyEvent.createKeyEventFromAWT(e, KeyEventType.PRESSED);
         ((GraphicsAppKeyListener) app).onKeyPressed(keyPressedEvent);
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        long timestamp = System.currentTimeMillis();
-        int keyCode = e.getKeyCode();
-        // TODO: Change to actual key name
-        char keyChar = e.getKeyChar();
-        KeyReleasedEvent keyReleasedEvent = new KeyReleasedEvent(timestamp, keyCode, keyChar);
+        KeyReleasedEvent keyReleasedEvent = (KeyReleasedEvent) GraphicsAppKeyEvent.createKeyEventFromAWT(e, KeyEventType.RELEASED);
         ((GraphicsAppKeyListener) app).onKeyReleased(keyReleasedEvent);
     }
 
@@ -133,21 +125,13 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void mousePressed(MouseEvent e) {
-        long timestamp = System.currentTimeMillis();
-        int xPos = e.getX();
-        int yPos = e.getY();
-        MousePressedEvent mousePressedEvent = new MousePressedEvent(timestamp, xPos, yPos,
-                MouseButton.values()[e.getButton()]);
+        MousePressedEvent mousePressedEvent = (MousePressedEvent) GraphicsAppMouseEvent.createMouseEventFromAWT(e, MouseEventType.PRESSED);
         ((GraphicsAppMouseListener) app).onMousePressed(mousePressedEvent);
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        long timestamp = System.currentTimeMillis();
-        int xPos = e.getX();
-        int yPos = e.getY();
-        MouseReleasedEvent mouseReleasedEvent = new MouseReleasedEvent(timestamp, xPos, yPos,
-                MouseButton.values()[e.getButton()]);
+        MouseReleasedEvent mouseReleasedEvent = (MouseReleasedEvent) GraphicsAppMouseEvent.createMouseEventFromAWT(e, MouseEventType.RELEASED);
         ((GraphicsAppMouseListener) app).onMouseReleased(mouseReleasedEvent);
     }
 
@@ -168,10 +152,7 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        long timestamp = System.currentTimeMillis();
-        int xPos = e.getX();
-        int yPos = e.getY();
-        MouseMovedEvent mouseMovedEvent = new MouseMovedEvent(timestamp, xPos, yPos);
+        MouseMovedEvent mouseMovedEvent = (MouseMovedEvent) GraphicsAppMouseEvent.createMouseEventFromAWT(e, MouseEventType.MOVED);
         ((GraphicsAppMouseListener) app).onMouseMoved(mouseMovedEvent);
     }
 }

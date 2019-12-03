@@ -1,5 +1,7 @@
 package de.ur.mi.oop.events;
 
+import java.awt.event.MouseEvent;
+
 public abstract class GraphicsAppMouseEvent extends Event {
 
     private final int xPos;
@@ -23,6 +25,23 @@ public abstract class GraphicsAppMouseEvent extends Event {
 
     public int getYPos() {
         return this.yPos;
+    }
+
+    public static GraphicsAppMouseEvent createMouseEventFromAWT(MouseEvent event, MouseEventType type) {
+        long timestamp = System.currentTimeMillis();
+        int xPos = event.getX();
+        int yPos = event.getY();
+        MouseButton button = MouseButton.values()[event.getButton()];
+        switch(type) {
+            case PRESSED:
+                return new MousePressedEvent(timestamp, xPos, yPos, button);
+            case RELEASED:
+                return new MouseReleasedEvent(timestamp, xPos, yPos, button);
+            case MOVED:
+                return new MouseMovedEvent(timestamp, xPos, yPos);
+            default:
+                return  null;
+        }
     }
 
 }
