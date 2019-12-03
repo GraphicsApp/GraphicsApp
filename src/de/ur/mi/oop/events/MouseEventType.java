@@ -3,8 +3,6 @@ package de.ur.mi.oop.events;
 public enum MouseEventType {
     UNDEFINED,
     MOVE,
-    CLICK,
     PRESS,
-    RELEASE,
-    DRAG
+    RELEASE
 }

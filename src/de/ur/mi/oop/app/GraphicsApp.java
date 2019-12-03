@@ -32,16 +32,6 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
      */
     public abstract void draw();
 
-    /**
-     * Wenn Mausklicks abgefangen werden sollen, muss diese Methode von Kindklassen überschrieben werden
-     *
-     * @param event Der Maus-Event, der wichtige Informationen enthält wie die Klickposition und welche
-     *              Maustaste benutzt wurde
-     */
-    @Override
-    public void onMouseClicked(MouseClickedEvent event) {
-
-    }
 
     @Override
     public void onMouseMoved(MouseMovedEvent event) {
@@ -65,11 +55,6 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
      */
     @Override
     public void onKeyPressed(KeyPressedEvent event) {
-
-    }
-
-    @Override
-    public void onKeyTyped(KeyTypedEvent event) {
 
     }
 

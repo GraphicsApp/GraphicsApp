@@ -104,12 +104,6 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void keyTyped(KeyEvent e) {
-        long timestamp = System.currentTimeMillis();
-        int keyCode = e.getKeyCode();
-        // TODO: Change to actual key name
-        char keyChar = e.getKeyChar();
-        KeyTypedEvent keyTypedEvent = new KeyTypedEvent(timestamp, keyCode, keyChar);
-        ((GraphicsAppKeyListener) app).onKeyTyped(keyTypedEvent);
     }
 
     @Override
@@ -135,12 +129,6 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        long timestamp = System.currentTimeMillis();
-        int xPos = e.getX();
-        int yPos = e.getY();
-        MouseClickedEvent mouseClickedEvent = new MouseClickedEvent(timestamp, xPos, yPos,
-                MouseButton.values()[e.getButton()]);
-        ((GraphicsAppMouseListener) app).onMouseClicked(mouseClickedEvent);
     }
 
     @Override
