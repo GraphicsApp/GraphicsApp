@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
-import java.awt.image.BufferStrategy;
+
 
 /**
  * Der AppManager ist dafür zuständig, den Zeichen-Canvas zu initialisieren und
@@ -56,9 +56,9 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
         appFrame.setLocationRelativeTo(null);
         appFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         appFrame.add(canvas);
+        canvas.addMouseListener(this);  // MouseListener auf Canvas, damit Koordinaten Titelleiste nicht beinhalten
+        canvas.addMouseMotionListener(this);
         appFrame.addKeyListener(this);
-        appFrame.addMouseListener(this);
-        appFrame.addMouseMotionListener(this);
         appFrame.setVisible(true);
     }
 
