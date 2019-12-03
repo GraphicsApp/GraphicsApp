@@ -63,7 +63,6 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
     }
 
     private void startLoop() {
-
         loopTimer = new Timer(1000 / config.getFrameRate(), this);
         loopTimer.start();
     }
