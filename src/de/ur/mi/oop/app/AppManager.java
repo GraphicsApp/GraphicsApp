@@ -146,7 +146,8 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void mouseDragged(MouseEvent e) {
-
+        MouseDraggedEvent mouseDraggedEvent = (MouseDraggedEvent) GraphicsAppMouseEvent.createMouseEventFromAWT(e, MouseEventType.DRAGGED);
+        ((GraphicsAppMouseListener) app).onMouseDragged(mouseDraggedEvent);
     }
 
     @Override

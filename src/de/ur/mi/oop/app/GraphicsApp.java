@@ -48,6 +48,11 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
 
     }
 
+    @Override
+    public void onMouseDragged(MouseDraggedEvent event) {
+
+    }
+
     /**
      * Wenn Tastendrücke abgefangen werden sollen, muss diese Methode von Kindklassen überschrieben werden
      *

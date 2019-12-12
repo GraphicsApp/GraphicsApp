@@ -39,6 +39,8 @@ public abstract class GraphicsAppMouseEvent extends Event {
                 return new MouseReleasedEvent(timestamp, xPos, yPos, button);
             case MOVED:
                 return new MouseMovedEvent(timestamp, xPos, yPos);
+            case DRAGGED:
+                return new MouseDraggedEvent(timestamp, xPos, yPos);
             default:
                 return  null;
         }
