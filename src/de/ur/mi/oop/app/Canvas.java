@@ -6,8 +6,10 @@ import de.ur.mi.oop.graphics.Label;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.Rectangle;
+import java.awt.geom.AffineTransform;
 import java.awt.geom.Arc2D;
 import java.awt.geom.Ellipse2D;
+import java.awt.geom.Rectangle2D;
 
 /**
  * Zeichenfläche zur Darstellung der einzelnen GraphicsObjects
@@ -100,11 +102,11 @@ public class Canvas extends JPanel {
     }
 
     private void drawRectangle(Graphics2D g2d, de.ur.mi.oop.graphics.Rectangle rect) {
-        Rectangle rectShape = new Rectangle(
-                (int) rect.getXPos(),
-                (int) rect.getYPos(),
-                (int) rect.getWidth(),
-                (int) rect.getHeight());
+        Rectangle2D rectShape = new Rectangle.Float(
+                rect.getXPos(),
+                rect.getYPos(),
+                rect.getWidth(),
+                rect.getHeight());
 
         drawAndStrokeShape(g2d, rect, rectShape);
     }
@@ -132,11 +134,15 @@ public class Canvas extends JPanel {
     }
 
     private void drawImage(Graphics2D g2d, de.ur.mi.oop.graphics.Image image) {
-        g2d.drawImage(image.getImage(), (int) image.getXPos(), (int) image.getYPos(), null);
+        AffineTransform transformation  = new AffineTransform();
+        transformation.translate(image.getXPos(), image.getYPos());
+        transformation.scale(1,1);
+        g2d.drawImage(image.getImage(), transformation, null);
     }
 
     private void drawLabel(Graphics2D g2d, Label label) {
         g2d.setColor(label.getColor().asAWTColor());
+        g2d.setFont(new Font(label.getFont(), Font.PLAIN, label.getFontSize()));
         g2d.drawString(label.getText(), label.getXPos(), label.getYPos());
     }
 

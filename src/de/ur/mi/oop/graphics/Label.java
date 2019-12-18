@@ -7,7 +7,12 @@ import de.ur.mi.oop.colors.Color;
  */
 public class Label extends GraphicsObject {
 
+    private static final int DEFAULT_FONT_SIZE = 12;
+    private static final String DEFAULT_FONT = "SansSerif";
+
     private String text;
+    private String font;
+    private int fontSize;
 
     /**
      * Konstruiert ein neues Label, das an den Koordinaten x und y mit
@@ -20,6 +25,8 @@ public class Label extends GraphicsObject {
     public Label(float x, float y, String text) {
         super(x, y);
         this.text = text;
+        this.fontSize = DEFAULT_FONT_SIZE;
+        this.font = DEFAULT_FONT;
         this.type = GraphicsObjectType.LABEL;
     }
 
@@ -36,6 +43,22 @@ public class Label extends GraphicsObject {
     public Label(float x, float y, String text, Color fontColor) {
         this(x, y, text);
         this.setColor(fontColor);
+    }
+
+    public int getFontSize() {
+        return fontSize;
+    }
+
+    public void setFontSize(int fontSize) {
+        this.fontSize = fontSize;
+    }
+
+    public String getFont() {
+        return font;
+    }
+
+    public void setFont(String font) {
+        this.font = font;
     }
 
     public String getText() {
