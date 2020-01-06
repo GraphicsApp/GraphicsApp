@@ -44,6 +44,19 @@ public class Color {
     }
 
     /**
+     * Erstellt eine neue Color-Instanz aus den angegebenen RGB-Wert im Binärformat.
+     *
+     * @param rgb   der Farbwert (RGB) im Binärformat
+     */
+    public Color (int rgb) {
+        java.awt.Color color = new java.awt.Color(rgb);
+        this.red = color.getRed();
+        this.green = color.getGreen();
+        this.blue = color.getBlue();
+        this.alpha = color.getAlpha();
+    }
+
+    /**
      * Gibt den Rotwert zurück
      *
      * @return Rotwert (0-255)
@@ -77,6 +90,17 @@ public class Color {
      */
     public int alpha() {
         return alpha;
+    }
+
+
+    /**
+     * Gibt die Farbe als RGB-Wert im Binärformat zurück.
+     *
+     * @return Farbwert (RGB) im Binärformat
+     */
+    public int toInt() {
+        java.awt.Color color = this.asAWTColor();
+        return color.getRGB();
     }
 
     /**

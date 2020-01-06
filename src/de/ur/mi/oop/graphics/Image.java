@@ -1,5 +1,6 @@
 package de.ur.mi.oop.graphics;
 
+import de.ur.mi.oop.colors.Color;
 import de.ur.mi.oop.utils.FileHelper;
 import de.ur.mi.oop.utils.GraphicsHelper;
 
@@ -39,6 +40,24 @@ public class Image extends GraphicsObject {
      */
     public BufferedImage getImage() {
         return image;
+    }
+
+    public int[][] getPixelArray() {
+        int[][] pixels = new int[image.getHeight()][image.getWidth()];
+        for(int x = 0; x < image.getWidth(); x++) {
+            for(int y = 0; y < image.getHeight(); y++) {
+                pixels[y][x] = image.getRGB(x,y);
+            }
+        }
+        return pixels;
+    }
+
+    public void setPixelArray(int[][] pixels) {
+        for(int x = 0; x < image.getWidth(); x++) {
+            for(int y = 0; y < image.getHeight(); y++) {
+                image.setRGB(x,y,pixels[y][x]);
+            }
+        }
     }
 
     public void setWidth(float width) {
