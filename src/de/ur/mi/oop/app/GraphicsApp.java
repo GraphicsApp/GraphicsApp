@@ -6,6 +6,16 @@ import de.ur.mi.oop.graphics.Background;
 
 import java.awt.event.MouseEvent;
 
+/*! \mainpage GraphicsApp API
+ *
+ * Die GraphicsApp-Bibliothek ist eine einfache 2D-Grafikumgebung für die JAVA-Laufzeitumgebung.
+ * Sie dient in erster Linie dazu, Programmiernovizen an die Verwendung der Programmiersprache Java heranzuführen.
+ * Die Programmierenden können auf Basis der Bibliothek eigene graphische Anwendungen gestalten.
+ * Grundlage dafür ist ein Lifecycle, bestehend aus einer Initalisierungsphase sowie eines einfachen Game loop.
+ * Die Bibliothek erlaubt das Erstellen, Darstellen und dynamisches Manipulieren graphischer Primitive.
+ *
+ */
+
 /**
  * Die abstrakte Basisklasse für GraphicsApp-Anwendungen. Nutzer müssen hiervon erben,
  * um eine konkrete GraphicsApp-Anwendung zu implementieren. Dabei müssen die Methoden

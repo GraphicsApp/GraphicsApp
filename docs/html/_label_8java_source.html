@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GraphicsApp API: Label.java Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GraphicsApp API
+   </div>
+   <div id="projectbrief">Eine überarbeitete und angepasste Variante der originalen GraphicsApp-Umgebung</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_label_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Label.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_label_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>de.ur.mi.oop.graphics;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> <a class="code" href="namespacede.html">de</a>.<a class="code" href="namespacede_1_1ur.html">ur</a>.<a class="code" href="namespacede_1_1ur_1_1mi.html">mi</a>.<a class="code" href="namespacede_1_1ur_1_1mi_1_1oop.html">oop</a>.<a class="code" href="namespacede_1_1ur_1_1mi_1_1oop_1_1colors.html">colors</a>.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Die Klasse Label ist ein grafisches Objekt, das einen Text darstellt.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html">    8</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html">Label</a> <span class="keyword">extends</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html">GraphicsObject</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> DEFAULT_FONT_SIZE = 12;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String DEFAULT_FONT = <span class="stringliteral">&quot;SansSerif&quot;</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span> String text;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">private</span> String font;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> fontSize;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">     * Konstruiert ein neues Label, das an den Koordinaten x und y mit</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">     * angegebenem Text und Schriftfarbe.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">     * @param x    Die x-Position der Grundlinie in Pixel</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">     * @param y    Die y-Position der Grundlinie in Pixel</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">     * @param text Der Text des Labels</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a572d61b894a7ce7fb3eef01859b2ba78">   25</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a572d61b894a7ce7fb3eef01859b2ba78">Label</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, String text) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        super(x, y);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        this.text = text;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        this.fontSize = DEFAULT_FONT_SIZE;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        this.font = DEFAULT_FONT;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a8759f7d676ab386ffa98e6cc08076623">type</a> = <a class="code" href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html">GraphicsObjectType</a>.<a class="code" href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html#a3863a97e42d724cbd3b13bef2271f909">LABEL</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">     * Konstruiert ein neues Label, das an den Koordinaten x und y mit</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">     * angegebenem Text und Schriftfarbe.</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">     * @param x         Die x-Position der Grundlinie in Pixel</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">     * @param y         y</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">     *                  Die y-Position der Grundlinie in Pixel</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">     * @param text      Der Text des Labels</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">     * @param fontColor Die Farbe des Labels</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a89b362c8c85841e5235368affafae5ee">   43</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a89b362c8c85841e5235368affafae5ee">Label</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, String text, <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> fontColor) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">this</span>(x, y, text);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#ac6237a5b55f56d9b3ea768895b6f8eb1">setColor</a>(fontColor);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a7c0d4362a221e040ec77fe28c4532400">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a7c0d4362a221e040ec77fe28c4532400">getFontSize</a>() {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> fontSize;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a83e69e81939d9c996c1f15bb946f8b24">   52</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a83e69e81939d9c996c1f15bb946f8b24">setFontSize</a>(<span class="keywordtype">int</span> fontSize) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        this.fontSize = fontSize;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#af55417c4d11a10cadc544ff72a076458">   56</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#af55417c4d11a10cadc544ff72a076458">getFont</a>() {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> font;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#aac85aed027b025879e09901f2519699b">   60</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#aac85aed027b025879e09901f2519699b">setFont</a>(String font) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        this.font = font;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a783572ac7367f107098d397170f1e02d">   64</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a783572ac7367f107098d397170f1e02d">getText</a>() {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> this.text;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#aab56c6989b8143cf6fae5cb95eaf5ff1">   68</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#aab56c6989b8143cf6fae5cb95eaf5ff1">setText</a>(String text) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        this.text = text;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aenumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type_html_a3863a97e42d724cbd3b13bef2271f909"><div class="ttname"><a href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html#a3863a97e42d724cbd3b13bef2271f909">de.ur.mi.oop.graphics.GraphicsObjectType.LABEL</a></div><div class="ttdeci">LABEL</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_type_8java_source.html#l00016">GraphicsObjectType.java:16</a></div></div>
+<div class="ttc" id="anamespacede_html"><div class="ttname"><a href="namespacede.html">de</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_1_1mi_1_1oop_html"><div class="ttname"><a href="namespacede_1_1ur_1_1mi_1_1oop.html">de.ur.mi.oop</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label_html_a572d61b894a7ce7fb3eef01859b2ba78"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a572d61b894a7ce7fb3eef01859b2ba78">de.ur.mi.oop.graphics.Label.Label</a></div><div class="ttdeci">Label(float x, float y, String text)</div><div class="ttdef"><b>Definition:</b> <a href="_label_8java_source.html#l00025">Label.java:25</a></div></div>
+<div class="ttc" id="aenumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type_html"><div class="ttname"><a href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html">de.ur.mi.oop.graphics.GraphicsObjectType</a></div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_type_8java_source.html#l00007">GraphicsObjectType.java:7</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_html"><div class="ttname"><a href="namespacede_1_1ur.html">de.ur</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label_html_aac85aed027b025879e09901f2519699b"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#aac85aed027b025879e09901f2519699b">de.ur.mi.oop.graphics.Label.setFont</a></div><div class="ttdeci">void setFont(String font)</div><div class="ttdef"><b>Definition:</b> <a href="_label_8java_source.html#l00060">Label.java:60</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html">de.ur.mi.oop.graphics.GraphicsObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_8java_source.html#l00014">GraphicsObject.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label_html_a783572ac7367f107098d397170f1e02d"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a783572ac7367f107098d397170f1e02d">de.ur.mi.oop.graphics.Label.getText</a></div><div class="ttdeci">String getText()</div><div class="ttdef"><b>Definition:</b> <a href="_label_8java_source.html#l00064">Label.java:64</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">de.ur.mi.oop.colors.Color</a></div><div class="ttdef"><b>Definition:</b> <a href="_color_8java_source.html#l00008">Color.java:8</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_1_1mi_html"><div class="ttname"><a href="namespacede_1_1ur_1_1mi.html">de.ur.mi</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html">de.ur.mi.oop.graphics.Label</a></div><div class="ttdef"><b>Definition:</b> <a href="_label_8java_source.html#l00008">Label.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label_html_aab56c6989b8143cf6fae5cb95eaf5ff1"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#aab56c6989b8143cf6fae5cb95eaf5ff1">de.ur.mi.oop.graphics.Label.setText</a></div><div class="ttdeci">void setText(String text)</div><div class="ttdef"><b>Definition:</b> <a href="_label_8java_source.html#l00068">Label.java:68</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label_html_a7c0d4362a221e040ec77fe28c4532400"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a7c0d4362a221e040ec77fe28c4532400">de.ur.mi.oop.graphics.Label.getFontSize</a></div><div class="ttdeci">int getFontSize()</div><div class="ttdef"><b>Definition:</b> <a href="_label_8java_source.html#l00048">Label.java:48</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_1_1mi_1_1oop_1_1colors_html"><div class="ttname"><a href="namespacede_1_1ur_1_1mi_1_1oop_1_1colors.html">de.ur.mi.oop.colors</a></div><div class="ttdef"><b>Definition:</b> <a href="_color_8java_source.html#l00001">Color.java:1</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label_html_af55417c4d11a10cadc544ff72a076458"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#af55417c4d11a10cadc544ff72a076458">de.ur.mi.oop.graphics.Label.getFont</a></div><div class="ttdeci">String getFont()</div><div class="ttdef"><b>Definition:</b> <a href="_label_8java_source.html#l00056">Label.java:56</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_html_a8759f7d676ab386ffa98e6cc08076623"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a8759f7d676ab386ffa98e6cc08076623">de.ur.mi.oop.graphics.GraphicsObject.type</a></div><div class="ttdeci">GraphicsObjectType type</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_8java_source.html#l00033">GraphicsObject.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_html_ac6237a5b55f56d9b3ea768895b6f8eb1"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#ac6237a5b55f56d9b3ea768895b6f8eb1">de.ur.mi.oop.graphics.GraphicsObject.setColor</a></div><div class="ttdeci">void setColor(Color color)</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_8java_source.html#l00219">GraphicsObject.java:219</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label_html_a89b362c8c85841e5235368affafae5ee"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a89b362c8c85841e5235368affafae5ee">de.ur.mi.oop.graphics.Label.Label</a></div><div class="ttdeci">Label(float x, float y, String text, Color fontColor)</div><div class="ttdef"><b>Definition:</b> <a href="_label_8java_source.html#l00043">Label.java:43</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label_html_a83e69e81939d9c996c1f15bb946f8b24"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html#a83e69e81939d9c996c1f15bb946f8b24">de.ur.mi.oop.graphics.Label.setFontSize</a></div><div class="ttdeci">void setFontSize(int fontSize)</div><div class="ttdef"><b>Definition:</b> <a href="_label_8java_source.html#l00052">Label.java:52</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_821818eb74338e35a65f6fbb6b6439d5.html">de</a></li><li class="navelem"><a class="el" href="dir_5d2753e19a262a1a340e90ef72c2a8cb.html">ur</a></li><li class="navelem"><a class="el" href="dir_b51185c31e96325dc03e995ba0cdea94.html">mi</a></li><li class="navelem"><a class="el" href="dir_2471dce55b57edabebc87c0ed02ad4c9.html">oop</a></li><li class="navelem"><a class="el" href="dir_75a15ca84b26f6b73c8eadb7b2099bee.html">graphics</a></li><li class="navelem"><a class="el" href="_label_8java.html">Label.java</a></li>
+    <li class="footer">Erzeugt am Mon Okt 5 2020 21:06:54 für GraphicsApp API von <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

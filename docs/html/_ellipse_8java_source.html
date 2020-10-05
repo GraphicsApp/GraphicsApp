@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GraphicsApp API: Ellipse.java Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GraphicsApp API
+   </div>
+   <div id="projectbrief">Eine überarbeitete und angepasste Variante der originalen GraphicsApp-Umgebung</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_ellipse_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Ellipse.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_ellipse_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>de.ur.mi.oop.graphics;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> <a class="code" href="namespacede.html">de</a>.<a class="code" href="namespacede_1_1ur.html">ur</a>.<a class="code" href="namespacede_1_1ur_1_1mi.html">mi</a>.<a class="code" href="namespacede_1_1ur_1_1mi_1_1oop.html">oop</a>.<a class="code" href="namespacede_1_1ur_1_1mi_1_1oop_1_1colors.html">colors</a>.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Die Ellipse-Klasse ist ein grafisches Objekt, das eine Ellipse darstellt.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html">    8</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html">Ellipse</a> <span class="keyword">extends</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html">GraphicsObject</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">float</span> radiusX;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">float</span> radiusY;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">     * Konstruiert eine neue Ellipse mit dem angegebenen vertikalen und horizontalen Radius, deren</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">     * Mittelpunkt an den Koordinaten x und y positioniert ist.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">     * @param x       Die x-Position der Ellipse in Pixel</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">     * @param y       Die y-Position der Ellipse in Pixel</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">     * @param radiusX Der horizontale Radius der Ellipse in Pixel</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">     * @param radiusY Der vertikale Radius der Ellipse in Pixel</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">     * @param color   Die Füllfarbe für die Ellipse</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#abd90460f2626c3eb570ba926a5d17729">   23</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#abd90460f2626c3eb570ba926a5d17729">Ellipse</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> radiusX, <span class="keywordtype">float</span> radiusY, <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> color) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        super(x, y, color);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        this.radiusX = radiusX;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        this.radiusY = radiusY;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a8759f7d676ab386ffa98e6cc08076623">type</a> = <a class="code" href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html">GraphicsObjectType</a>.<a class="code" href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html#a5bb46e441465adc923b8c1a66b9e03fa">ELLIPSE</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">     * Konstruiert eine neue Ellipse mit dem angegebenen vertikalen und horizontalen Radius, deren</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">     * Mittelpunkt an den Koordinaten x und y positioniert ist und mit einer</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">     * Default-Farbe gefärbt ist.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">     * @param x       Die x-Position der Ellipse in Pixel</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">     * @param y       y</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">     *                Die y-Position der Ellipse in Pixel</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">     * @param radiusX Der horizontale Radius der Ellipse in Pixel</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">     * @param radiusY Der vertikale Radius der Ellipse in Pixel</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#af7cd644abf23631b6b350a461f483b74">   41</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#af7cd644abf23631b6b350a461f483b74">Ellipse</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> radiusX, <span class="keywordtype">float</span> radiusY) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        super(x, y);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        this.radiusX = radiusX;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        this.radiusY = radiusY;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a8759f7d676ab386ffa98e6cc08076623">type</a> = <a class="code" href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html">GraphicsObjectType</a>.<a class="code" href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html#a5bb46e441465adc923b8c1a66b9e03fa">ELLIPSE</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#af8e4974ee2bc1458461cba1d05314f59">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#af8e4974ee2bc1458461cba1d05314f59">setRadiusX</a>(<span class="keywordtype">float</span> radiusX) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        this.radiusX = radiusX;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#abf01f4e340e2150258459ba9cf72845f">   52</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#abf01f4e340e2150258459ba9cf72845f">setRadiusY</a>(<span class="keywordtype">float</span> radiusY) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        this.radiusY = radiusY;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a35de8f9657263a92a50b1f2cf1c91bf4">   56</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a35de8f9657263a92a50b1f2cf1c91bf4">getRadiusX</a>() {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> radiusX;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a498c4a5f1d00b1f79b4a010b9e537c6d">   60</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a498c4a5f1d00b1f79b4a010b9e537c6d">getRadiusY</a>() {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> radiusY;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a10e06d49486ccbffb3d9591060eab185">   64</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a10e06d49486ccbffb3d9591060eab185">getWidth</a>() {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> this.radiusX * 2.f;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a9b56145ac33febf52819f15592986754">   68</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a9b56145ac33febf52819f15592986754">getHeight</a>() {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> this.radiusY * 2.f;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#aa7f213ab2365ecca64241a7841f6c14f">   72</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#aa7f213ab2365ecca64241a7841f6c14f">setWidth</a>(<span class="keywordtype">float</span> width) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#af8e4974ee2bc1458461cba1d05314f59">setRadiusX</a>(0.5f * width);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a73b8b209c5caaadfc23043764d70a083">   76</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a73b8b209c5caaadfc23043764d70a083">setHeight</a>(<span class="keywordtype">float</span> height) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#abf01f4e340e2150258459ba9cf72845f">setRadiusY</a>(0.5f * height);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#aea1e8357f7dc1c82a7214c4a3ebc1dde">   80</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#aea1e8357f7dc1c82a7214c4a3ebc1dde">getRightBorder</a>() {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> this.radiusX + <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#ae09c9c2c3a8ea11f5ecfdb73e7260dfe">getXPos</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a475a109d54038d7dd62305179c3ffd29">   84</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a475a109d54038d7dd62305179c3ffd29">getLeftBorder</a>() {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#ae09c9c2c3a8ea11f5ecfdb73e7260dfe">getXPos</a>() - this.radiusX;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a5fbe9c46a0b8b259f4b7eb4186d2e58a">   88</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a5fbe9c46a0b8b259f4b7eb4186d2e58a">getTopBorder</a>() {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a7487be7d19e70d23f3d4104f5d9450c4">getYPos</a>() - this.radiusY;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a4e49b5ac8fc290b8e68c8f026edb66e0">   92</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a4e49b5ac8fc290b8e68c8f026edb66e0">getBottomBorder</a>() {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a7487be7d19e70d23f3d4104f5d9450c4">getYPos</a>() + this.radiusY;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_af7cd644abf23631b6b350a461f483b74"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#af7cd644abf23631b6b350a461f483b74">de.ur.mi.oop.graphics.Ellipse.Ellipse</a></div><div class="ttdeci">Ellipse(float x, float y, float radiusX, float radiusY)</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00041">Ellipse.java:41</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_af8e4974ee2bc1458461cba1d05314f59"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#af8e4974ee2bc1458461cba1d05314f59">de.ur.mi.oop.graphics.Ellipse.setRadiusX</a></div><div class="ttdeci">void setRadiusX(float radiusX)</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00048">Ellipse.java:48</a></div></div>
+<div class="ttc" id="anamespacede_html"><div class="ttname"><a href="namespacede.html">de</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_1_1mi_1_1oop_html"><div class="ttname"><a href="namespacede_1_1ur_1_1mi_1_1oop.html">de.ur.mi.oop</a></div></div>
+<div class="ttc" id="aenumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type_html"><div class="ttname"><a href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html">de.ur.mi.oop.graphics.GraphicsObjectType</a></div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_type_8java_source.html#l00007">GraphicsObjectType.java:7</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_abd90460f2626c3eb570ba926a5d17729"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#abd90460f2626c3eb570ba926a5d17729">de.ur.mi.oop.graphics.Ellipse.Ellipse</a></div><div class="ttdeci">Ellipse(float x, float y, float radiusX, float radiusY, Color color)</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00023">Ellipse.java:23</a></div></div>
+<div class="ttc" id="aenumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type_html_a5bb46e441465adc923b8c1a66b9e03fa"><div class="ttname"><a href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html#a5bb46e441465adc923b8c1a66b9e03fa">de.ur.mi.oop.graphics.GraphicsObjectType.ELLIPSE</a></div><div class="ttdeci">ELLIPSE</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_type_8java_source.html#l00015">GraphicsObjectType.java:15</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_html"><div class="ttname"><a href="namespacede_1_1ur.html">de.ur</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html">de.ur.mi.oop.graphics.GraphicsObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_8java_source.html#l00014">GraphicsObject.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_a35de8f9657263a92a50b1f2cf1c91bf4"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a35de8f9657263a92a50b1f2cf1c91bf4">de.ur.mi.oop.graphics.Ellipse.getRadiusX</a></div><div class="ttdeci">float getRadiusX()</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00056">Ellipse.java:56</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_a9b56145ac33febf52819f15592986754"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a9b56145ac33febf52819f15592986754">de.ur.mi.oop.graphics.Ellipse.getHeight</a></div><div class="ttdeci">float getHeight()</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00068">Ellipse.java:68</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">de.ur.mi.oop.colors.Color</a></div><div class="ttdef"><b>Definition:</b> <a href="_color_8java_source.html#l00008">Color.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_a10e06d49486ccbffb3d9591060eab185"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a10e06d49486ccbffb3d9591060eab185">de.ur.mi.oop.graphics.Ellipse.getWidth</a></div><div class="ttdeci">float getWidth()</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00064">Ellipse.java:64</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html">de.ur.mi.oop.graphics.Ellipse</a></div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00008">Ellipse.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_a498c4a5f1d00b1f79b4a010b9e537c6d"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a498c4a5f1d00b1f79b4a010b9e537c6d">de.ur.mi.oop.graphics.Ellipse.getRadiusY</a></div><div class="ttdeci">float getRadiusY()</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00060">Ellipse.java:60</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_html_ae09c9c2c3a8ea11f5ecfdb73e7260dfe"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#ae09c9c2c3a8ea11f5ecfdb73e7260dfe">de.ur.mi.oop.graphics.GraphicsObject.getXPos</a></div><div class="ttdeci">float getXPos()</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_8java_source.html#l00090">GraphicsObject.java:90</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_a5fbe9c46a0b8b259f4b7eb4186d2e58a"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a5fbe9c46a0b8b259f4b7eb4186d2e58a">de.ur.mi.oop.graphics.Ellipse.getTopBorder</a></div><div class="ttdeci">float getTopBorder()</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00088">Ellipse.java:88</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_1_1mi_html"><div class="ttname"><a href="namespacede_1_1ur_1_1mi.html">de.ur.mi</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_html_a7487be7d19e70d23f3d4104f5d9450c4"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a7487be7d19e70d23f3d4104f5d9450c4">de.ur.mi.oop.graphics.GraphicsObject.getYPos</a></div><div class="ttdeci">float getYPos()</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_8java_source.html#l00108">GraphicsObject.java:108</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_a73b8b209c5caaadfc23043764d70a083"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a73b8b209c5caaadfc23043764d70a083">de.ur.mi.oop.graphics.Ellipse.setHeight</a></div><div class="ttdeci">void setHeight(float height)</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00076">Ellipse.java:76</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_1_1mi_1_1oop_1_1colors_html"><div class="ttname"><a href="namespacede_1_1ur_1_1mi_1_1oop_1_1colors.html">de.ur.mi.oop.colors</a></div><div class="ttdef"><b>Definition:</b> <a href="_color_8java_source.html#l00001">Color.java:1</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_aea1e8357f7dc1c82a7214c4a3ebc1dde"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#aea1e8357f7dc1c82a7214c4a3ebc1dde">de.ur.mi.oop.graphics.Ellipse.getRightBorder</a></div><div class="ttdeci">float getRightBorder()</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00080">Ellipse.java:80</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_html_a8759f7d676ab386ffa98e6cc08076623"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a8759f7d676ab386ffa98e6cc08076623">de.ur.mi.oop.graphics.GraphicsObject.type</a></div><div class="ttdeci">GraphicsObjectType type</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_8java_source.html#l00033">GraphicsObject.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_abf01f4e340e2150258459ba9cf72845f"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#abf01f4e340e2150258459ba9cf72845f">de.ur.mi.oop.graphics.Ellipse.setRadiusY</a></div><div class="ttdeci">void setRadiusY(float radiusY)</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00052">Ellipse.java:52</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_aa7f213ab2365ecca64241a7841f6c14f"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#aa7f213ab2365ecca64241a7841f6c14f">de.ur.mi.oop.graphics.Ellipse.setWidth</a></div><div class="ttdeci">void setWidth(float width)</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00072">Ellipse.java:72</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_a475a109d54038d7dd62305179c3ffd29"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a475a109d54038d7dd62305179c3ffd29">de.ur.mi.oop.graphics.Ellipse.getLeftBorder</a></div><div class="ttdeci">float getLeftBorder()</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00084">Ellipse.java:84</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse_html_a4e49b5ac8fc290b8e68c8f026edb66e0"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a4e49b5ac8fc290b8e68c8f026edb66e0">de.ur.mi.oop.graphics.Ellipse.getBottomBorder</a></div><div class="ttdeci">float getBottomBorder()</div><div class="ttdef"><b>Definition:</b> <a href="_ellipse_8java_source.html#l00092">Ellipse.java:92</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_821818eb74338e35a65f6fbb6b6439d5.html">de</a></li><li class="navelem"><a class="el" href="dir_5d2753e19a262a1a340e90ef72c2a8cb.html">ur</a></li><li class="navelem"><a class="el" href="dir_b51185c31e96325dc03e995ba0cdea94.html">mi</a></li><li class="navelem"><a class="el" href="dir_2471dce55b57edabebc87c0ed02ad4c9.html">oop</a></li><li class="navelem"><a class="el" href="dir_75a15ca84b26f6b73c8eadb7b2099bee.html">graphics</a></li><li class="navelem"><a class="el" href="_ellipse_8java.html">Ellipse.java</a></li>
+    <li class="footer">Erzeugt am Mon Okt 5 2020 21:06:53 für GraphicsApp API von <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

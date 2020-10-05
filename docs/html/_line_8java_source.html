@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GraphicsApp API: Line.java Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GraphicsApp API
+   </div>
+   <div id="projectbrief">Eine überarbeitete und angepasste Variante der originalen GraphicsApp-Umgebung</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_line_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Line.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_line_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>de.ur.mi.oop.graphics;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> <a class="code" href="namespacede.html">de</a>.<a class="code" href="namespacede_1_1ur.html">ur</a>.<a class="code" href="namespacede_1_1ur_1_1mi.html">mi</a>.<a class="code" href="namespacede_1_1ur_1_1mi_1_1oop.html">oop</a>.<a class="code" href="namespacede_1_1ur_1_1mi_1_1oop_1_1app.html">app</a>.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html">GraphicsApp</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> <a class="code" href="namespacede.html">de</a>.<a class="code" href="namespacede_1_1ur.html">ur</a>.<a class="code" href="namespacede_1_1ur_1_1mi.html">mi</a>.<a class="code" href="namespacede_1_1ur_1_1mi_1_1oop.html">oop</a>.<a class="code" href="namespacede_1_1ur_1_1mi_1_1oop_1_1colors.html">colors</a>.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Die Klasse Line ist ein grafisches Objekt, das eine Linie darstellt.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html">    9</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html">Line</a> <span class="keyword">extends</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html">GraphicsObject</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">float</span> xEndPoint;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">float</span> yEndPoint;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">     * Konstruiert eine neue Linie von startX und startY nach endX und endY.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">     * @param startX Die x-Position des ersten Punktes</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">     * @param startY Die y-Position des ersten Punktes</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">     * @param endX   Die x-Position des Endpunktes</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">     * @param endY   Die y-Position des Endpunktes</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">     * @param color  Die Strichfarbe für die Linie</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a00e219d6529f691f22f80942c036ac62">   22</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a00e219d6529f691f22f80942c036ac62">Line</a>(<span class="keywordtype">float</span> startX, <span class="keywordtype">float</span> startY, <span class="keywordtype">float</span> endX, <span class="keywordtype">float</span> endY, <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> color) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        super(startX, startY, color);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        this.xEndPoint = endX;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        this.yEndPoint = endY;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a6765c37ca7755af0e472090f565d6ecb">strokeWeight</a> = <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html">GraphicsApp</a>.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app_core.html#a9b48771b501dd91fa516a190fc581767">getApp</a>().<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app_core.html#ac9bb0ca272b30e9373818f516e5f96d5">getConfig</a>().<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_config.html#a8d17fabef5892702f585f172712a7072">getStrokeWidth</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a8759f7d676ab386ffa98e6cc08076623">type</a> = <a class="code" href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html">GraphicsObjectType</a>.<a class="code" href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html#a2d67033ab46413992eaea4f7d5ab523b">LINE</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a40b1c5a4c89e8534a2778ff9ce2d16fa">setColor</a>(color);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">     * Konstruiert eine neue Linie von startX und startY nach endX und endY.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">     * @param startX    Die x-Position des ersten Punktes</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">     * @param startY    Die y-Position des ersten Punktes</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">     * @param endX      Die x-Position des Endpunktes</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">     * @param endY      Die y-Position des Endpunktes</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">     * @param color     Die Strichfarbe für die Linie</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">     * @param lineWidth Die Strichstärke</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#abe8273a0c0f2ffb4e3f98fd611b18a4b">   41</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#abe8273a0c0f2ffb4e3f98fd611b18a4b">Line</a>(<span class="keywordtype">float</span> startX, <span class="keywordtype">float</span> startY, <span class="keywordtype">float</span> endX, <span class="keywordtype">float</span> endY, <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> color, <span class="keywordtype">float</span> lineWidth) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">this</span>(startX, startY, endX, endY, color);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a6765c37ca7755af0e472090f565d6ecb">strokeWeight</a> = lineWidth;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">     * Konstruiert eine neue Linie von einem Startpunkt zu einem Endpunkt.</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">     * @param start Start-Koordinatenpunkt</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">     * @param end   End-Koordinatenpunkt</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">     * @param color Die Strichfarbe für die Linie</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae51a6ed9ae557ae5e9b4c4e52431f5d4">   53</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae51a6ed9ae557ae5e9b4c4e52431f5d4">Line</a>(<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html">Point</a> start, <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html">Point</a> end, <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> color) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">this</span>(start.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a5ddde9953d28db311391009e89648f58">getXPos</a>(), start.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a0e0eaf2ff327c8aecac4fd0bcbd79e97">getYPos</a>(), end.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a5ddde9953d28db311391009e89648f58">getXPos</a>(), end.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a0e0eaf2ff327c8aecac4fd0bcbd79e97">getYPos</a>(), color);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">     * Konstruiert eine neue Linie von einem Startpunkt zu einem Endpunkt.</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">     * @param start     Start-Koordinatenpunkt</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">     * @param end       End-Koordinatenpunkt</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">     * @param color     Die Strichfarbe für die Linie</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">     * @param lineWidth Die Strichstärke</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a3e9bcde4b53548fa8186b53172986732">   65</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a3e9bcde4b53548fa8186b53172986732">Line</a>(<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html">Point</a> start, <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html">Point</a> end, <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> color, <span class="keywordtype">float</span> lineWidth) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">this</span>(start.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a5ddde9953d28db311391009e89648f58">getXPos</a>(), start.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a0e0eaf2ff327c8aecac4fd0bcbd79e97">getYPos</a>(), end.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a5ddde9953d28db311391009e89648f58">getXPos</a>(), end.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a0e0eaf2ff327c8aecac4fd0bcbd79e97">getYPos</a>(), color, lineWidth);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a0de2f182d71f6adbcab79e89f40d3746">   69</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a0de2f182d71f6adbcab79e89f40d3746">getLineWidth</a>() {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a6765c37ca7755af0e472090f565d6ecb">strokeWeight</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a0914473cdf5e5fe4a7a336f692583057">   73</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a0914473cdf5e5fe4a7a336f692583057">setLineWidth</a>(<span class="keywordtype">float</span> lineWidth) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a6765c37ca7755af0e472090f565d6ecb">strokeWeight</a> = lineWidth;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae830089edf77aa58c5cc031e309f4f0f">   77</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae830089edf77aa58c5cc031e309f4f0f">getStartpointX</a>() {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> super.getXPos();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a28225c762bdbc60c157c70466ec917aa">   81</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a28225c762bdbc60c157c70466ec917aa">getStartpointY</a>() {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> super.getYPos();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#aa5fc775a2e687e2a35aca406adce8a64">   85</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#aa5fc775a2e687e2a35aca406adce8a64">getEndpointX</a>() {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> this.xEndPoint;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae98229b9044ff937688262c442f88b6a">   89</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae98229b9044ff937688262c442f88b6a">getEndpointY</a>() {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> this.yEndPoint;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a55832e55fb20b8ec47ecb2567e56f614">   93</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a55832e55fb20b8ec47ecb2567e56f614">setStartPoint</a>(<span class="keywordtype">float</span> xStartPoint, <span class="keywordtype">float</span> yStartPoint) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        super.setPosition(xStartPoint, yStartPoint);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a3b8d565890bb16419f50edb718211e86">   97</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a3b8d565890bb16419f50edb718211e86">setStartPoint</a>(<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html">Point</a> start) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a55832e55fb20b8ec47ecb2567e56f614">setStartPoint</a>(start.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a5ddde9953d28db311391009e89648f58">getXPos</a>(), start.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a0e0eaf2ff327c8aecac4fd0bcbd79e97">getYPos</a>());</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a9809c84ed665a434afb8cf7081fa5b4e">  101</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a9809c84ed665a434afb8cf7081fa5b4e">setEndPoint</a>(<span class="keywordtype">float</span> xEndPoint, <span class="keywordtype">float</span> yEndPoint) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        this.xEndPoint = xEndPoint;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        this.yEndPoint = yEndPoint;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae7b1c98512c23c2292d476359b8b0bba">  106</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae7b1c98512c23c2292d476359b8b0bba">setEndPoint</a>(<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html">Point</a> end) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a9809c84ed665a434afb8cf7081fa5b4e">setEndPoint</a>(end.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a5ddde9953d28db311391009e89648f58">getXPos</a>(), end.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a0e0eaf2ff327c8aecac4fd0bcbd79e97">getYPos</a>());</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a40b1c5a4c89e8534a2778ff9ce2d16fa">  110</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a40b1c5a4c89e8534a2778ff9ce2d16fa">setColor</a>(<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> newColor) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        super.setColor(newColor);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a1a5407f82383152dbfedc3426205a351">setBorderColor</a>(newColor);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a69dc5a3eda8a52c56331a97dd7576a83">  115</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a69dc5a3eda8a52c56331a97dd7576a83">move</a>(<span class="keywordtype">float</span> dx, <span class="keywordtype">float</span> dy) {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a55832e55fb20b8ec47ecb2567e56f614">setStartPoint</a>(super.getXPos() + dx, super.getXPos() + dy);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a9809c84ed665a434afb8cf7081fa5b4e">setEndPoint</a>(this.xEndPoint + dx, this.yEndPoint + dy);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#abac890bc8267fa193460bac67bd60a33">  120</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#abac890bc8267fa193460bac67bd60a33">setPosition</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span> (x &lt; super.getXPos()) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">if</span> (super.getXPos() &lt; <span class="keyword">this</span>.xEndPoint) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                this.xEndPoint = x + (this.xEndPoint - super.getXPos());</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                super.setXPos(x);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                super.setXPos(x + (super.getXPos() - <span class="keyword">this</span>.xEndPoint));</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                this.xEndPoint = x;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (super.getXPos() &lt; this.xEndPoint) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            this.xEndPoint = x + (this.xEndPoint - super.getXPos());</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            super.setXPos(x);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            super.setXPos(x + (super.getXPos() - this.xEndPoint));</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            this.xEndPoint = x;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">if</span> (y &lt; super.getYPos()) {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordflow">if</span> (super.getYPos() &lt; this.yEndPoint) {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                this.yEndPoint = y + (this.yEndPoint - super.getYPos());</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                super.setYPos(y);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                super.setYPos(y + (super.getYPos() - this.yEndPoint));</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                this.yEndPoint = y;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (super.getYPos() &lt; this.yEndPoint) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            this.yEndPoint = y + (this.yEndPoint - super.getYPos());</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            super.setYPos(y);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            super.setYPos(y + (super.getYPos() - this.yEndPoint));</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            this.yEndPoint = y;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a96e0dd8c75642854b67c0661b1a3f904">  155</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a96e0dd8c75642854b67c0661b1a3f904">setPosition</a>(<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html">Point</a> p) {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#abac890bc8267fa193460bac67bd60a33">setPosition</a>(p.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a5ddde9953d28db311391009e89648f58">getXPos</a>(), p.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a0e0eaf2ff327c8aecac4fd0bcbd79e97">getYPos</a>());</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">     * Setzt sowohl Start- als auch Endpunkt der Linie neu</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">     * @param toStartPointX Die neue x-Position des Startpunkts</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">     * @param toStartPointY Die neue y-Position des Startpunktes</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">     * @param toEndPointX   Die neue x-Position des Endpunkts</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">     * @param toEndPointY   Die neue y-Position des Endpunktes</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a2a030c5d67d4572ccba1b7409e23558e">  167</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a2a030c5d67d4572ccba1b7409e23558e">setStartAndEndPoint</a>(<span class="keywordtype">float</span> toStartPointX, <span class="keywordtype">float</span> toStartPointY, <span class="keywordtype">float</span> toEndPointX, <span class="keywordtype">float</span> toEndPointY) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a55832e55fb20b8ec47ecb2567e56f614">setStartPoint</a>(toStartPointX, toStartPointY);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        this.<a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a9809c84ed665a434afb8cf7081fa5b4e">setEndPoint</a>(toEndPointX, toEndPointY);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a3156470564774d0707f3611cf9e68425">  172</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a3156470564774d0707f3611cf9e68425">getRightBorder</a>() {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> Math.max(super.getXPos(), <span class="keyword">this</span>.xEndPoint);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a1a43499dc5948ccd49f38015da2a4601">  176</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a1a43499dc5948ccd49f38015da2a4601">getLeftBorder</a>() {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">return</span> Math.min(super.getXPos(), <span class="keyword">this</span>.xEndPoint);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a492d3bd0197bde00f891ffac3b0d4662">  180</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a492d3bd0197bde00f891ffac3b0d4662">getTopBorder</a>() {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">return</span> Math.min(super.getYPos(), <span class="keyword">this</span>.yEndPoint);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a69f2c7a8f2a920d27e05bed0920dfc5f">  184</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a69f2c7a8f2a920d27e05bed0920dfc5f">getBottomBorder</a>() {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">return</span> Math.max(super.getYPos(), <span class="keyword">this</span>.yEndPoint);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="anamespacede_html"><div class="ttname"><a href="namespacede.html">de</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_abe8273a0c0f2ffb4e3f98fd611b18a4b"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#abe8273a0c0f2ffb4e3f98fd611b18a4b">de.ur.mi.oop.graphics.Line.Line</a></div><div class="ttdeci">Line(float startX, float startY, float endX, float endY, Color color, float lineWidth)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00041">Line.java:41</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_1_1mi_1_1oop_html"><div class="ttname"><a href="namespacede_1_1ur_1_1mi_1_1oop.html">de.ur.mi.oop</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html">de.ur.mi.oop.graphics.Point</a></div><div class="ttdef"><b>Definition:</b> <a href="_point_8java_source.html#l00006">Point.java:6</a></div></div>
+<div class="ttc" id="aenumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type_html"><div class="ttname"><a href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html">de.ur.mi.oop.graphics.GraphicsObjectType</a></div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_type_8java_source.html#l00007">GraphicsObjectType.java:7</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app_core_html_a9b48771b501dd91fa516a190fc581767"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app_core.html#a9b48771b501dd91fa516a190fc581767">de.ur.mi.oop.app.GraphicsAppCore.getApp</a></div><div class="ttdeci">static GraphicsApp getApp()</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_app_core_8java_source.html#l00037">GraphicsAppCore.java:37</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_html_a1a5407f82383152dbfedc3426205a351"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a1a5407f82383152dbfedc3426205a351">de.ur.mi.oop.graphics.GraphicsObject.setBorderColor</a></div><div class="ttdeci">void setBorderColor(Color color)</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_8java_source.html#l00228">GraphicsObject.java:228</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_html"><div class="ttname"><a href="namespacede_1_1ur.html">de.ur</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1app_1_1_config_html_a8d17fabef5892702f585f172712a7072"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_config.html#a8d17fabef5892702f585f172712a7072">de.ur.mi.oop.app.Config.getStrokeWidth</a></div><div class="ttdeci">float getStrokeWidth()</div><div class="ttdef"><b>Definition:</b> <a href="_config_8java_source.html#l00046">Config.java:46</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html">de.ur.mi.oop.graphics.GraphicsObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_8java_source.html#l00014">GraphicsObject.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html">de.ur.mi.oop.app.GraphicsApp</a></div><div class="ttdef"><b>Definition:</b> <a href="_graphics_app_8java_source.html#l00024">GraphicsApp.java:24</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_1_1mi_1_1oop_1_1app_html"><div class="ttname"><a href="namespacede_1_1ur_1_1mi_1_1oop_1_1app.html">de.ur.mi.oop.app</a></div><div class="ttdef"><b>Definition:</b> <a href="_app_manager_8java_source.html#l00001">AppManager.java:1</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html">de.ur.mi.oop.graphics.Line</a></div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00009">Line.java:9</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a9809c84ed665a434afb8cf7081fa5b4e"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a9809c84ed665a434afb8cf7081fa5b4e">de.ur.mi.oop.graphics.Line.setEndPoint</a></div><div class="ttdeci">void setEndPoint(float xEndPoint, float yEndPoint)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00101">Line.java:101</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a69dc5a3eda8a52c56331a97dd7576a83"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a69dc5a3eda8a52c56331a97dd7576a83">de.ur.mi.oop.graphics.Line.move</a></div><div class="ttdeci">void move(float dx, float dy)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00115">Line.java:115</a></div></div>
+<div class="ttc" id="aenumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type_html_a2d67033ab46413992eaea4f7d5ab523b"><div class="ttname"><a href="enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html#a2d67033ab46413992eaea4f7d5ab523b">de.ur.mi.oop.graphics.GraphicsObjectType.LINE</a></div><div class="ttdeci">LINE</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_type_8java_source.html#l00011">GraphicsObjectType.java:11</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a0914473cdf5e5fe4a7a336f692583057"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a0914473cdf5e5fe4a7a336f692583057">de.ur.mi.oop.graphics.Line.setLineWidth</a></div><div class="ttdeci">void setLineWidth(float lineWidth)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00073">Line.java:73</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a3b8d565890bb16419f50edb718211e86"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a3b8d565890bb16419f50edb718211e86">de.ur.mi.oop.graphics.Line.setStartPoint</a></div><div class="ttdeci">void setStartPoint(Point start)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00097">Line.java:97</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_html_a6765c37ca7755af0e472090f565d6ecb"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a6765c37ca7755af0e472090f565d6ecb">de.ur.mi.oop.graphics.GraphicsObject.strokeWeight</a></div><div class="ttdeci">float strokeWeight</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_8java_source.html#l00031">GraphicsObject.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_aa5fc775a2e687e2a35aca406adce8a64"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#aa5fc775a2e687e2a35aca406adce8a64">de.ur.mi.oop.graphics.Line.getEndpointX</a></div><div class="ttdeci">float getEndpointX()</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00085">Line.java:85</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_ae98229b9044ff937688262c442f88b6a"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae98229b9044ff937688262c442f88b6a">de.ur.mi.oop.graphics.Line.getEndpointY</a></div><div class="ttdeci">float getEndpointY()</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00089">Line.java:89</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point_html_a5ddde9953d28db311391009e89648f58"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a5ddde9953d28db311391009e89648f58">de.ur.mi.oop.graphics.Point.getXPos</a></div><div class="ttdeci">float getXPos()</div><div class="ttdef"><b>Definition:</b> <a href="_point_8java_source.html#l00029">Point.java:29</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">de.ur.mi.oop.colors.Color</a></div><div class="ttdef"><b>Definition:</b> <a href="_color_8java_source.html#l00008">Color.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_ae51a6ed9ae557ae5e9b4c4e52431f5d4"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae51a6ed9ae557ae5e9b4c4e52431f5d4">de.ur.mi.oop.graphics.Line.Line</a></div><div class="ttdeci">Line(Point start, Point end, Color color)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00053">Line.java:53</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a492d3bd0197bde00f891ffac3b0d4662"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a492d3bd0197bde00f891ffac3b0d4662">de.ur.mi.oop.graphics.Line.getTopBorder</a></div><div class="ttdeci">float getTopBorder()</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00180">Line.java:180</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a0de2f182d71f6adbcab79e89f40d3746"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a0de2f182d71f6adbcab79e89f40d3746">de.ur.mi.oop.graphics.Line.getLineWidth</a></div><div class="ttdeci">float getLineWidth()</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00069">Line.java:69</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a2a030c5d67d4572ccba1b7409e23558e"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a2a030c5d67d4572ccba1b7409e23558e">de.ur.mi.oop.graphics.Line.setStartAndEndPoint</a></div><div class="ttdeci">void setStartAndEndPoint(float toStartPointX, float toStartPointY, float toEndPointX, float toEndPointY)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00167">Line.java:167</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a28225c762bdbc60c157c70466ec917aa"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a28225c762bdbc60c157c70466ec917aa">de.ur.mi.oop.graphics.Line.getStartpointY</a></div><div class="ttdeci">float getStartpointY()</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00081">Line.java:81</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_1_1mi_html"><div class="ttname"><a href="namespacede_1_1ur_1_1mi.html">de.ur.mi</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a96e0dd8c75642854b67c0661b1a3f904"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a96e0dd8c75642854b67c0661b1a3f904">de.ur.mi.oop.graphics.Line.setPosition</a></div><div class="ttdeci">void setPosition(Point p)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00155">Line.java:155</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a1a43499dc5948ccd49f38015da2a4601"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a1a43499dc5948ccd49f38015da2a4601">de.ur.mi.oop.graphics.Line.getLeftBorder</a></div><div class="ttdeci">float getLeftBorder()</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00176">Line.java:176</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point_html_a0e0eaf2ff327c8aecac4fd0bcbd79e97"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html#a0e0eaf2ff327c8aecac4fd0bcbd79e97">de.ur.mi.oop.graphics.Point.getYPos</a></div><div class="ttdeci">float getYPos()</div><div class="ttdef"><b>Definition:</b> <a href="_point_8java_source.html#l00033">Point.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a3e9bcde4b53548fa8186b53172986732"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a3e9bcde4b53548fa8186b53172986732">de.ur.mi.oop.graphics.Line.Line</a></div><div class="ttdeci">Line(Point start, Point end, Color color, float lineWidth)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00065">Line.java:65</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a69f2c7a8f2a920d27e05bed0920dfc5f"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a69f2c7a8f2a920d27e05bed0920dfc5f">de.ur.mi.oop.graphics.Line.getBottomBorder</a></div><div class="ttdeci">float getBottomBorder()</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00184">Line.java:184</a></div></div>
+<div class="ttc" id="anamespacede_1_1ur_1_1mi_1_1oop_1_1colors_html"><div class="ttname"><a href="namespacede_1_1ur_1_1mi_1_1oop_1_1colors.html">de.ur.mi.oop.colors</a></div><div class="ttdef"><b>Definition:</b> <a href="_color_8java_source.html#l00001">Color.java:1</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_ae830089edf77aa58c5cc031e309f4f0f"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae830089edf77aa58c5cc031e309f4f0f">de.ur.mi.oop.graphics.Line.getStartpointX</a></div><div class="ttdeci">float getStartpointX()</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00077">Line.java:77</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a3156470564774d0707f3611cf9e68425"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a3156470564774d0707f3611cf9e68425">de.ur.mi.oop.graphics.Line.getRightBorder</a></div><div class="ttdeci">float getRightBorder()</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00172">Line.java:172</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_html_a8759f7d676ab386ffa98e6cc08076623"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a8759f7d676ab386ffa98e6cc08076623">de.ur.mi.oop.graphics.GraphicsObject.type</a></div><div class="ttdeci">GraphicsObjectType type</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_object_8java_source.html#l00033">GraphicsObject.java:33</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app_core_html_ac9bb0ca272b30e9373818f516e5f96d5"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app_core.html#ac9bb0ca272b30e9373818f516e5f96d5">de.ur.mi.oop.app.GraphicsAppCore.getConfig</a></div><div class="ttdeci">Config getConfig()</div><div class="ttdef"><b>Definition:</b> <a href="_graphics_app_core_8java_source.html#l00045">GraphicsAppCore.java:45</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_ae7b1c98512c23c2292d476359b8b0bba"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae7b1c98512c23c2292d476359b8b0bba">de.ur.mi.oop.graphics.Line.setEndPoint</a></div><div class="ttdeci">void setEndPoint(Point end)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00106">Line.java:106</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a00e219d6529f691f22f80942c036ac62"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a00e219d6529f691f22f80942c036ac62">de.ur.mi.oop.graphics.Line.Line</a></div><div class="ttdeci">Line(float startX, float startY, float endX, float endY, Color color)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00022">Line.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_abac890bc8267fa193460bac67bd60a33"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#abac890bc8267fa193460bac67bd60a33">de.ur.mi.oop.graphics.Line.setPosition</a></div><div class="ttdeci">void setPosition(float x, float y)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00120">Line.java:120</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a40b1c5a4c89e8534a2778ff9ce2d16fa"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a40b1c5a4c89e8534a2778ff9ce2d16fa">de.ur.mi.oop.graphics.Line.setColor</a></div><div class="ttdeci">void setColor(Color newColor)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00110">Line.java:110</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line_html_a55832e55fb20b8ec47ecb2567e56f614"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a55832e55fb20b8ec47ecb2567e56f614">de.ur.mi.oop.graphics.Line.setStartPoint</a></div><div class="ttdeci">void setStartPoint(float xStartPoint, float yStartPoint)</div><div class="ttdef"><b>Definition:</b> <a href="_line_8java_source.html#l00093">Line.java:93</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_821818eb74338e35a65f6fbb6b6439d5.html">de</a></li><li class="navelem"><a class="el" href="dir_5d2753e19a262a1a340e90ef72c2a8cb.html">ur</a></li><li class="navelem"><a class="el" href="dir_b51185c31e96325dc03e995ba0cdea94.html">mi</a></li><li class="navelem"><a class="el" href="dir_2471dce55b57edabebc87c0ed02ad4c9.html">oop</a></li><li class="navelem"><a class="el" href="dir_75a15ca84b26f6b73c8eadb7b2099bee.html">graphics</a></li><li class="navelem"><a class="el" href="_line_8java.html">Line.java</a></li>
+    <li class="footer">Erzeugt am Mon Okt 5 2020 21:06:54 für GraphicsApp API von <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>

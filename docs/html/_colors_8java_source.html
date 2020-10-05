@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GraphicsApp API: Colors.java Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">GraphicsApp API
+   </div>
+   <div id="projectbrief">Eine überarbeitete und angepasste Variante der originalen GraphicsApp-Umgebung</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_colors_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Colors.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_colors_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>de.ur.mi.oop.colors;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.util.Random;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Eine Sammlung von vordefinierten GraphicsApp-Colors.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html">    8</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html">Colors</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Random rand = <span class="keyword">new</span> Random();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a04b836ec4440a7afb135dd7084fd1ea8">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a04b836ec4440a7afb135dd7084fd1ea8">RED</a> = <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(255, 0, 0);</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#af51bab14ed96a572277d209edc3e159c">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#af51bab14ed96a572277d209edc3e159c">ORANGE</a> = <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(255, 153, 0);</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a37b684626dedb79c042851f4db263c28">   14</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a37b684626dedb79c042851f4db263c28">YELLOW</a> = <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(255, 255, 0);</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a79d614aed1881a8c840f6a511eeaf69a">   15</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a79d614aed1881a8c840f6a511eeaf69a">GREEN</a> = <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(51, 204, 51);</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a9475d7ac0818509b4fbbf5a882750e9e">   16</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a9475d7ac0818509b4fbbf5a882750e9e">BLUE</a> = <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(0, 102, 255);</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#ac27df5f27c8b96152195b4e4ae291ef1">   17</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#ac27df5f27c8b96152195b4e4ae291ef1">PURPLE</a> = <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(204, 51, 255);</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a7856b95732f9c1b929556ba9166c2fe0">   18</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a7856b95732f9c1b929556ba9166c2fe0">PINK</a> = <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(255, 102, 153);</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a90c98bc0e8eaf16df688f57e7cc96ba6">   19</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a90c98bc0e8eaf16df688f57e7cc96ba6">BROWN</a> = <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(204, 102, 0);</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#aef268e4546455bd753f9317467e9a351">   20</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#aef268e4546455bd753f9317467e9a351">WHITE</a> = <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(255, 255, 255);</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#ac63469cc5795b5d0ac126d0367f80b56">   21</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#ac63469cc5795b5d0ac126d0367f80b56">BLACK</a> = <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(0, 0, 0);</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a6d8dfbc1e7beb3028182f2a8dcb7c673">   22</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a6d8dfbc1e7beb3028182f2a8dcb7c673">GREY</a> = <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(100, 100, 100);</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a3c68b4a14763da65c3472b601dd9b70c">   23</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a3c68b4a14763da65c3472b601dd9b70c">TRANSPARENT</a> = <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(255, 255, 255, 0);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    /**</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">     * Erzeugt eine zufällige, opake Farbe.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">     * @return Ein Color-Objekt, das mit zufälligen Rot-, Grün- und Blauwerten instantiiert wurde.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a73b1632daae834daef9cbc877bf638b0">   30</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a73b1632daae834daef9cbc877bf638b0">getRandomColor</a>() {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">int</span> red = (rand.nextInt(256) + 255) / 2;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">int</span> green = (rand.nextInt(256) + 255) / 2;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">int</span> blue = (rand.nextInt(256) + 255) / 2;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">Color</a>(red, green, blue);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_a9475d7ac0818509b4fbbf5a882750e9e"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a9475d7ac0818509b4fbbf5a882750e9e">de.ur.mi.oop.colors.Colors.BLUE</a></div><div class="ttdeci">static final Color BLUE</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00016">Colors.java:16</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_a37b684626dedb79c042851f4db263c28"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a37b684626dedb79c042851f4db263c28">de.ur.mi.oop.colors.Colors.YELLOW</a></div><div class="ttdeci">static final Color YELLOW</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00014">Colors.java:14</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_ac27df5f27c8b96152195b4e4ae291ef1"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#ac27df5f27c8b96152195b4e4ae291ef1">de.ur.mi.oop.colors.Colors.PURPLE</a></div><div class="ttdeci">static final Color PURPLE</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00017">Colors.java:17</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_ac63469cc5795b5d0ac126d0367f80b56"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#ac63469cc5795b5d0ac126d0367f80b56">de.ur.mi.oop.colors.Colors.BLACK</a></div><div class="ttdeci">static final Color BLACK</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00021">Colors.java:21</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_a3c68b4a14763da65c3472b601dd9b70c"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a3c68b4a14763da65c3472b601dd9b70c">de.ur.mi.oop.colors.Colors.TRANSPARENT</a></div><div class="ttdeci">static final Color TRANSPARENT</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00023">Colors.java:23</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html">de.ur.mi.oop.colors.Color</a></div><div class="ttdef"><b>Definition:</b> <a href="_color_8java_source.html#l00008">Color.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_a6d8dfbc1e7beb3028182f2a8dcb7c673"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a6d8dfbc1e7beb3028182f2a8dcb7c673">de.ur.mi.oop.colors.Colors.GREY</a></div><div class="ttdeci">static final Color GREY</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00022">Colors.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_a04b836ec4440a7afb135dd7084fd1ea8"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a04b836ec4440a7afb135dd7084fd1ea8">de.ur.mi.oop.colors.Colors.RED</a></div><div class="ttdeci">static final Color RED</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00012">Colors.java:12</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_a90c98bc0e8eaf16df688f57e7cc96ba6"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a90c98bc0e8eaf16df688f57e7cc96ba6">de.ur.mi.oop.colors.Colors.BROWN</a></div><div class="ttdeci">static final Color BROWN</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00019">Colors.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_a79d614aed1881a8c840f6a511eeaf69a"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a79d614aed1881a8c840f6a511eeaf69a">de.ur.mi.oop.colors.Colors.GREEN</a></div><div class="ttdeci">static final Color GREEN</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00015">Colors.java:15</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_a7856b95732f9c1b929556ba9166c2fe0"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a7856b95732f9c1b929556ba9166c2fe0">de.ur.mi.oop.colors.Colors.PINK</a></div><div class="ttdeci">static final Color PINK</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00018">Colors.java:18</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_af51bab14ed96a572277d209edc3e159c"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#af51bab14ed96a572277d209edc3e159c">de.ur.mi.oop.colors.Colors.ORANGE</a></div><div class="ttdeci">static final Color ORANGE</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00013">Colors.java:13</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_a73b1632daae834daef9cbc877bf638b0"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#a73b1632daae834daef9cbc877bf638b0">de.ur.mi.oop.colors.Colors.getRandomColor</a></div><div class="ttdeci">static final Color getRandomColor()</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00030">Colors.java:30</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html">de.ur.mi.oop.colors.Colors</a></div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00008">Colors.java:8</a></div></div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors_html_aef268e4546455bd753f9317467e9a351"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_colors.html#aef268e4546455bd753f9317467e9a351">de.ur.mi.oop.colors.Colors.WHITE</a></div><div class="ttdeci">static final Color WHITE</div><div class="ttdef"><b>Definition:</b> <a href="_colors_8java_source.html#l00020">Colors.java:20</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_821818eb74338e35a65f6fbb6b6439d5.html">de</a></li><li class="navelem"><a class="el" href="dir_5d2753e19a262a1a340e90ef72c2a8cb.html">ur</a></li><li class="navelem"><a class="el" href="dir_b51185c31e96325dc03e995ba0cdea94.html">mi</a></li><li class="navelem"><a class="el" href="dir_2471dce55b57edabebc87c0ed02ad4c9.html">oop</a></li><li class="navelem"><a class="el" href="dir_6e2870a9bc3ebc26f66039f641feef3a.html">colors</a></li><li class="navelem"><a class="el" href="_colors_8java.html">Colors.java</a></li>
+    <li class="footer">Erzeugt am Mon Okt 5 2020 21:06:53 für GraphicsApp API von <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+  </ul>
+</div>
+</body>
+</html>
