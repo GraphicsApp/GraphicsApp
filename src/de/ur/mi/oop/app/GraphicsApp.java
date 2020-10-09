@@ -17,9 +17,10 @@ import java.awt.event.MouseEvent;
  */
 
 /**
- * Die abstrakte Basisklasse für GraphicsApp-Anwendungen. Nutzer müssen hiervon erben,
- * um eine konkrete GraphicsApp-Anwendung zu implementieren. Dabei müssen die Methoden
- * draw() und initialize() implementiert werden.
+ * Dies ist die abstrakte Basisklasse für alle GraphicsApp-Anwendungen. Jedes Programm erbt von dieser Klasse
+ * und verfügt über die hier implementierten Funktionen. Die Programmier*innen überschreibt die `draw()`- und
+ * `initialize()`-Methoden, um die spezifischen Funktionen des eigenen GraphicsApp-Programms umzusetzten. Ein
+ * solches Programm kann dann über eine `main`-Methode und die Verwendung desGraphicsAppLauncher gestartet werden.
  */
 public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsAppKeyListener, GraphicsAppMouseListener {
 
