@@ -1,2 +1,5 @@
 Manifest-Version: 1.0
-
+Name: de/ur/mi/oop
+Implementation-Title: GraphicsApp Library
+Implementation-Version: 1.4.3
+Implementation-Vendor: Lehrstuhl für Medieninformatik, Regensburg
