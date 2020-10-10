@@ -21,12 +21,16 @@ public class Arc extends GraphicsObject {
      * @param end    Die Winkelausdehnung des Bogens in Grad.
      * @param color  Die Füllfarbe des Bogens
      */
-    public Arc(float x, float y, float radius, float start, float end, Color color) {
+    public Arc(float x, float y, float radius, float start, float end, Color color, boolean open) {
         super(x, y, color);
         this.radius = radius;
         this.start = start;
         this.end = end;
-        this.type = GraphicsObjectType.ARC;
+        if(open) {
+            this.type = GraphicsObjectType.ARC;
+        } else {
+            this.type = GraphicsObjectType.PIE_ARC;
+        }
     }
 
     /**
@@ -36,12 +40,16 @@ public class Arc extends GraphicsObject {
      * @param y      y-Koordinate des Mittelpunkts
      * @param radius der Radius des Bogens
      */
-    public Arc(float x, float y, float radius) {
+    public Arc(float x, float y, float radius, boolean open) {
         super(x, y);
         this.radius = radius;
         this.start = 0;
         this.end = 360;
-        this.type = GraphicsObjectType.ARC;
+        if(open) {
+            this.type = GraphicsObjectType.ARC;
+        } else {
+            this.type = GraphicsObjectType.PIE_ARC;
+        }
     }
 
     public void setRadius(float radius) {

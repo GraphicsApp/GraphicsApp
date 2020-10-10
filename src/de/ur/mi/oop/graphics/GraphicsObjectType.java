@@ -11,6 +11,7 @@ public enum GraphicsObjectType {
     LINE,
     RECTANGLE,
     ARC,
+    PIE_ARC,
     CIRCLE,
     ELLIPSE,
     LABEL,

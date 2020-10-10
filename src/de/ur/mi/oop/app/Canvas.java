@@ -66,6 +66,9 @@ public class Canvas extends JPanel {
             case ARC:
                 drawArc(g2d, (Arc) object);
                 break;
+            case PIE_ARC:
+                drawPieArc(g2d, (Arc) object);
+                break;
             case ELLIPSE:
                 drawEllipse(g2d, (Ellipse) object);
                 break;
@@ -129,6 +132,18 @@ public class Canvas extends JPanel {
                 arc.getStart(),
                 arc.getEnd(),
                 Arc2D.OPEN);
+
+        drawAndStrokeShape(g2d, arc, arcShape);
+    }
+
+    private void drawPieArc(Graphics2D g2d, Arc arc) {
+        Arc2D arcShape = new Arc2D.Float(
+                arc.getXPos() - arc.getRadius(),
+                arc.getYPos() - arc.getRadius(),
+                arc.getRadius() * 2, arc.getRadius() * 2,
+                arc.getStart(),
+                arc.getEnd(),
+                Arc2D.PIE);
 
         drawAndStrokeShape(g2d, arc, arcShape);
     }
