@@ -77,7 +77,7 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
     public void actionPerformed(ActionEvent e) {
         long currentTime = System.currentTimeMillis();
         long delta = currentTime - lastFrameTime;
-        if (delta != currentTime) {
+        if (delta != currentTime && delta != 0) {
             int currentFPS = 1000 / (int) delta;
             if (Math.abs(currentFPS - lastFPS) > 5) {
                 showFPS(currentFPS);
