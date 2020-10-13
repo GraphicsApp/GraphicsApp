@@ -13,6 +13,16 @@ public class GraphicsAppLauncher {
 
     public static final String PACKAGE_DELIMITER = ".";
 
+    public static void launch() {
+        // TODO Find way to move stack tracing to getGraphicsAppInstance() to reduce load time
+        StackTraceElement[] stackTraceElements = new Exception().getStackTrace();
+        String launcherName = stackTraceElements[stackTraceElements.length - 1].getClassName();
+        if(launcherName.contains(PACKAGE_DELIMITER)) {
+            launcherName = launcherName.substring(launcherName.lastIndexOf(PACKAGE_DELIMITER)+1);
+        }
+        launch(launcherName);
+    }
+
     public static void launch(String appName) {
         Config config = new Config();
         launch(appName, config);
@@ -37,17 +47,16 @@ public class GraphicsAppLauncher {
     private static GraphicsApp getGraphicsAppInstance(String appName) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         StackTraceElement[] stackTraceElements = new Exception().getStackTrace();
         String launcherName = stackTraceElements[stackTraceElements.length - 1].getClassName();
-
         String className;
-
         int packageNameCutOffIndex = launcherName.lastIndexOf(PACKAGE_DELIMITER);
-        if (packageNameCutOffIndex != -1) {
+        // If Launcher was called from GraphicsApp
+        if(packageNameCutOffIndex == -1) {
+            className = appName;
+        // If Launcher was called from outside GraphicsApp
+        } else {
             String packageName = launcherName.substring(0, launcherName.lastIndexOf(PACKAGE_DELIMITER));
             className = packageName + PACKAGE_DELIMITER + appName;
-        } else {
-            className = appName;
         }
-
         Class<?> appClass = Class.forName(className);
         return (GraphicsApp) appClass.getConstructor().newInstance();
     }
