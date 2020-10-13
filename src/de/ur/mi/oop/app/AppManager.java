@@ -55,6 +55,7 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
         appFrame.setSize(config.getWidth(), config.getHeight());
         appFrame.setLocationRelativeTo(null);
         appFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        appFrame.setResizable(false);
         appFrame.add(canvas);
         canvas.addMouseListener(this);  // MouseListener auf Canvas, damit Koordinaten Titelleiste nicht beinhalten
         canvas.addMouseMotionListener(this);
@@ -107,6 +108,11 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
 
     @Override
     public void keyPressed(KeyEvent e) {
+        // Close GraphicsApp on ESCAPE
+        if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+            appFrame.dispatchEvent(new WindowEvent(appFrame, WindowEvent.WINDOW_CLOSING));
+            return;
+        }
         KeyPressedEvent keyPressedEvent = (KeyPressedEvent) GraphicsAppKeyEvent.createKeyEventFromAWT(e, KeyEventType.PRESSED);
         ((GraphicsAppKeyListener) app).onKeyPressed(keyPressedEvent);
     }
