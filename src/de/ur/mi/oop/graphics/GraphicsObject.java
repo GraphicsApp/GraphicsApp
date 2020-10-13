@@ -45,7 +45,6 @@ public abstract class GraphicsObject {
         this.strokeWeight = 0;
         this.strokeColor = DEFAULT_BORDER_COLOR;
         this.type = GraphicsObjectType.NONE;
-        GraphicsApp.getApp().addObject(this);
     }
 
     public GraphicsObject(float x, float y) {
@@ -314,11 +313,5 @@ public abstract class GraphicsObject {
         double dx = object.getXPos() - this.getXPos();
         double dy = object.getYPos() - this.getYPos();
         return Math.sqrt(dx * dx + dy * dy);
-    }
-
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
-        GraphicsApp.getApp().removeObject(this);
     }
 }

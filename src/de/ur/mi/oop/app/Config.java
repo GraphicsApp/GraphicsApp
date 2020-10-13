@@ -6,7 +6,7 @@ import de.ur.mi.oop.colors.Colors;
 /**
  * Basiskonfiguration der GraphicsApp-Anwendung
  */
-// TODO: Config is shared by App and AppManager. Check if any safety issues occur by allowing both sides to change the object.
+
 public class Config {
 
     private static final int DEFAULT_WIDTH = 1280;

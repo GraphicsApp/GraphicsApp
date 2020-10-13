@@ -86,7 +86,7 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
      */
     protected void drawBackground(Color color) {
         if (background == null) {
-            background = new Background();
+            background = new Background(getWidth(), getHeight());
         }
         background.setColor(color);
         background.draw();
