@@ -103,7 +103,7 @@ public class Compound extends GraphicsObject {
         backgroundRectangle.setColor(this.getColor());
     }
 
-    // TODO: add possibility of transparent background rectangle with only stroke
+    // TODO: Add possibility of transparent background rectangle with only stroke
     private void drawBackground() {
         if (backgroundRectangle != null) {
             GraphicsApp.getApp().addToDrawBuffer(backgroundRectangle);
