@@ -2,6 +2,7 @@ package de.ur.mi.oop.app;
 
 import de.ur.mi.oop.graphics.GraphicsObject;
 
+import java.lang.ref.Cleaner;
 import java.util.ArrayList;
 
 /**
@@ -10,7 +11,6 @@ import java.util.ArrayList;
 public class GraphicsAppCore {
 
     private static GraphicsAppCore app = null;
-    private ArrayList<GraphicsObject> objects;
     private ArrayList<GraphicsObject> drawBuffer;
     private Config config;
 
@@ -24,7 +24,6 @@ public class GraphicsAppCore {
         try {
             if (app == null) {
                 app = this;
-                objects = new ArrayList<>();
                 drawBuffer = new ArrayList<>();
             } else {
                 throw new OnlyOneGraphicsAppAllowedException();
@@ -46,25 +45,12 @@ public class GraphicsAppCore {
         return config;
     }
 
-    public GraphicsObject[] getObjects() {
-        // TODO: Think about passing copies of the objects!
-        return objects.toArray(new GraphicsObject[0]);
-    }
-
-    public void addObject(GraphicsObject object) {
-        objects.add(object);
-    }
-
-    public void removeObject(GraphicsObject object) {
-        objects.remove(object);
-    }
-
     public void addToDrawBuffer(GraphicsObject object) {
         drawBuffer.add(object);
     }
 
     public GraphicsObject[] getDrawBuffer() {
-        // TODO: Think about passing copies of the objects!
+        // TODO Think about passing copies of the objects!
         return drawBuffer.toArray(new GraphicsObject[0]);
     }
 
