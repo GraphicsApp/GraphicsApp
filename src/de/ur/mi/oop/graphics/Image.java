@@ -30,7 +30,7 @@ public class Image extends GraphicsObject {
         loadImage(filePath);
         super.setWidth(image.getWidth());
         super.setHeight(image.getHeight());
-        rescale();
+        rescale(true);
     }
 
     /**
@@ -62,16 +62,26 @@ public class Image extends GraphicsObject {
 
     public void setWidth(float width) {
         super.setWidth(width);
-        rescale();
+        rescale(false);
     }
 
     public void setHeight(float height) {
         super.setHeight(height);
-        rescale();
+        rescale(false);
     }
 
-    private void rescale() {
-        image = GraphicsHelper.resizeImage(image, (int) getWidth(), (int) getHeight());
+    public void setWidth(float width, boolean smooth) {
+        super.setWidth(width);
+        rescale(smooth);
+    }
+
+    public void setHeight(float height, boolean smooth) {
+        super.setHeight(height);
+        rescale(smooth);
+    }
+
+    private void rescale(boolean smooth) {
+        image = GraphicsHelper.resizeImage(image, (int) getWidth(), (int) getHeight(), smooth);
     }
 
     private void loadImage(String filePath) {
