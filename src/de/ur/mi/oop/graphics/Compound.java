@@ -348,11 +348,12 @@ public class Compound extends GraphicsObject {
             double objMaxX = object.getRightBorder();
             double objMinY = object.getTopBorder();
             double objMaxY = object.getBottomBorder();
+
             if (objMinX < minX) {
                 minX = objMinX;
             }
 
-            if (objMinX > maxX) {
+            if (objMaxX > maxX) {
                 maxX = objMaxX;
             }
 
@@ -364,7 +365,6 @@ public class Compound extends GraphicsObject {
                 maxY = objMaxY;
             }
         }
-
         return x >= minX && x <= maxX && y >= minY && y <= maxY;
     }
 }

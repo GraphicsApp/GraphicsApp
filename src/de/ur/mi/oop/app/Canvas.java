@@ -149,9 +149,9 @@ public class Canvas extends JPanel {
     }
 
     private void drawImage(Graphics2D g2d, de.ur.mi.oop.graphics.Image image) {
-        AffineTransform transformation  = new AffineTransform();
+        AffineTransform transformation = new AffineTransform();
         transformation.translate(image.getXPos(), image.getYPos());
-        transformation.scale(1,1);
+        transformation.scale(1, 1);
         g2d.drawImage(image.getImage(), transformation, null);
     }
 
