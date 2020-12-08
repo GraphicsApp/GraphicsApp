@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class GraphicsAppCore {
 
     private static GraphicsAppCore app = null;
+    private AppManager manager;
     private ArrayList<GraphicsObject> drawBuffer;
     private Config config;
 
@@ -35,6 +36,14 @@ public class GraphicsAppCore {
 
     public static GraphicsApp getApp() {
         return (GraphicsApp) app;
+    }
+
+    public void setAppManager(AppManager manager) {
+        this.manager = manager;
+    }
+
+    public AppManager getAppManager() {
+        return manager;
     }
 
     public void setConfig(Config config) {

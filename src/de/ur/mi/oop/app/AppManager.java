@@ -34,6 +34,7 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
     public AppManager(GraphicsApp app, Config config) {
         this.app = app;
         this.config = config;
+        this.app.setAppManager(this);
         initFrame();
     }
 
@@ -74,6 +75,10 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
         }
     }
 
+    public Graphics2D getGraphicsContext() {
+        return (Graphics2D) canvas.getGraphics();
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         long currentTime = System.currentTimeMillis();
@@ -109,7 +114,7 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
     @Override
     public void keyPressed(KeyEvent e) {
         // Close GraphicsApp on ESCAPE
-        if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+        if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
             appFrame.dispatchEvent(new WindowEvent(appFrame, WindowEvent.WINDOW_CLOSING));
             return;
         }
