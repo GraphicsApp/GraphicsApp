@@ -158,14 +158,19 @@ public class Canvas extends JPanel {
     private void drawLabel(Graphics2D g2d, Label label) {
         g2d.setColor(label.getColor().asAWTColor());
         g2d.setFont(new Font(label.getFont(), Font.PLAIN, label.getFontSize()));
-        g2d.drawString(label.getText(), label.getXPos(), label.getYPos());
+        /**
+         * Keep in mind: drawString's y parameter defines the text's baseline position not the label's upper left corner.
+         * To keep this call consistent with similar drawing operations (see drawRectangle or drawImage) we are
+         * translating the label's origin by using the current font size as an offset for the y position. This is only
+         * an estimate, since font specific measures (top, ascent, descent or bottom) are not considered.
+         */
+        g2d.drawString(label.getText(), label.getXPos(), label.getYPos() + label.getFontSize());
     }
 
     private void drawAndStrokeShape(Graphics2D g2d, GraphicsObject graphicsObject, Shape shape) {
         Color fillColor = graphicsObject.getColor().asAWTColor();
         g2d.setPaint(fillColor);
         g2d.fill(shape);
-
         if (graphicsObject.getBorderWeight() != 0.f) {
             Stroke stroke = new BasicStroke(graphicsObject.getBorderWeight());
             Color strokeColor = graphicsObject.getBorderColor().asAWTColor();
