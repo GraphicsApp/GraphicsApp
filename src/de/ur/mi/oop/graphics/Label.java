@@ -1,6 +1,10 @@
 package de.ur.mi.oop.graphics;
 
+import de.ur.mi.oop.app.GraphicsApp;
 import de.ur.mi.oop.colors.Color;
+import de.ur.mi.oop.utils.FontHelper;
+
+import java.awt.*;
 
 /**
  * Die Klasse Label ist ein grafisches Objekt, das einen Text darstellt.
@@ -68,4 +72,15 @@ public class Label extends GraphicsObject {
     public void setText(String text) {
         this.text = text;
     }
+
+    public int getWidthEstimate() {
+        FontMetrics metrics = FontHelper.getFontMetrics(font, fontSize);
+        return metrics.stringWidth(text);
+    }
+
+    public int getHeightEstimate() {
+        FontMetrics metrics = FontHelper.getFontMetrics(font, fontSize);
+        return metrics.getHeight();
+    }
+
 }
