@@ -1,7 +1,7 @@
 var classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_arc =
 [
-    [ "Arc", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_arc.html#af62092545d9d5a3bc757d0ace729b33d", null ],
-    [ "Arc", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_arc.html#afff350bbee244b03a81008a360cc61ee", null ],
+    [ "Arc", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_arc.html#ab320fae7c5622fc05a1fbb2929724636", null ],
+    [ "Arc", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_arc.html#acd2eb1da804488292f779855b9edd03f", null ],
     [ "getEnd", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_arc.html#a3cc56be1738ad86a52d3283b43d98529", null ],
     [ "getHeight", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_arc.html#ab8045c8675702e7dd9b06c478edc7ff0", null ],
     [ "getRadius", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_arc.html#a0739cc34a0f07ca05cc3d7a9f0f2d73f", null ],

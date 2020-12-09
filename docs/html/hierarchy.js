@@ -22,6 +22,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "de.ur.mi.oop.utils.FileHelper", "classde_1_1ur_1_1mi_1_1oop_1_1utils_1_1_file_helper.html", null ],
+    [ "de.ur.mi.oop.utils.FontHelper", "classde_1_1ur_1_1mi_1_1oop_1_1utils_1_1_font_helper.html", null ],
     [ "de.ur.mi.oop.app.GraphicsAppCore", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app_core.html", [
       [ "de.ur.mi.oop.app.GraphicsApp", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html", null ]
     ] ],

@@ -9,5 +9,6 @@ var enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type =
     [ "LABEL", "enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html#a3863a97e42d724cbd3b13bef2271f909", null ],
     [ "LINE", "enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html#a2d67033ab46413992eaea4f7d5ab523b", null ],
     [ "NONE", "enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html#a78f728fd39735b572e69d76a4cb41a38", null ],
+    [ "PIE_ARC", "enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html#a6b124c629f3129e6c9b7ae9d4019e0eb", null ],
     [ "RECTANGLE", "enumde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object_type.html#adcbfb1f34bbdd043386c174a8d37ad0a", null ]
 ];
