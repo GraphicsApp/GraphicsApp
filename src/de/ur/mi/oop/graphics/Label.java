@@ -72,11 +72,19 @@ public class Label extends GraphicsObject {
         this.text = text;
     }
 
+    /**
+     * Gibt die geschätze Breite des Labels auf dem Bildschirm zurück (in Pixel)
+     *
+     */
     public int getWidthEstimate() {
         FontMetrics metrics = FontHelper.getFontMetrics(font, fontSize);
         return metrics.stringWidth(text);
     }
 
+    /**
+     * Gibt die geschätze Höhe des Labels auf dem Bildschirm zurück (in Pixel)
+     *
+     */
     public int getHeightEstimate() {
         FontMetrics metrics = FontHelper.getFontMetrics(font, fontSize);
         return metrics.getHeight();

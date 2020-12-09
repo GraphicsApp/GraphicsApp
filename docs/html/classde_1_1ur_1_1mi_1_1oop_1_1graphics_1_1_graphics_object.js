@@ -7,7 +7,6 @@ var classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object =
     [ "GraphicsObject", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a9ab952f2b2915509120547ba011a2c4c", null ],
     [ "distanceTo", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#afdf135bb5089be43fe8c249535ed75c3", null ],
     [ "draw", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#af7d595d6c7b3a0794a64da791e0e771a", null ],
-    [ "finalize", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#ab49a5575bc346a3a7d47709873e0d4db", null ],
     [ "getBorderColor", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a0480a5b8969a9bdabf896c6b581c5067", null ],
     [ "getBorderWeight", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#ab96825a8059bd3fe0d2e105f6a691c28", null ],
     [ "getBottomBorder", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#ab5936e2642e993bd6b0da5185ba22d92", null ],

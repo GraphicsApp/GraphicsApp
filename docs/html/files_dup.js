@@ -42,6 +42,9 @@ var files_dup =
     [ "FileHelper.java", "_file_helper_8java.html", [
       [ "FileHelper", "classde_1_1ur_1_1mi_1_1oop_1_1utils_1_1_file_helper.html", null ]
     ] ],
+    [ "FontHelper.java", "_font_helper_8java.html", [
+      [ "FontHelper", "classde_1_1ur_1_1mi_1_1oop_1_1utils_1_1_font_helper.html", null ]
+    ] ],
     [ "GraphicsApp.java", "_graphics_app_8java.html", [
       [ "GraphicsApp", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app" ]
     ] ],

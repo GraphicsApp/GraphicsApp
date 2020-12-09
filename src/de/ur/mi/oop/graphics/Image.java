@@ -44,18 +44,18 @@ public class Image extends GraphicsObject {
 
     public int[][] getPixelArray() {
         int[][] pixels = new int[image.getHeight()][image.getWidth()];
-        for(int x = 0; x < image.getWidth(); x++) {
-            for(int y = 0; y < image.getHeight(); y++) {
-                pixels[y][x] = image.getRGB(x,y);
+        for (int x = 0; x < image.getWidth(); x++) {
+            for (int y = 0; y < image.getHeight(); y++) {
+                pixels[y][x] = image.getRGB(x, y);
             }
         }
         return pixels;
     }
 
     public void setPixelArray(int[][] pixels) {
-        for(int x = 0; x < image.getWidth(); x++) {
-            for(int y = 0; y < image.getHeight(); y++) {
-                image.setRGB(x,y,pixels[y][x]);
+        for (int x = 0; x < image.getWidth(); x++) {
+            for (int y = 0; y < image.getHeight(); y++) {
+                image.setRGB(x, y, pixels[y][x]);
             }
         }
     }
@@ -70,11 +70,23 @@ public class Image extends GraphicsObject {
         rescale(false);
     }
 
+    /**
+     * Setzt die Breite des Bildes.
+     *
+     * @param width die neue Breite
+     * @param smooth Schalter für Aktivierung qualitativ höherwertigen Skalierung
+     */
     public void setWidth(float width, boolean smooth) {
         super.setWidth(width);
         rescale(smooth);
     }
 
+    /**
+     * Setzt die Höhe des Bildes.
+     *
+     * @param height die neue Höhe
+     * @param smooth Schalter für Aktivierung qualitativ höherwertigen Skalierung
+     */
     public void setHeight(float height, boolean smooth) {
         super.setHeight(height);
         rescale(smooth);

@@ -3,6 +3,7 @@ var classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_app_manager =
     [ "AppManager", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_app_manager.html#a0fce57a98f893a422e4dec7ffa8e1c48", null ],
     [ "actionPerformed", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_app_manager.html#a4c19c4223dd709040c65fc7d593edeb8", null ],
     [ "draw", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_app_manager.html#af67e789b58fb307648ec1c072f48da9e", null ],
+    [ "getGraphicsContext", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_app_manager.html#a0baf1fa8a00ccad7eea8ad55cb82541a", null ],
     [ "keyPressed", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_app_manager.html#a76bcb2584a8fad3467cb4827ecabd9c7", null ],
     [ "keyReleased", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_app_manager.html#a4034fc6e9865d60d52c0478021db2443", null ],
     [ "keyTyped", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_app_manager.html#ae3ef2528285ed866f723acbcdd786da1", null ],
