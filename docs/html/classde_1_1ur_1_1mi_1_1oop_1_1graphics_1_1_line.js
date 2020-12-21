@@ -8,6 +8,7 @@ var classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line =
     [ "getEndpointX", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#aa5fc775a2e687e2a35aca406adce8a64", null ],
     [ "getEndpointY", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae98229b9044ff937688262c442f88b6a", null ],
     [ "getLeftBorder", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a1a43499dc5948ccd49f38015da2a4601", null ],
+    [ "getLength", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#afaf6ba478d792319b4e7099fc38da8e2", null ],
     [ "getLineWidth", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a0de2f182d71f6adbcab79e89f40d3746", null ],
     [ "getRightBorder", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#a3156470564774d0707f3611cf9e68425", null ],
     [ "getStartpointX", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html#ae830089edf77aa58c5cc031e309f4f0f", null ],
