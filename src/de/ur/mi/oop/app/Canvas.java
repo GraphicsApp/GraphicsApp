@@ -1,6 +1,7 @@
 package de.ur.mi.oop.app;
 
 import de.ur.mi.oop.graphics.*;
+import de.ur.mi.oop.graphics.Image;
 import de.ur.mi.oop.graphics.Label;
 
 import javax.swing.*;
@@ -84,6 +85,8 @@ public class Canvas extends JPanel {
     }
 
     private void drawLine(Graphics2D g2d, Line line) {
+        AffineTransform originalTransformation = g2d.getTransform();
+        g2d.setTransform(getRotationTransformationForObject(line));
         g2d.setColor(line.getColor().asAWTColor());
         Stroke stroke = new BasicStroke(line.getLineWidth());
         g2d.setStroke(stroke);
@@ -92,6 +95,7 @@ public class Canvas extends JPanel {
                 (int) line.getYPos(),
                 (int) line.getEndpointX(),
                 (int) line.getEndpointY());
+        g2d.setTransform(originalTransformation);
     }
 
     private void drawEllipse(Graphics2D g2d, Ellipse ellipse) {
@@ -144,18 +148,19 @@ public class Canvas extends JPanel {
                 arc.getStart(),
                 arc.getEnd(),
                 Arc2D.PIE);
-
         drawAndStrokeShape(g2d, arc, arcShape);
     }
 
     private void drawImage(Graphics2D g2d, de.ur.mi.oop.graphics.Image image) {
-        AffineTransform transformation = new AffineTransform();
+        AffineTransform transformation = getRotationTransformationForObject(image);
         transformation.translate(image.getXPos(), image.getYPos());
         transformation.scale(1, 1);
         g2d.drawImage(image.getImage(), transformation, null);
     }
 
     private void drawLabel(Graphics2D g2d, Label label) {
+        AffineTransform originalTransformation = g2d.getTransform();
+        g2d.setTransform(getRotationTransformationForObject(label));
         g2d.setColor(label.getColor().asAWTColor());
         g2d.setFont(new Font(label.getFont(), Font.PLAIN, label.getFontSize()));
         /**
@@ -165,11 +170,13 @@ public class Canvas extends JPanel {
          * an estimate, since font specific measures (top, ascent, descent or bottom) are not considered.
          */
         g2d.drawString(label.getText(), label.getXPos(), label.getYPos() + label.getFontSize());
+        g2d.setTransform(originalTransformation);
     }
 
     private void drawAndStrokeShape(Graphics2D g2d, GraphicsObject graphicsObject, Shape shape) {
-        Color fillColor = graphicsObject.getColor().asAWTColor();
-        g2d.setPaint(fillColor);
+        AffineTransform originalTransformation = g2d.getTransform();
+        g2d.setTransform(getRotationTransformationForObject(graphicsObject));
+        g2d.setPaint(graphicsObject.getColor().asAWTColor());
         g2d.fill(shape);
         if (graphicsObject.getBorderWeight() != 0.f) {
             Stroke stroke = new BasicStroke(graphicsObject.getBorderWeight());
@@ -178,6 +185,37 @@ public class Canvas extends JPanel {
             g2d.setPaint(strokeColor);
             g2d.draw(shape);
         }
+        g2d.setTransform(originalTransformation);
+    }
+
+    /**
+     * Return an AffineTransform instance to draw a rotated version of an given GraphicsObject. Objects are rotated around their
+     * center point.
+     *
+     * @param object The object to be rotated
+     * @return The AffineTransform to be applied before or during drawing
+     */
+    private AffineTransform getRotationTransformationForObject(GraphicsObject object) {
+        // Since Lines do not return proper values for width and height, we create a bounding box to translate the rotation origin
+        if (object instanceof Line) {
+            Line line = (Line) object;
+            object = new de.ur.mi.oop.graphics.Rectangle(line.getStartpointX(), line.getStartpointY(), line.getLength(), line.getLineWidth());
+            object.setRotationAngle(line.getRotationAngle());
+        }
+        // Since Label does use different Getters to return (estimated) dimensions, we create a bounding box to translate the rotation origin
+        if (object instanceof Label) {
+            Label label = (Label) object;
+            object = new de.ur.mi.oop.graphics.Rectangle(label.getXPos(), label.getYPos(), label.getWidthEstimate(), label.getHeightEstimate());
+            object.setRotationAngle(label.getRotationAngle());
+        }
+        double rotationAngleInRadians = Math.toRadians(object.getRotationAngle());
+        // Some GraphicsObjects do not use center point as origin and must be translated accordingly
+        boolean translateOrigin = object instanceof Image || object instanceof de.ur.mi.oop.graphics.Rectangle;
+        float rotationOffsetX = translateOrigin ? object.getWidth() / 2 : 0;
+        float rotationOffsetY = translateOrigin ? object.getHeight() / 2 : 0;
+        float rotationOriginX = object.getXPos() + rotationOffsetX;
+        float rotationOriginY = object.getYPos() + rotationOffsetY;
+        return AffineTransform.getRotateInstance(rotationAngleInRadians, rotationOriginX, rotationOriginY);
     }
 
 }

@@ -73,7 +73,7 @@ public class Image extends GraphicsObject {
     /**
      * Setzt die Breite des Bildes.
      *
-     * @param width die neue Breite
+     * @param width  die neue Breite
      * @param smooth Schalter für Aktivierung qualitativ höherwertigen Skalierung
      */
     public void setWidth(float width, boolean smooth) {
@@ -104,4 +104,5 @@ public class Image extends GraphicsObject {
             e.printStackTrace();
         }
     }
+
 }

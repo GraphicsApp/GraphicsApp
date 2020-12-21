@@ -74,6 +74,17 @@ public class Line extends GraphicsObject {
         this.strokeWeight = lineWidth;
     }
 
+    /**
+     * Gibt die Länge der Linie, also den Abstand zwischen Start- und Endpunkt, in Pixel zurück
+     *
+     * @return Länge der Linie in Pixel
+     */
+    public float getLength() {
+        float deltaX = Math.abs(getXPos() - xEndPoint);
+        float deltaY = Math.abs(getYPos() - yEndPoint);
+        return (float) Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
+    }
+
     public float getStartpointX() {
         return super.getXPos();
     }
