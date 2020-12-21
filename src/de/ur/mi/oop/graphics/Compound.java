@@ -309,6 +309,19 @@ public class Compound extends GraphicsObject {
         this.setPosition(point.getXPos(), point.getYPos());
     }
 
+    /**
+     * Rotiert alle im Compound gespeicherten Objekte isoliert um den angegebenen Wert
+     *
+     * @param angle Neuer Rotationswinkel in Grad
+     */
+    @Override
+    public void setRotationAngle(double angle) {
+        super.setRotationAngle(angle);
+        for (GraphicsObject object : objects) {
+            object.setRotationAngle(getRotationAngle());
+        }
+    }
+
     ///////////////////////////////////////////////////////////////////////////
     // Utility Methods
     ///////////////////////////////////////////////////////////////////////////
