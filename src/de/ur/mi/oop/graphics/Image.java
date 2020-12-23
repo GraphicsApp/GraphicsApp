@@ -1,6 +1,5 @@
 package de.ur.mi.oop.graphics;
 
-import de.ur.mi.oop.colors.Color;
 import de.ur.mi.oop.utils.FileHelper;
 import de.ur.mi.oop.utils.GraphicsHelper;
 
@@ -12,7 +11,9 @@ import java.io.IOException;
 /**
  * Die Image-Klasse ist ein grafisches Objekt, das ein Bild anzeigt.
  */
-public class Image extends GraphicsObject {
+public class Image extends GraphicsObject implements RotatableGraphicsObject {
+
+    private double rotationAngle;
 
     private BufferedImage image;
 
@@ -27,6 +28,7 @@ public class Image extends GraphicsObject {
     public Image(float x, float y, String filePath) {
         super(x, y);
         this.type = GraphicsObjectType.IMAGE;
+        this.rotationAngle = 0;
         loadImage(filePath);
         super.setWidth(image.getWidth());
         super.setHeight(image.getHeight());
@@ -102,6 +104,41 @@ public class Image extends GraphicsObject {
             image = ImageIO.read(file);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    @Override
+    public Point getRotationOrigin() {
+        return new Point(this.getXPos() + this.getWidth()/2, this.getYPos() + this.getHeight()/2);
+    }
+
+    /**
+     * Liefert den aktuellen Rotationswinkel des Objects
+     *
+     * @return Aktueller Rotationswinkel als Radians
+     */
+
+    public double getRotationAngle() {
+        return rotationAngle;
+    }
+
+    /**
+     * Liefert den aktuellen Rotationswinkel des Objects
+     *
+     * @return Aktueller Rotationswinkel in Grad
+     */
+    public double getRotationAngleInRadians() {
+        return Math.toRadians(rotationAngle);
+    }
+
+    /**
+     * Setzt den Rotationswinkel des Objekts
+     *
+     * @param angle Neuer Rotationswinkel in Grad
+     */
+    public void setRotationAngle(double angle) {
+        if (angle >= MIN_ROTATION_ANGLE && angle <= MAX_ROTATION_ANGLE) {
+            rotationAngle = angle;
         }
     }
 

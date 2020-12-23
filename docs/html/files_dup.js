@@ -119,5 +119,8 @@ var files_dup =
     ] ],
     [ "Rectangle.java", "_rectangle_8java.html", [
       [ "Rectangle", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rectangle.html", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rectangle" ]
+    ] ],
+    [ "RotatableGraphicsObject.java", "_rotatable_graphics_object_8java.html", [
+      [ "RotatableGraphicsObject", "interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html", "interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object" ]
     ] ]
 ];
