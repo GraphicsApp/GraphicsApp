@@ -11,5 +11,6 @@ var namespacede_1_1ur_1_1mi_1_1oop_1_1graphics =
     [ "Label", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label" ],
     [ "Line", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line.html", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_line" ],
     [ "Point", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point" ],
-    [ "Rectangle", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rectangle.html", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rectangle" ]
+    [ "Rectangle", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rectangle.html", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rectangle" ],
+    [ "RotatableGraphicsObject", "interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html", "interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object" ]
 ];

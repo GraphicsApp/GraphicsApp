@@ -1,5 +1,10 @@
 package de.ur.mi.oop.graphics;
 
+/**
+ * Alle rotierbaren GraphicsObjects implementieren dieses Interface und bietet damit eine Schnittstelle
+ * zum Setzen und Auslesen des aktuellen Rotationswinkels und des zu verwendenden Rotationspunkts an.
+ */
+
 public interface RotatableGraphicsObject {
 
     double MIN_ROTATION_ANGLE = 0;

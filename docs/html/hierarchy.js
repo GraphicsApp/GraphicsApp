@@ -66,6 +66,10 @@ var hierarchy =
       [ "de.ur.mi.oop.app.AppManager", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_app_manager.html", null ]
     ] ],
     [ "de.ur.mi.oop.graphics.Point", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html", null ],
+    [ "de.ur.mi.oop.graphics.RotatableGraphicsObject", "interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html", [
+      [ "de.ur.mi.oop.graphics.Image", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_image.html", null ],
+      [ "de.ur.mi.oop.graphics.Label", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_label.html", null ]
+    ] ],
     [ "Throwable", null, [
       [ "de.ur.mi.oop.app.OnlyOneGraphicsAppAllowedException", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_only_one_graphics_app_allowed_exception.html", null ]
     ] ]

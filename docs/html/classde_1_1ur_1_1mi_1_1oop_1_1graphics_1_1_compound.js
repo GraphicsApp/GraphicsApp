@@ -22,7 +22,6 @@ var classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_compound =
     [ "removeAll", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_compound.html#a3567b346db4a4df3cc0595a970691ac8", null ],
     [ "setPosition", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_compound.html#a71cf36e6ad0d2d779d74bd51b50f4927", null ],
     [ "setPosition", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_compound.html#a0f799bf33eea94c5a3f42d8ae84a1f7d", null ],
-    [ "setRotationAngle", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_compound.html#ada6c18c8cb51170e676b8d607de63fda", null ],
     [ "setXPos", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_compound.html#a20c8f7b7ed2923e319cbb3665d9e6946", null ],
     [ "setYPos", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_compound.html#adbdf8b248ef66845b6d5cbd5e048f950", null ],
     [ "size", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_compound.html#afb5323c0dca52e8a870e5b46f817009d", null ]
