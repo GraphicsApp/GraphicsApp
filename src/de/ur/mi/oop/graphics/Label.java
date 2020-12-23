@@ -8,7 +8,9 @@ import java.awt.*;
 /**
  * Die Klasse Label ist ein grafisches Objekt, das einen Text darstellt.
  */
-public class Label extends GraphicsObject {
+public class Label extends GraphicsObject implements RotatableGraphicsObject {
+
+    private double rotationAngle;
 
     private static final int DEFAULT_FONT_SIZE = 12;
     private static final String DEFAULT_FONT = "SansSerif";
@@ -88,6 +90,35 @@ public class Label extends GraphicsObject {
     public int getHeightEstimate() {
         FontMetrics metrics = FontHelper.getFontMetrics(font, fontSize);
         return metrics.getHeight();
+    }
+
+    @Override
+    public Point getRotationOrigin() {
+       return new Point(this.getXPos() + this.getWidthEstimate()/2, this.getYPos() + this.getHeightEstimate()/2);
+    }
+
+    public double getRotationAngle() {
+        return rotationAngle;
+    }
+
+    /**
+     * Liefert den aktuellen Rotationswinkel des Objects
+     *
+     * @return Aktueller Rotationswinkel in Grad
+     */
+    public double getRotationAngleInRadians() {
+        return Math.toRadians(rotationAngle);
+    }
+
+    /**
+     * Setzt den Rotationswinkel des Objekts
+     *
+     * @param angle Neuer Rotationswinkel in Grad
+     */
+    public void setRotationAngle(double angle) {
+        if (angle >= MIN_ROTATION_ANGLE && angle <= MAX_ROTATION_ANGLE) {
+            rotationAngle = angle;
+        }
     }
 
 }

@@ -22,16 +22,11 @@ public abstract class GraphicsObject {
     protected static final Color DEFAULT_COLOR = Colors.RED;
     protected static final Color DEFAULT_BORDER_COLOR = Colors.BLACK;
 
-    double MIN_ROTATION_ANGLE = 0;
-    double MAX_ROTATION_ANGLE = 360;
-
     private float xPos;
     private float yPos;
 
     private float width;
     private float height;
-
-    private double rotationAngle;
 
     private Color color;
     private Color strokeColor;
@@ -48,7 +43,6 @@ public abstract class GraphicsObject {
         this.yPos = y;
         this.width = 0;
         this.height = 0;
-        this.rotationAngle = 0;
         this.color = color;
         this.strokeWeight = 0;
         this.strokeColor = DEFAULT_BORDER_COLOR;
@@ -281,27 +275,6 @@ public abstract class GraphicsObject {
      */
     public GraphicsObjectType getType() {
         return type;
-    }
-
-
-    /**
-     * Liefert den aktuellen Rotationswinkel des Objects
-     *
-     * @return Aktueller Rotationswinkel in Grad
-     */
-    public double getRotationAngle() {
-        return rotationAngle;
-    }
-
-    /**
-     * Setzt den Rotationswinkel des Objekts
-     *
-     * @param angle Neuer Rotationswinkel in Grad
-     */
-    public void setRotationAngle(double angle) {
-        if (angle >= MIN_ROTATION_ANGLE && angle <= MAX_ROTATION_ANGLE) {
-            rotationAngle = angle;
-        }
     }
 
     ///////////////////////////////////////////////////////////////////////////
