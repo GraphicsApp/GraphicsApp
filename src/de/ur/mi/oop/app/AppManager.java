@@ -7,8 +7,7 @@ import de.ur.mi.oop.events.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 
 
 /**
@@ -27,6 +26,9 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
     private Canvas canvas;
     private JFrame appFrame;
     private Timer loopTimer;
+
+    private Cursor originalCursor;
+    private Cursor blankCursor;
 
     private long lastFrameTime = 0;
     private int lastFPS = 0;
@@ -62,6 +64,9 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
         canvas.addMouseMotionListener(this);
         appFrame.addKeyListener(this);
         appFrame.setVisible(true);
+        originalCursor = appFrame.getContentPane().getCursor();
+        blankCursor = Toolkit.getDefaultToolkit().createCustomCursor(
+                new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB), new Point(0, 0), "blank cursor");
     }
 
     private void startLoop() {
@@ -73,6 +78,14 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
         if (config.shouldShowFrameRate()) {
             appFrame.setTitle("Current FPS: ~ " + fps);
         }
+    }
+
+    private void hideCursor() {
+        appFrame.getContentPane().setCursor(blankCursor);
+    }
+
+    private void showCursor() {
+        appFrame.getContentPane().setCursor(originalCursor);
     }
 
     public Graphics2D getGraphicsContext() {
@@ -104,6 +117,15 @@ public class AppManager implements ConfigChangeListener, ActionListener, KeyList
     public void onFrameRateChanged(int newFramerate) {
         if (loopTimer != null) {
             loopTimer.setDelay(1000 / newFramerate);
+        }
+    }
+
+    @Override
+    public void onCursorVisibilityChanged(boolean cursorVisibility) {
+        if(cursorVisibility) {
+            showCursor();
+        } else {
+            hideCursor();
         }
     }
 

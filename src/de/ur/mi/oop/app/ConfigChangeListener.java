@@ -6,4 +6,5 @@ public interface ConfigChangeListener {
 
     void onFrameRateChanged(int newFramerate);
 
+    void onCursorVisibilityChanged(boolean cursorVisibility);
 }

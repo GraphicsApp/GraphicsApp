@@ -108,6 +108,20 @@ public abstract class GraphicsApp extends GraphicsAppCore implements GraphicsApp
         getConfig().setFrameRateVisibility(true);
     }
 
+    /**
+     * Blendet den Maus-Cursor im Anwendungsfenster ein
+     */
+    protected void showCursor() {
+        getConfig().setCursorVisibility(true);
+    }
+
+    /**
+     * Blendet den Maus-Cursor im Anwendungsfenster aus
+     */
+    protected void hideCursor() {
+        getConfig().setCursorVisibility(false);
+    }
+
     public int getWidth() {
         return getConfig().getWidth();
     }

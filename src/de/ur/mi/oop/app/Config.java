@@ -16,6 +16,7 @@ public class Config {
     private static final Color DEFAULT_COLOR = Colors.RED;
     private static final boolean DEFAULT_FRAME_RATE_VISIBILITY = false;
     private static final String DEFAULT_TITLE = "GraphicsApp";
+    private static final boolean DEFAULT_CURSOR_VISIBILITY = true;
 
     private static final float DEFAULT_STROKE_WIDTH = 2f;
 
@@ -26,6 +27,7 @@ public class Config {
     private Color backgroundColor = DEFAULT_BACKGROUND_COLOR;
     private float strokeWidth = DEFAULT_STROKE_WIDTH;
     private String title = DEFAULT_TITLE;
+    private boolean cursorVisibility = DEFAULT_CURSOR_VISIBILITY;
 
     private ConfigChangeListener listener;
 
@@ -87,6 +89,15 @@ public class Config {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public boolean getCursorVisibility() {
+        return cursorVisibility;
+    }
+
+    public void setCursorVisibility(boolean isVisible) {
+        this.cursorVisibility = isVisible;
+        listener.onCursorVisibilityChanged(this.cursorVisibility);
     }
 
     public boolean shouldShowFrameRate() {
