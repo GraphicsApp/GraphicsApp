@@ -8,6 +8,7 @@ import java.io.File;
  * JAVA-kompatiblen Formaten (WAV oder AU).
  */
 
+// TODO Implement AudioClipPool for parallel playback of individual sounds
 public class AudioClip implements LineListener {
 
     private Clip clip;
@@ -67,6 +68,7 @@ public class AudioClip implements LineListener {
 
     @Override
     public void update(LineEvent lineEvent) {
+        // TODO Check if stop events are reliably retrieved on non-windows systems
         if(lineEvent.getType() == LineEvent.Type.STOP) {
             clip.setFramePosition(0);
             isReady = true;

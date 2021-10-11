@@ -1,7 +1,7 @@
 package de.ur.mi.oop.graphics;
 
 import de.ur.mi.oop.colors.Color;
-import de.ur.mi.oop.utils.FontHelper;
+import de.ur.mi.oop.fonts.FontHelper;
 
 import java.awt.*;
 
@@ -75,7 +75,7 @@ public class Label extends GraphicsObject implements RotatableGraphicsObject {
     }
 
     /**
-     * Gibt die geschätze Breite des Labels auf dem Bildschirm zurück (in Pixel)
+     * Gibt die geschätzte Breite des Labels auf dem Bildschirm zurück (in Pixel)
      *
      */
     public int getWidthEstimate() {
@@ -84,7 +84,7 @@ public class Label extends GraphicsObject implements RotatableGraphicsObject {
     }
 
     /**
-     * Gibt die geschätze Höhe des Labels auf dem Bildschirm zurück (in Pixel)
+     * Gibt die geschätzte Höhe des Labels auf dem Bildschirm zurück (in Pixel)
      *
      */
     public int getHeightEstimate() {
@@ -94,7 +94,7 @@ public class Label extends GraphicsObject implements RotatableGraphicsObject {
 
     @Override
     public Point getRotationOrigin() {
-       return new Point(this.getXPos() + this.getWidthEstimate()/2, this.getYPos() + this.getHeightEstimate()/2);
+       return new Point(this.getXPos() + (this.getWidthEstimate()/2.0f), this.getYPos() - (this.getHeightEstimate()/2.0f));
     }
 
     public double getRotationAngle() {

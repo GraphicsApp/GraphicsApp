@@ -1,5 +1,6 @@
 package de.ur.mi.oop.app;
 
+import de.ur.mi.oop.fonts.FontPool;
 import de.ur.mi.oop.graphics.*;
 import de.ur.mi.oop.graphics.Label;
 import de.ur.mi.oop.graphics.Point;
@@ -124,17 +125,15 @@ public class Canvas extends JPanel {
 
     private void drawLabel(Graphics2D g2d, Label label) {
         AffineTransform originalTransform = g2d.getTransform();
-        g2d.setTransform(getRotationTransformForObject(label));
-        /**
-         * Keep in mind: drawString's y parameter defines the text's baseline position not the label's upper left corner.
-         * To keep this call consistent with similar drawing operations (see drawRectangle or drawImage) we are
-         * translating the label's origin by using the current font size as an offset for the y position. This is only
-         * an estimate, since font specific measures (top, ascent, descent or bottom) are not considered.
+        /*
+         * To prevent positioning errors, instead of rotating the current g2d context,
+         * we only rotate the label's font.
          */
-        g2d.translate(label.getXPos(), label.getYPos() + label.getFontSize());
-        g2d.scale(originalTransform.getScaleX(), originalTransform.getScaleY());
+        Font originalFont = FontPool.getFont(label.getFont(), Font.PLAIN, label.getFontSize());
+        g2d.setFont(originalFont.deriveFont(getRotationTransformForObject(label)));
         g2d.setColor(label.getColor().asAWTColor());
-        g2d.setFont(new Font(label.getFont(), Font.PLAIN, label.getFontSize()));
+        g2d.translate(label.getXPos(), label.getYPos());
+        g2d.scale(originalTransform.getScaleX(), originalTransform.getScaleY());
         g2d.drawString(label.getText(), 0, 0);
         g2d.setTransform(originalTransform);
     }
