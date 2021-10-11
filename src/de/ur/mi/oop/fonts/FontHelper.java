@@ -1,4 +1,4 @@
-package de.ur.mi.oop.utils;
+package de.ur.mi.oop.fonts;
 
 import de.ur.mi.oop.app.GraphicsApp;
 
@@ -8,7 +8,7 @@ public class FontHelper {
 
     public static FontMetrics getFontMetrics(String fontName, int fontSize) {
         Graphics2D context = GraphicsApp.getApp().getAppManager().getGraphicsContext();
-        Font actualFont = new Font(fontName, Font.PLAIN, fontSize);
+        Font actualFont = FontPool.getFont(fontName, Font.PLAIN, fontSize);
         return context.getFontMetrics(actualFont);
     }
 
