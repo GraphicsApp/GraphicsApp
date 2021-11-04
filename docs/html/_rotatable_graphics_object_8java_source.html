@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>GraphicsApp API: RotatableGraphicsObject.java Quellcode</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -34,21 +34,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Erzeugt von Doxygen 1.8.20 -->
+<!-- Erzeugt von Doxygen 1.9.2 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Suchen','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Suchen');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -62,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('_rotatable_graphics_object_8java_source.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -82,65 +83,64 @@ $(document).ready(function(){initNavTree('_rotatable_graphics_object_8java_sourc
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">RotatableGraphicsObject.java</div>  </div>
+  <div class="headertitle"><div class="title">RotatableGraphicsObject.java</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_rotatable_graphics_object_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>de.ur.mi.oop.graphics;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Alle rotierbaren GraphicsObjects implementieren dieses Interface und bietet damit eine Schnittstelle</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * zum Setzen und Auslesen des aktuellen Rotationswinkels und des zu verwendenden Rotationspunkts an.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html">    8</a></span>&#160;<span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html">RotatableGraphicsObject</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#ace55bd2f5419ce22bc9724d3cb7a5b43">   10</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#ace55bd2f5419ce22bc9724d3cb7a5b43">MIN_ROTATION_ANGLE</a> = 0;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a5c77b784e1855781c47e65a7f64285c2">   11</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a5c77b784e1855781c47e65a7f64285c2">MAX_ROTATION_ANGLE</a> = 360;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">     * Liefert den für die Rotation zu verwendenden Ursprungspunkt zurück</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">     * @return Ursprungspunkt für die Rotation</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a305d5c9da2f5c2667b1e18aa03de7766">   18</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html">Point</a> <a class="code" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a305d5c9da2f5c2667b1e18aa03de7766">getRotationOrigin</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">     * Liefert den aktuellen Rotationswinkel des Objects</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">     * @return Aktueller Rotationswinkel als Radians</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a7166391f5116c2986d9463596d108b39">   25</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a7166391f5116c2986d9463596d108b39">getRotationAngle</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">     * Liefert den aktuellen Rotationswinkel des Objects</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">     * @return Aktueller Rotationswinkel in Grad</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#ac021baa39fcb1bea26134738811bafce">   32</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#ac021baa39fcb1bea26134738811bafce">getRotationAngleInRadians</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    /**</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">     * Setzt den Rotationswinkel des Objekts</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">     *</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">     * @param angle Neuer Rotationswinkel in Grad</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a4d98aef52cda66e7158738f88dd49fbf">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a4d98aef52cda66e7158738f88dd49fbf">setRotationAngle</a>(<span class="keywordtype">double</span> angle);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<a href="_rotatable_graphics_object_8java.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.ur.mi.oop.graphics;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"></span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Alle rotierbaren GraphicsObjects implementieren dieses Interface und bietet damit eine Schnittstelle</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * zum Setzen und Auslesen des aktuellen Rotationswinkels und des zu verwendenden Rotationspunkts an.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html">    8</a></span><span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html">RotatableGraphicsObject</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#ace55bd2f5419ce22bc9724d3cb7a5b43">   10</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#ace55bd2f5419ce22bc9724d3cb7a5b43">MIN_ROTATION_ANGLE</a> = 0;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a5c77b784e1855781c47e65a7f64285c2">   11</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a5c77b784e1855781c47e65a7f64285c2">MAX_ROTATION_ANGLE</a> = 360;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"></span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">    /**</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">     * Liefert den für die Rotation zu verwendenden Ursprungspunkt zurück</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">     *</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">     * @return Ursprungspunkt für die Rotation</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a305d5c9da2f5c2667b1e18aa03de7766">   18</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html">Point</a> <a class="code hl_function" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a305d5c9da2f5c2667b1e18aa03de7766">getRotationOrigin</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"></span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">    /**</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">     * Liefert den aktuellen Rotationswinkel des Objects</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">     *</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">     * @return Aktueller Rotationswinkel als Radians</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a7166391f5116c2986d9463596d108b39">   25</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_function" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a7166391f5116c2986d9463596d108b39">getRotationAngle</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"></span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">    /**</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">     * Liefert den aktuellen Rotationswinkel des Objects</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">     *</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">     * @return Aktueller Rotationswinkel in Grad</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#ac021baa39fcb1bea26134738811bafce">   32</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_function" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#ac021baa39fcb1bea26134738811bafce">getRotationAngleInRadians</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"></span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">    /**</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">     * Setzt den Rotationswinkel des Objekts</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">     *</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">     * @param angle Neuer Rotationswinkel in Grad</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a4d98aef52cda66e7158738f88dd49fbf">   39</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a4d98aef52cda66e7158738f88dd49fbf">setRotationAngle</a>(<span class="keywordtype">double</span> angle);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html">de.ur.mi.oop.graphics.Point</a></div><div class="ttdef"><b>Definition:</b> <a href="_point_8java_source.html#l00006">Point.java:6</a></div></div>
+<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html">de.ur.mi.oop.graphics.RotatableGraphicsObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_rotatable_graphics_object_8java_source.html#l00008">RotatableGraphicsObject.java:8</a></div></div>
+<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html_a305d5c9da2f5c2667b1e18aa03de7766"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a305d5c9da2f5c2667b1e18aa03de7766">de.ur.mi.oop.graphics.RotatableGraphicsObject.getRotationOrigin</a></div><div class="ttdeci">Point getRotationOrigin()</div></div>
+<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html_a4d98aef52cda66e7158738f88dd49fbf"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a4d98aef52cda66e7158738f88dd49fbf">de.ur.mi.oop.graphics.RotatableGraphicsObject.setRotationAngle</a></div><div class="ttdeci">void setRotationAngle(double angle)</div></div>
+<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html_a5c77b784e1855781c47e65a7f64285c2"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a5c77b784e1855781c47e65a7f64285c2">de.ur.mi.oop.graphics.RotatableGraphicsObject.MAX_ROTATION_ANGLE</a></div><div class="ttdeci">double MAX_ROTATION_ANGLE</div><div class="ttdef"><b>Definition:</b> <a href="_rotatable_graphics_object_8java_source.html#l00011">RotatableGraphicsObject.java:11</a></div></div>
+<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html_a7166391f5116c2986d9463596d108b39"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a7166391f5116c2986d9463596d108b39">de.ur.mi.oop.graphics.RotatableGraphicsObject.getRotationAngle</a></div><div class="ttdeci">double getRotationAngle()</div></div>
+<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html_ac021baa39fcb1bea26134738811bafce"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#ac021baa39fcb1bea26134738811bafce">de.ur.mi.oop.graphics.RotatableGraphicsObject.getRotationAngleInRadians</a></div><div class="ttdeci">double getRotationAngleInRadians()</div></div>
+<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html_ace55bd2f5419ce22bc9724d3cb7a5b43"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#ace55bd2f5419ce22bc9724d3cb7a5b43">de.ur.mi.oop.graphics.RotatableGraphicsObject.MIN_ROTATION_ANGLE</a></div><div class="ttdeci">double MIN_ROTATION_ANGLE</div><div class="ttdef"><b>Definition:</b> <a href="_rotatable_graphics_object_8java_source.html#l00010">RotatableGraphicsObject.java:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html">de.ur.mi.oop.graphics.RotatableGraphicsObject</a></div><div class="ttdef"><b>Definition:</b> <a href="_rotatable_graphics_object_8java_source.html#l00008">RotatableGraphicsObject.java:8</a></div></div>
-<div class="ttc" id="aclassde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point_html"><div class="ttname"><a href="classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_point.html">de.ur.mi.oop.graphics.Point</a></div><div class="ttdef"><b>Definition:</b> <a href="_point_8java_source.html#l00006">Point.java:6</a></div></div>
-<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html_ac021baa39fcb1bea26134738811bafce"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#ac021baa39fcb1bea26134738811bafce">de.ur.mi.oop.graphics.RotatableGraphicsObject.getRotationAngleInRadians</a></div><div class="ttdeci">double getRotationAngleInRadians()</div></div>
-<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html_a7166391f5116c2986d9463596d108b39"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a7166391f5116c2986d9463596d108b39">de.ur.mi.oop.graphics.RotatableGraphicsObject.getRotationAngle</a></div><div class="ttdeci">double getRotationAngle()</div></div>
-<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html_a4d98aef52cda66e7158738f88dd49fbf"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a4d98aef52cda66e7158738f88dd49fbf">de.ur.mi.oop.graphics.RotatableGraphicsObject.setRotationAngle</a></div><div class="ttdeci">void setRotationAngle(double angle)</div></div>
-<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html_ace55bd2f5419ce22bc9724d3cb7a5b43"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#ace55bd2f5419ce22bc9724d3cb7a5b43">de.ur.mi.oop.graphics.RotatableGraphicsObject.MIN_ROTATION_ANGLE</a></div><div class="ttdeci">double MIN_ROTATION_ANGLE</div><div class="ttdef"><b>Definition:</b> <a href="_rotatable_graphics_object_8java_source.html#l00010">RotatableGraphicsObject.java:10</a></div></div>
-<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html_a5c77b784e1855781c47e65a7f64285c2"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a5c77b784e1855781c47e65a7f64285c2">de.ur.mi.oop.graphics.RotatableGraphicsObject.MAX_ROTATION_ANGLE</a></div><div class="ttdeci">double MAX_ROTATION_ANGLE</div><div class="ttdef"><b>Definition:</b> <a href="_rotatable_graphics_object_8java_source.html#l00011">RotatableGraphicsObject.java:11</a></div></div>
-<div class="ttc" id="ainterfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object_html_a305d5c9da2f5c2667b1e18aa03de7766"><div class="ttname"><a href="interfacede_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_rotatable_graphics_object.html#a305d5c9da2f5c2667b1e18aa03de7766">de.ur.mi.oop.graphics.RotatableGraphicsObject.getRotationOrigin</a></div><div class="ttdeci">Point getRotationOrigin()</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_821818eb74338e35a65f6fbb6b6439d5.html">de</a></li><li class="navelem"><a class="el" href="dir_5d2753e19a262a1a340e90ef72c2a8cb.html">ur</a></li><li class="navelem"><a class="el" href="dir_b51185c31e96325dc03e995ba0cdea94.html">mi</a></li><li class="navelem"><a class="el" href="dir_2471dce55b57edabebc87c0ed02ad4c9.html">oop</a></li><li class="navelem"><a class="el" href="dir_75a15ca84b26f6b73c8eadb7b2099bee.html">graphics</a></li><li class="navelem"><a class="el" href="_rotatable_graphics_object_8java.html">RotatableGraphicsObject.java</a></li>
-    <li class="footer">Erzeugt am Mit Dez 23 2020 14:39:04 für GraphicsApp API von <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Erzeugt am Don Nov 4 2021 09:32:06 für GraphicsApp API von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

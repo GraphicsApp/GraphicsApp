@@ -5,6 +5,7 @@ var classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app =
     [ "drawBackground", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html#abfbbff426321a503d38a86b4259b4e52", null ],
     [ "getHeight", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html#ac39bdcf9b940819c8f8ca957dbc04858", null ],
     [ "getWidth", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html#a05574826944400ff1e744a3488dc35e3", null ],
+    [ "hideCursor", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html#a7563f923e9cad1e62ed8fb63e5f16311", null ],
     [ "initialize", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html#ad5d6fa0c948c969982956f547fd19868", null ],
     [ "onKeyPressed", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html#ab36a8f98ca0a54e006292cc19d75a62e", null ],
     [ "onKeyReleased", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html#a37f02de65a903d65cfbfba22bb9f5ed1", null ],
@@ -14,5 +15,6 @@ var classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app =
     [ "onMouseReleased", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html#ac70ab35c76657c7d1c04c5e9ab70b521", null ],
     [ "setCanvasSize", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html#a8e7ab205d836afde0322977498a0c44f", null ],
     [ "setFrameRate", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html#adfb4de8979907219fe12af5158dd193f", null ],
+    [ "showCursor", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html#ac8be95b4f398ca4f214226f5d86d7093", null ],
     [ "showFrameRate", "classde_1_1ur_1_1mi_1_1oop_1_1app_1_1_graphics_app.html#a7318fa5aecb73cbc277b03bdc4854f58", null ]
 ];
