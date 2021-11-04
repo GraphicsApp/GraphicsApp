@@ -2,7 +2,7 @@ var classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_image =
 [
     [ "Image", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_image.html#a3a00837a918370b4eb9ff786acfdbb2a", null ],
     [ "getImage", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_image.html#a2a7ce6e88216a5ab2dbbf7a00389e029", null ],
-    [ "getPixelArray", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_image.html#aedaf63becdb1f94173280fdc027fbdab", null ],
+    [ "getPixelArray", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_image.html#a660012cfa8eb6ce75a73da926811c309", null ],
     [ "getRotationAngle", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_image.html#ad1124f040bcecfeed8343c87c1419ca0", null ],
     [ "getRotationAngleInRadians", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_image.html#a6c93b94b29ec29c7ad700623a0c0a8e5", null ],
     [ "getRotationOrigin", "classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_image.html#a6cc94b5bc12af50017e6a4d04ee844b5", null ],

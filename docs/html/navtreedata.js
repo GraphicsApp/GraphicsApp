@@ -47,7 +47,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_app_manager_8java.html",
-"classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_ellipse.html#a10e06d49486ccbffb3d9591060eab185"
+"classde_1_1ur_1_1mi_1_1oop_1_1colors_1_1_color.html#a5d73b7fe1dad1860a047497cc266dc7b",
+"classde_1_1ur_1_1mi_1_1oop_1_1graphics_1_1_graphics_object.html#a9dc7186c121b5f7363c8319c224c07ec",
+"functions_func_u.html"
 ];
 
 var SYNCONMSG = 'Klicken um Panelsynchronisation auszuschalten';
