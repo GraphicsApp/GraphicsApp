@@ -8,12 +8,20 @@ import java.awt.event.MouseEvent;
 
 /*! \mainpage GraphicsApp API
  *
- * Die GraphicsApp-Bibliothek ist eine einfache 2D-Grafikumgebung für die JAVA-Laufzeitumgebung.
- * Sie dient in erster Linie dazu, Programmiernovizen an die Verwendung der Programmiersprache Java heranzuführen.
- * Die Programmierenden können auf Basis der Bibliothek eigene graphische Anwendungen gestalten.
- * Grundlage dafür ist ein Lifecycle, bestehend aus einer Initalisierungsphase sowie eines einfachen Game loop.
- * Die Bibliothek erlaubt das Erstellen, Darstellen und dynamisches Manipulieren graphischer Primitive.
- *
+ * <p>Die <i>GraphicsApp</i>-Bibliothek erlaubt die Umsetzung einfacher 2D-Anwendungen mit der Programmiersprache Java und richtet
+ * sich explizit an Programmieranfänger*innen. Die Bibliothek wird von Mitarbeiter*innen des
+ * <a href= "https://www.uni-regensburg.de/sprache-literatur-kultur/medieninformatik/aktuelles/index.html">Lehrstuhls für Medieninformatik</a>
+ * der Universität Regensburg <a href="https://github.com/OOP-Regensburg/GraphicsApp-Reborn-Library">entwickelt</a>. Der Quellcode kann
+ * auf <a href="https://github.com/OOP-Regensburg/GraphicsApp-Reborn-Library">GitHub</a> eingesehen werden und unter der MIT-Lizenz verwendet werden.
+ * Vorbereitete JAR-Dateien für die Integration in eigene Projekte finden sich ebenfalls <a href="https://github.com/OOP-Regensburg/GraphicsApp-Reborn-Library/releases">
+ * auf GitHub</a>.Hauptverantwortlicher Ansprechpartner für die Weiterentwicklung ist <a href="go.ur.de/alexanderbazo">Alexander Bazo</a>.</p>
+ * <p>Mit der <i>GraphicsApp</i>-Umgebung können Programmieranfänger*innen erste, interaktive Java-Programme entwickeln. Grundlegende Konzepte sind dabei
+ * eine <b>Zeichenfläche</b>, ein <i>Draw Loop</i> und ein Reihe von <b>Klassen</b> zur Repräsentation von graphischen Primitiven, Texten und Bildern auf dieser
+ * Zeichenfläche. Ergänzen stehen einfache Möglichkeiten zur Ausgabe von Audio-Dateien und eine Event-basierte Möglichkeit zur Nutzung von Maus- und
+ * Tastatureingaben zur Verfügung.</p>
+ * <p>Alle <i>GraphicsApp</i>-Anwendungen basieren auf der Klasse <code>GraphicsApp</code>. Deren <code>draw</code>-Methode bildet die Grundlage für
+ * den <i>Draw Loop</i> und wird zur Laufzeit ca. 60 mal pro Sekunde aufgerufen. Innerhalb des <i>Loops</i> können graphische Elemente erstellt,
+ * bewegt und gezeichnet werden. Auf dieser Basis lassen sich statische Collagen, einfache Animationen und erste, interaktive Anwendungen bzw. Spiele umsetzen.</p>
  */
 
 /**
