@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'de.ur.mi'
+version '1.4.10'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    archiveBaseName = 'GraphicsApp'
+    archiveVersion =  '1.4.10'
+}
+
+sourceCompatibility = 16
+targetCompatibility = 16
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+
+test {
+    useJUnitPlatform()
+}
