@@ -3,20 +3,20 @@ plugins {
     id 'maven-publish'
 }
 
-group 'de.ur.mi'
-version '1.4.10'
+group "${projectGroup}"
+version "${projectVersion}"
 
 repositories {
     mavenCentral()
 }
 
 jar {
-    archiveBaseName = 'GraphicsApp'
-    archiveVersion =  '1.4.10'
+    archiveBaseName = "${projectName}"
+    archiveVersion =  "${version}"
 }
 
-sourceCompatibility = 16
-targetCompatibility = 16
+sourceCompatibility = "${projectVersionCompatibility}"
+targetCompatibility = "${projectTargetCompatibility}"
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
@@ -26,7 +26,6 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-
 
 publishing {
     repositories {
