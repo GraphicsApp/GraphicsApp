@@ -2,6 +2,10 @@
 .idea/
 *.iml
 
+# Gradle and Maven
+.gradle/
+
 # Production and Testing
 out/
 build/
+target/
