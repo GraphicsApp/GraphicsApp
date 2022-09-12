@@ -16,9 +16,11 @@ jobs:
           distribution: 'adopt'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@v1
-      - name: Publish package
+      - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
-        with:
-          arguments: publish
+      - name: Ensure gradlew is executable
+        run: chmod +x ./gradlew
+      - name: Publish package
+        run: ./gradlew publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
