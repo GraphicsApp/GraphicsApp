@@ -6,6 +6,9 @@ plugins {
 group "${projectGroup}"
 version "${projectVersion}"
 
+sourceCompatibility = "${projectVersionCompatibility}"
+targetCompatibility = "${projectTargetCompatibility}"
+
 repositories {
     mavenCentral()
 }
@@ -14,9 +17,6 @@ jar {
     archiveBaseName = "${projectName}"
     archiveVersion =  "${version}"
 }
-
-sourceCompatibility = "${projectVersionCompatibility}"
-targetCompatibility = "${projectTargetCompatibility}"
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
